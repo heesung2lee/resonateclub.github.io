@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Resonate Club — Premium Korea & USA Travel</title>
+<meta name="description" content="Resonate Club — Premium curated travel packages. Discover Korea inbound tours & USA golf tours from Korea.">
+<meta name="theme-color" content="#1a3450">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--navy:#1a3450;--gold:#d4af37;--navy-light:#264460;--cream:#fdf8ed}
+html{font-size:16px;scroll-behavior:smooth}
+body{font-family:-apple-system,"Noto Sans KR",sans-serif;background:#fff;color:#1a1a2e;-webkit-font-smoothing:antialiased}
+[data-lang="en"] .ko{display:none!important}
+[data-lang="ko"] .en{display:none!important}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:300;height:56px;display:flex;align-items:center;justify-content:space-between;padding:0 20px;background:rgba(255,255,255,.96);backdrop-filter:blur(20px);border-bottom:1px solid #eee}
+.nav-logo{font-family:"Playfair Display",serif;font-size:20px;font-weight:700;color:var(--gold);letter-spacing:.02em;cursor:pointer}
+.nav-links{display:flex;gap:4px;align-items:center}
+.nav-links a{font-size:13px;color:#5c6a7a;text-decoration:none;padding:6px 12px;border-radius:4px;transition:all .2s}
+.nav-links a:hover{background:#f5eed6;color:var(--navy)}
+.btn-lang{font-size:12px;font-weight:500;background:none;border:1px solid rgba(212,175,55,.3);color:var(--gold);padding:6px 14px;border-radius:4px;cursor:pointer;transition:all .2s}
+.btn-lang:hover{background:var(--cream)}
+
+/* Hero */
+.hero{min-height:90vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:100px 20px 60px;background:linear-gradient(160deg,var(--navy) 0%,var(--navy-light) 50%,#0d1f30 100%);color:#fff;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 70% 30%,rgba(212,175,55,.08) 0%,transparent 60%)}
+.hero h1{font-family:"Playfair Display",serif;font-size:clamp(34px,7vw,64px);font-weight:700;color:var(--gold);margin-bottom:12px;letter-spacing:-.01em;position:relative}
+.hero .sub{font-size:clamp(14px,2.5vw,18px);color:rgba(255,255,255,.65);max-width:540px;margin-bottom:32px;line-height:1.6;position:relative}
+.hero .cta-group{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;position:relative}
+.btn-pri{display:inline-block;font-size:14px;font-weight:600;background:var(--gold);color:var(--navy);border:none;padding:13px 32px;border-radius:4px;cursor:pointer;text-decoration:none;transition:all .2s}
+.btn-pri:hover{background:#c49a2c;transform:translateY(-1px)}
+.btn-sec{display:inline-block;font-size:14px;font-weight:500;background:transparent;color:#fff;border:2px solid rgba(255,255,255,.4);padding:13px 32px;border-radius:4px;cursor:pointer;text-decoration:none;transition:all .2s}
+.btn-sec:hover{border-color:rgba(255,255,255,.7)}
+
+/* Section */
+section{padding:80px 20px;max-width:1100px;margin:0 auto}
+.sec-title{text-align:center;margin-bottom:48px}
+.sec-title h2{font-family:"Playfair Display",serif;font-size:clamp(26px,4vw,38px);color:var(--navy);margin-bottom:8px}
+.sec-title .tag{display:inline-block;font-size:12px;font-weight:600;letter-spacing:.12em;color:var(--gold);text-transform:uppercase;margin-bottom:8px}
+
+/* Tier toggle */
+.tier-toggle{display:flex;justify-content:center;gap:8px;margin-bottom:40px}
+.tier-btn{font-size:13px;font-weight:500;background:none;border:1px solid #e0e0e0;color:#5c6a7a;padding:8px 20px;border-radius:4px;cursor:pointer;transition:all .2s}
+.tier-btn.active{background:var(--navy);color:var(--gold);border-color:var(--navy)}
+
+/* Package cards */
+.pkg-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px}
+.pkg-card{background:#fff;border:1px solid #eee;border-radius:8px;overflow:hidden;transition:all .3s;display:flex;flex-direction:column}
+.pkg-card:hover{box-shadow:0 8px 30px rgba(0,0,0,.1);transform:translateY(-2px)}
+.pkg-img{height:180px;background:linear-gradient(135deg,var(--navy-light),var(--navy));display:flex;align-items:center;justify-content:center;position:relative}
+.pkg-img .pkg-icon{font-size:48px;opacity:.3;color:#fff}
+.pkg-badge{position:absolute;top:12px;right:12px;background:var(--gold);color:var(--navy);font-size:11px;font-weight:700;padding:4px 12px;border-radius:4px}
+.pkg-body{padding:24px;flex:1;display:flex;flex-direction:column}
+.pkg-body h3{font-size:18px;font-weight:700;color:var(--navy);margin-bottom:4px}
+.pkg-body .dur{font-size:13px;color:#888;margin-bottom:12px}
+.pkg-body .desc{font-size:13px;color:#555;line-height:1.6;margin-bottom:16px;flex:1}
+.pkg-body .price{font-size:22px;font-weight:700;color:var(--navy);margin-bottom:4px}
+.pkg-body .price small{font-size:12px;font-weight:400;color:#888}
+.pkg-body .route{font-size:11px;color:var(--gold);font-weight:500;margin-bottom:16px}
+.pkg-btn{display:inline-block;width:100%;text-align:center;font-size:13px;font-weight:600;background:var(--navy);color:var(--gold);border:none;padding:12px;border-radius:4px;cursor:pointer;text-decoration:none;transition:all .2s}
+.pkg-btn:hover{background:var(--navy-light)}
+
+/* Highlight bar */
+.highlight-bar{background:var(--cream);padding:32px 0;text-align:center}
+.highlight-bar .items{display:flex;justify-content:center;gap:40px;flex-wrap:wrap;max-width:900px;margin:0 auto;padding:0 20px}
+.highlight-bar .item{text-align:center}
+.highlight-bar .item .num{font-family:"Playfair Display",serif;font-size:28px;font-weight:700;color:var(--navy)}
+.highlight-bar .item .lbl{font-size:12px;color:#888;margin-top:2px}
+
+/* Contact */
+#contact{background:var(--navy);color:#fff;text-align:center}
+#contact .sec-title h2{color:var(--gold)}
+#contact .sec-title .tag{color:rgba(255,255,255,.5)}
+#contact p{max-width:500px;margin:0 auto 24px;color:rgba(255,255,255,.65);font-size:14px;line-height:1.7}
+.contact-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+
+footer{background:#0d1f30;color:rgba(255,255,255,.4);text-align:center;padding:32px 20px;font-size:12px;letter-spacing:.04em}
+
+/* Modal */
+.modal-overlay{display:none;position:fixed;inset:0;z-index:500;background:rgba(0,0,0,.6);align-items:center;justify-content:center}
+.modal-overlay.show{display:flex}
+.modal{background:#fff;border-radius:8px;padding:32px;max-width:600px;width:90%;max-height:80vh;overflow-y:auto;position:relative}
+.modal h3{font-size:20px;color:var(--navy);margin-bottom:16px}
+.modal .itinerary{font-size:13px;line-height:1.8;color:#555}
+.modal .itinerary h4{color:var(--navy);margin:14px 0 4px;font-size:15px}
+.modal .itinerary .day{color:var(--gold);font-weight:600;margin-top:10px}
+.modal-close{position:absolute;top:12px;right:16px;font-size:22px;border:none;background:none;cursor:pointer;color:#888}
+.modal-close:hover{color:#333}
+
+/* Responsive */
+@media(max-width:640px){
+  .nav-links a{font-size:11px;padding:4px 8px}
+  .pkg-grid{grid-template-columns:1fr}
+  section{padding:60px 16px}
+  .hero{padding:80px 16px 40px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo" onclick="scrollToTop()">RESONATE CLUB</div>
+  <div class="nav-links">
+    <a href="#korea" class="en">Korea Tours</a><a href="#korea" class="ko">한국 투어</a>
+    <a href="#usa" class="en">USA Tours</a><a href="#usa" class="ko">미국 투어</a>
+    <a href="#contact" class="en">Contact</a><a href="#contact" class="ko">문의</a>
+    <button class="btn-lang" onclick="toggleLang()"><span id="langLabel">KO</span></button>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <h1>RESONATE CLUB</h1>
+  <div class="sub en">Premium curated journeys between Korea and the United States — where culture, cuisine, and world-class golf converge.</div>
+  <div class="sub ko">한국과 미국을 잇는 프리미엄 큐레이션 여행 — 문화, 미식, 그리고 세계적인 골프가 만나는 곳.</div>
+  <div class="cta-group">
+    <a href="#korea" class="btn-pri en">Explore Korea Packages</a>
+    <a href="#korea" class="btn-pri ko">한국 패키지 보기</a>
+    <a href="#usa" class="btn-sec en">USA Golf Tours</a>
+    <a href="#usa" class="btn-sec ko">미국 골프 투어</a>
+  </div>
+</section>
+
+<!-- Highlight bar -->
+<div class="highlight-bar">
+  <div class="items">
+    <div class="item"><div class="num">6+</div><div class="lbl en">Korea Packages</div><div class="lbl ko">한국 패키지</div></div>
+    <div class="item"><div class="num">13D</div><div class="lbl en">California Golf Tour</div><div class="lbl ko">캘리포니아 골프 투어</div></div>
+    <div class="item"><div class="num">5★</div><div class="lbl en">Curated Experience</div><div class="lbl ko">프리미엄 큐레이션</div></div>
+    <div class="item"><div class="num">24/7</div><div class="lbl en">Concierge</div><div class="lbl ko">컨시어지</div></div>
+  </div>
+</div>
+
+<!-- KOREA INBOUND PACKAGES -->
+<section id="korea">
+  <div class="sec-title">
+    <div class="tag en">KOREA INBOUND</div><div class="tag ko">한국 인바운드</div>
+    <h2 class="en">Discover Korea</h2><h2 class="ko">한국을 발견하다</h2>
+  </div>
+
+  <!-- Tier toggle -->
+  <div class="tier-toggle">
+    <button class="tier-btn active" onclick="switchTier('luxury')"><span class="en">✦ Luxury Tier</span><span class="ko">✦ 럭셔리</span></button>
+    <button class="tier-btn" onclick="switchTier('standard')"><span class="en">Standard Tier</span><span class="ko">스탠다드</span></button>
+  </div>
+
+  <!-- Luxury packages -->
+  <div id="tier-luxury" class="pkg-grid">
+
+    <div class="pkg-card">
+      <div class="pkg-img"><span class="pkg-icon">🏙️</span><span class="pkg-badge en">Best Value</span><span class="pkg-badge ko">인기</span></div>
+      <div class="pkg-body">
+        <h3 class="en">Seoul Express</h3><h3 class="ko">Seoul Express</h3>
+        <div class="dur en">4 Days / 3 Nights</div><div class="dur ko">4일 / 3박</div>
+        <div class="desc en">VIP airport service, Michelin dining, private palace tour, K-beauty spa, DMZ, noraebang night. Perfect for first-timers with limited time.</div>
+        <div class="desc ko">VIP 공항 서비스, 미슐랭 다이닝, 프라이빗 궁전 투어, K-뷰티 스파, DMZ, 노래방. 시간이 부족한 첫 방문객을 위한 완벽한 패키지.</div>
+        <div class="price">$2,890 <small>/person</small></div>
+        <div class="route en">Route: Seoul</div><div class="route ko">코스: 서울</div>
+        <button class="pkg-btn" onclick="openModal('seoul-express')"><span class="en">View Itinerary →</span><span class="ko">일정 보기 →</span></button>
+      </div>
+    </div>
+
+    <div class="pkg-card">
+      <div class="pkg-img"><span class="pkg-icon">⛩️</span><span class="pkg-badge en">Most Popular</span><span class="pkg-badge ko">베스트</span></div>
+      <div class="pkg-body">
+        <h3 class="en">Korean Odyssey</h3><h3 class="ko">Korean Odyssey</h3>
+        <div class="dur en">7 Days / 6 Nights</div><div class="dur ko">7일 / 6박</div>
+        <div class="desc en">Seoul → Gyeongju → Busan. UNESCO temples, KTX bullet train, private yacht, K-pop studio, Michelin dining, DMZ, beach sunsets.</div>
+        <div class="desc ko">서울 → 경주 → 부산. 유네스코 사찰, KTX, 프라이빗 요트, K팝 스튜디오, 미슐랭, DMZ, 해변 석양.</div>
+        <div class="price">$5,490 <small>/person</small></div>
+        <div class="route en">Route: Seoul → Gyeongju → Busan</div><div class="route ko">코스: 서울 → 경주 → 부산</div>
+        <button class="pkg-btn" onclick="openModal('korean-odyssey')"><span class="en">View Itinerary →</span><span class="ko">일정 보기 →</span></button>
+      </div>
+    </div>
+
+    <div class="pkg-card">
+      <div class="pkg-img"><span class="pkg-icon">🌋</span><span class="pkg-badge en">Ultimate</span><span class="pkg-badge ko">얼티밋</span></div>
+      <div class="pkg-body">
+        <h3 class="en">Complete Korea</h3><h3 class="ko">Complete Korea</h3>
+        <div class="dur en">13 Days / 12 Nights</div><div class="dur ko">13일 / 12박</div>
+        <div class="desc en">The full peninsula: Seoul → Andong → Gyeongju → Busan → Jeju. Helicopter, hanok stays, Hallasan hike, haenyeo divers, private jets.</div>
+        <div class="desc ko">한반도 완전일주: 서울 → 안동 → 경주 → 부산 → 제주. 헬리콥터, 한옥 숙박, 한라산 트레킹, 해녀 체험, 프라이빗 제트.</div>
+        <div class="price">$11,900 <small>/person</small></div>
+        <div class="route en">Route: Seoul → Andong → Gyeongju → Busan → Jeju</div><div class="route ko">코스: 서울 → 안동 → 경주 → 부산 → 제주</div>
+        <button class="pkg-btn" onclick="openModal('complete-korea')"><span class="en">View Itinerary →</span><span class="ko">일정 보기 →</span></button>
+      </div>
+    </div>
+
+    <div class="pkg-card">
+      <div class="pkg-img"><span class="pkg-icon">💍</span><span class="pkg-badge en">Honeymoon</span><span class="pkg-badge ko">허니문</span></div>
+      <div class="pkg-body">
+        <h3 class="en">Korea for Two</h3><h3 class="ko">Korea for Two</h3>
+        <div class="dur en">13 Days / 12 Nights</div><div class="dur ko">13일 / 12박</div>
+        <div class="desc en">Honeymoon edition: private jets, helicopter Jeju tour, hanbok wedding photoshoot, couple's spa every 3 days, penthouse suites.</div>
+        <div class="desc ko">신혼여행 에디션: 프라이빗 제트, 제주 헬기 투어, 한복 웨딩 촬영, 3일마다 커플 스파, 펜트하우스 스위트.</div>
+        <div class="price">$16,500 <small>/couple</small></div>
+        <div class="route en">Route: Seoul → Andong → Gyeongju → Busan → Jeju</div><div class="route ko">코스: 서울 → 안동 → 경주 → 부산 → 제주</div>
+        <button class="pkg-btn" onclick="openModal('korea-for-two')"><span class="en">View Itinerary →</span><span class="ko">일정 보기 →</span></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Standard packages (hidden by default) -->
+  <div id="tier-standard" class="pkg-grid" style="display:none">
+
+    <div class="pkg-card">
+      <div class="pkg-img"><span class="pkg-icon">🏙️</span><span class="pkg-badge en">Value</span><span class="pkg-badge ko">가성비</span></div>
+      <div class="pkg-body">
+        <h3 class="en">Seoul in a Flash</h3><h3 class="ko">Seoul in a Flash</h3>
+        <div class="dur en">4 Days / 3 Nights</div><div class="dur ko">4일 / 3박</div>
+        <div class="desc en">Group tour. Palace + hanbok, DMZ, Hongdae nightlife, market food crawls. Small-group authentic Seoul at unbeatable value.</div>
+        <div class="desc ko">그룹 투어. 궁전+한복, DMZ, 홍대 클럽, 시장 먹방. 소그룹으로 즐기는 진짜 서울.</div>
+        <div class="price">$1,180 <small>/person</small></div>
+        <div class="route en">Route: Seoul</div><div class="route ko">코스: 서울</div>
+        <button class="pkg-btn" onclick="openModal('seoul-flash')"><span class="en">View Itinerary →</span><span class="ko">일정 보기 →</span></button>
+      </div>
+    </div>
+
+    <div class="pkg-card">
+      <div class="pkg-img"><span class="pkg-icon">⛩️</span><span class="pkg-badge en">Best Seller</span><span class="pkg-badge ko">베스트</span></div>
+      <div class="pkg-body">
+        <h3 class="en">Korean Discovery</h3><h3 class="ko">Korean Discovery</h3>
+        <div class="dur en">7 Days / 6 Nights</div><div class="dur ko">7일 / 6박</div>
+        <div class="desc en">Seoul → Gyeongju → Busan. KTX, UNESCO temples, local BBQ, beach towns. The essential Korea route with friends.</div>
+        <div class="desc ko">서울 → 경주 → 부산. KTX, 유네스코 사찰, 로컬 BBQ, 해변 마을. 친구들과 함께하는 필수 코스.</div>
+        <div class="price">$2,180 <small>/person</small></div>
+        <div class="route en">Route: Seoul → Gyeongju → Busan</div><div class="route ko">코스: 서울 → 경주 → 부산</div>
+        <button class="pkg-btn" onclick="openModal('korean-discovery')"><span class="en">View Itinerary →</span><span class="ko">일정 보기 →</span></button>
+      </div>
+    </div>
+
+    <div class="pkg-card">
+      <div class="pkg-img"><span class="pkg-icon">🌋</span><span class="pkg-badge en">Full Korea</span><span class="pkg-badge ko">풀코스</span></div>
+      <div class="pkg-body">
+        <h3 class="en">Ultimate Korea</h3><h3 class="ko">Ultimate Korea</h3>
+        <div class="dur en">13 Days / 12 Nights</div><div class="dur ko">13일 / 12박</div>
+        <div class="desc en">The whole peninsula: Seoul → Andong hanok → Gyeongju → Busan → Jeju Island. 13 days, small group, lifetime memories.</div>
+        <div class="desc ko">한반도 완주: 서울 → 안동 한옥 → 경주 → 부산 → 제주. 13일, 소그룹, 평생의 추억.</div>
+        <div class="price">$3,980 <small>/person</small></div>
+        <div class="route en">Route: Seoul → Andong → Gyeongju → Busan → Jeju</div><div class="route ko">코스: 서울 → 안동 → 경주 → 부산 → 제주</div>
+        <button class="pkg-btn" onclick="openModal('ultimate-korea')"><span class="en">View Itinerary →</span><span class="ko">일정 보기 →</span></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- USA GOLF TOURS (Korean) -->
+<section id="usa" style="background:#f9f9f9">
+  <div class="sec-title">
+    <div class="tag en">USA GOLF TOURS</div><div class="tag ko">미국 골프 투어</div>
+    <h2 class="en">California Golf & Culture</h2><h2 class="ko">캘리포니아 골프 & 문화</h2>
+    <p style="max-width:600px;margin:8px auto 0;color:#888;font-size:14px" class="en">Premium 13-day tour from Korea — world-class golf courses, Michelin dining, and iconic California experiences.</p>
+    <p style="max-width:600px;margin:8px auto 0;color:#888;font-size:14px" class="ko">한국 출발 프리미엄 13일 투어 — 세계적인 골프 코스, 미슐랭 다이닝, 그리고 아이코닉한 캘리포니아 경험.</p>
+  </div>
+
+  <div class="pkg-grid">
+
+    <div class="pkg-card">
+      <div class="pkg-img"><span class="pkg-icon">🏌️</span><span class="pkg-badge en">Premium</span><span class="pkg-badge ko">프리미엄</span></div>
+      <div class="pkg-body">
+        <h3 class="en">California Golf 13 Days</h3><h3 class="ko">캘리포니아 골프 13일</h3>
+        <div class="dur en">13 Days / 12 Nights · LA ↔ California Coast</div><div class="dur ko">13일 / 12박 · LA ↔ 캘리포니아 해안</div>
+        <div class="desc en">Sandpiper GC, The Crossings, Trump National, Alisal Ranch, Warner Springs Ranch. 10+ golf rounds, Michelin restaurants, Korean-guided, all-inclusive.</div>
+        <div class="desc ko">샌드파이퍼, 더 크로싱스, 트럼프 내셔널, 알리살 랜치, 워너 스프링스 랜치. 10+ 라운드 골프, 미슐랭 레스토랑, 한국인 가이드, 올인클루시브.</div>
+        <div class="price en">Contact for pricing</div><div class="price ko">가격 문의</div>
+        <div class="route en">Route: LA → Santa Barbara → Solvang → Carlsbad → Temecula → LA</div><div class="route ko">코스: LA → 샌타바버라 → 솔뱅 → 칼즈배드 → 테메큘라 → LA</div>
+        <button class="pkg-btn" onclick="openModal('california-golf')"><span class="en">View Details →</span><span class="ko">상세 보기 →</span></button>
+      </div>
+    </div>
+
+    <div class="pkg-card">
+      <div class="pkg-img"><span class="pkg-icon">🌟</span><span class="pkg-badge en">Luxury</span><span class="pkg-badge ko">럭셔리</span></div>
+      <div class="pkg-body">
+        <h3 class="en">5-Course Championship</h3><h3 class="ko">5대 챔피언십 코스</h3>
+        <div class="dur en">13 Days / 12 Nights</div><div class="dur ko">13일 / 12박</div>
+        <div class="desc en">Sandpiper GC, Trump National, Golf Club of California, The Crossings, Cross Creek. 5 championship courses rated 4.3★+. All-inclusive with Korean guide.</div>
+        <div class="desc ko">샌드파이퍼, 트럼프 내셔널, 골프클럽 오브 캘리포니아, 더 크로싱스, 크로스 크릭. 평점 4.3★ 이상 5대 챔피언십 코스. 한국인 가이드 올인클루시브.</div>
+        <div class="price en">Contact for pricing</div><div class="price ko">가격 문의</div>
+        <div class="route en">Route: LA → Santa Barbara → San Diego → Temecula</div><div class="route ko">코스: LA → 샌타바버라 → 샌디에이고 → 테메큘라</div>
+        <button class="pkg-btn" onclick="openModal('california-golf')"><span class="en">View Details →</span><span class="ko">상세 보기 →</span></button>
+      </div>
+    </div>
+
+    <div class="pkg-card">
+      <div class="pkg-img"><span class="pkg-icon">🍷</span><span class="pkg-badge en">Golf + Wine</span><span class="pkg-badge ko">골프+와인</span></div>
+      <div class="pkg-body">
+        <h3 class="en">Golf & Wine Country</h3><h3 class="ko">골프 & 와인 컨트리</h3>
+        <div class="dur en">13 Days / 12 Nights</div><div class="dur ko">13일 / 12박</div>
+        <div class="desc en">Combine championship golf with Santa Barbara and Temecula wine country. Vineyard tastings between rounds. The perfect blend of sport and leisure.</div>
+        <div class="desc ko">챔피언십 골프와 샌타바버라·테메큘라 와인 컨트리를 결합. 라운드 사이 와이너리 테이스팅. 스포츠와 여유의 완벽한 조화.</div>
+        <div class="price en">Contact for pricing</div><div class="price ko">가격 문의</div>
+        <div class="route en">Route: LA → Santa Barbara Wine Trail → Temecula Valley</div><div class="route ko">코스: LA → 샌타바버라 와인 트레일 → 테메큘라 밸리</div>
+        <button class="pkg-btn" onclick="openModal('california-golf')"><span class="en">View Details →</span><span class="ko">상세 보기 →</span></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact">
+  <div class="sec-title">
+    <div class="tag en">CONTACT</div><div class="tag ko">문의</div>
+    <h2 class="en">Let's Plan Your Journey</h2><h2 class="ko">여행을 계획해보세요</h2>
+  </div>
+  <p class="en">Every itinerary is tailored to you. Reach out and we'll craft the perfect Korea or California experience — at your pace, your style, your budget.</p>
+  <p class="ko">모든 일정은 당신에게 맞춰집니다. 연락 주시면 완벽한 한국 또는 캘리포니아 경험을 만들어드립니다 — 당신의 속도, 스타일, 예산에 맞게.</p>
+  <div class="contact-btns">
+    <a href="https://open.kakao.com/o/sresonatetour" target="_blank" class="btn-pri" style="background:#fee500;color:#391b1b">💬 KakaoTalk</a>
+    <a href="mailto:resonateclub@gmail.com" class="btn-sec">✉️ Email</a>
+  </div>
+</section>
+
+<footer>
+  © 2026 Resonate Club · resonatetour.com & resonateclub.com · Premium Korea ↔ USA Travel
+</footer>
+
+<!-- Modal -->
+<div class="modal-overlay" id="modal-overlay" onclick="closeModal(event)">
+  <div class="modal" id="modal-content" onclick="event.stopPropagation()">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <div id="modal-body"></div>
+  </div>
+</div>
+
+<script>
+// Language
+let curLang = 'en';
+function toggleLang() {
+  curLang = curLang === 'en' ? 'ko' : 'en';
+  document.documentElement.setAttribute('data-lang', curLang);
+  document.getElementById('langLabel').textContent = curLang === 'en' ? 'KO' : 'EN';
+}
+document.getElementById('langLabel').textContent = 'KO';
+
+// Tier toggle
+function switchTier(tier) {
+  document.querySelectorAll('.tier-btn').forEach(b => b.classList.toggle('active', b.textContent.includes(tier === 'luxury' ? 'Luxury' : 'Standard') || b.textContent.includes(tier === 'luxury' ? '럭셔리' : '스탠다드')));
+  document.getElementById('tier-luxury').style.display = tier === 'luxury' ? '' : 'none';
+  document.getElementById('tier-standard').style.display = tier === 'standard' ? '' : 'none';
+}
+
+// Modal
+const ITINERARIES = {
+  'seoul-express': {
+    en: `<h3>Seoul Express — 4 Days / 3 Nights · $2,890/person</h3><div class="itinerary"><div class="day">Day 1 — Arrival & Skyline Welcome</div><p>VIP Meet & Greet at Incheon → Mercedes S-Class to Signiel Seoul (76F+) → Welcome dinner at Jungsik (2★ Michelin) → Charles H. cocktail bar</p><div class="day">Day 2 — Royal Seoul & K-Culture</div><p>Gyeongbokgung Palace early access + hanbok photoshoot → Tosokchon Samgyetang lunch → Bukchon Hanok Village + calligraphy master → Mingles (2★) dinner → DDP night tour</p><div class="day">Day 3 — DMZ & Modern Korea</div><p>Private DMZ tour with military historian → Tofu village lunch → Garosugil shopping with fashion consultant → Born & Brewed K-BBQ → Luxury noraebang</p><div class="day">Day 4 — Wellness & Departure</div><p>Sulwhasoo Spa 90-min treatment → Gwangjang Market food crawl → Leeum Samsung Museum curator tour → VIP airport departure</p><p style="margin-top:16px"><strong>Includes:</strong> 3 nights Signiel, all meals, private guide, airport transfers, WiFi egg, departure gift. <strong>Excludes:</strong> international flights, travel insurance.</p></div>`,
+    ko: `<h3>Seoul Express — 4일 / 3박 · $2,890/인</h3><div class="itinerary"><div class="day">1일차 — 도착 & 스카이라인 웰컴</div><p>인천공항 VIP 미트앤그리트 → 메르세데스 S클래스로 시그니엘 서울 (76F+) → 정식당 (미슐랭 2스타) 환영 만찬 → 찰스 H. 칵테일 바</p><div class="day">2일차 — 로열 서울 & K-컬처</div><p>경복궁 얼리 액세스 + 한복 촬영 → 토속촌 삼계탕 → 북촌 한옥마을 + 서예 체험 → 밍글스 (2스타) 디너 → DDP 야간 투어</p><div class="day">3일차 — DMZ & 모던 코리아</div><p>군사 역사학자와 프라이빗 DMZ 투어 → 두부마을 점심 → 가로수길 패션 컨설턴트 쇼핑 → 본앤브루드 K-BBQ → 럭셔리 노래방</p><div class="day">4일차 — 웰니스 & 출발</div><p>설화수 스파 90분 트리트먼트 → 광장시장 먹방 → 리움 삼성미술관 큐레이터 투어 → VIP 공항 출발</p><p style="margin-top:16px"><strong>포함:</strong> 시그니엘 3박, 전 식사, 프라이빗 가이드, 공항 픽업, WiFi egg, 기념품. <strong>불포함:</strong> 국제선 항공, 여행자보험.</p></div>`
+  },
+  'korean-odyssey': {
+    en: `<h3>Korean Odyssey — 7 Days / 6 Nights · $5,490/person</h3><div class="itinerary"><div class="day">Day 1 — Arrival & Han River</div><p>Incheon VIP → Josun Palace Gangnam → Private Han River yacht dinner with champagne (5-course, Banpo Bridge fountain show)</p><div class="day">Day 2 — Royal & Traditional Seoul</div><p>Gyeongbokgung + hanbok → Balwoo Gongyang temple cuisine (Michelin) → Insadong gallery + hanji artisan + tea ceremony → Kwon Sook Soo (2★) → Ikseon-dong craft makgeolli</p><div class="day">Day 3 — DMZ & K-Culture Deep Dive</div><p>Private DMZ tour → HYBE Insight or SMTOWN → K-pop recording studio session → Hongdae street culture + BBQ → Club crawl with VIP table</p><div class="day">Day 4 — Seoul → Gyeongju</div><p>KTX First Class → Lahan Select Gyeongju → Bulguksa Temple + Seokguram Grotto + Cheomseongdae → Donggung Palace night walk → Hanwoo BBQ</p><div class="day">Day 5 — Gyeongju → Busan</div><p>Golgulsa Sunmudo martial arts → Private transfer to Signiel Busan → Millak Raw Fish Center → Haedong Yonggungsa → Haeundae sunset → Michelin dinner</p><div class="day">Day 6 — Busan Culture & Coast</div><p>Gamcheon Culture Village → Jagalchi Fish Market (live octopus) → Private yacht charter → Farewell dinner with makgeolli toast</p><div class="day">Day 7 — Departure</div><p>Donginbi red ginseng spa → Transfer to Gimhae Airport or KTX to Incheon → VIP lounge → Premium skincare departure gift</p><p style="margin-top:16px"><strong>Includes:</strong> 6 nights luxury accommodation, 12+ meals (3 Michelin), all tours/activities, private English guide, KTX + transfers, WiFi, departure gift.</p></div>`,
+    ko: `<h3>Korean Odyssey — 7일 / 6박 · $5,490/인</h3><div class="itinerary"><div class="day">1일차 — 도착 & 한강</div><p>인천 VIP → 조선팰리스 강남 → 한강 프라이빗 요트 디너 (5코스, 반포대교 분수쇼)</p><div class="day">2일차 — 로열 & 전통 서울</div><p>경복궁+한복 → 발우공양 사찰음식 (미슐랭) → 인사동 갤러리+한지 장인+다도 → 권숙수 (2스타) → 익선동 수제 막걸리</p><div class="day">3일차 — DMZ & K-컬처</div><p>프라이빗 DMZ → 하이브 인사이트 또는 SMTOWN → K팝 녹음실 → 홍대 길거리 문화+BBQ → VIP 클럽 크롤링</p><div class="day">4일차 — 서울 → 경주</div><p>KTX 퍼스트 클래스 → 라한셀렉트 경주 → 불국사+석굴암+첨성대 → 동궁과 월지 야경 → 한우 BBQ</p><div class="day">5일차 — 경주 → 부산</div><p>골굴사 선무도 → 시그니엘 부산 → 민락동 활어회 → 해동용궁사 → 해운대 석양 → 미슐랭 디너</p><div class="day">6일차 — 부산 문화 & 해안</div><p>감천문화마을 → 자갈치시장 (산낙지) → 프라이빗 요트 → 막걸리 건배 환송 만찬</p><div class="day">7일차 — 출발</div><p>동인비 홍삼 스파 → 김해공항 또는 KTX 인천 → VIP 라운지 → 프리미엄 스킨케어 기념품</p></div>`
+  },
+  'complete-korea': {
+    en: `<h3>Complete Korea — 13 Days / 12 Nights · $11,900/person</h3><div class="itinerary"><div class="day">Route: Seoul (4N) → Andong (1N) → Gyeongju (2N) → Busan (2N) → Jeju (3N)</div><p>The ultimate Korean journey. Helicopter transfer option, Four Seasons Seoul, private palace dining with traditional performance (pansori, fan dance), Changdeokgung Secret Garden, 3★ La Yeon at The Shilla. Andong Hahoe Village with mask dance, Dosan Seowon at sunrise. Gyeongju UNESCO deep dive. Park Hyatt Busan, Jeju Island: Hallasan hike, haenyeo divers, O'Sulloc tea fields, Bonte Museum (Tadao Ando), private yacht at sunset. The Shilla Seoul finale. 20+ meals including multiple Michelin stars. All private transport + domestic flights.</p><p style="margin-top:16px"><strong>Includes:</strong> 12 nights ultra-luxury, 20+ meals, full itinerary, 7+ days private guide, domestic flights, yacht, spa, departure gift package.</p></div>`,
+    ko: `<h3>Complete Korea — 13일 / 12박 · $11,900/인</h3><div class="itinerary"><div class="day">코스: 서울(4박) → 안동(1박) → 경주(2박) → 부산(2박) → 제주(3박)</div><p>한국 여행의 결정판. 헬리콥터 옵션, 포시즌스 서울, 한국의집 프라이빗 궁중 만찬 (판소리, 부채춤), 창덕궁 비원, 신라호텔 라연 (3스타). 안동 하회마을 탈춤, 도산서원 새벽. 경주 유네스코 딥다이브. 파크하얏트 부산, 제주: 한라산 트레킹, 해녀 체험, 오설록 차밭, 본태박물관 (안도 타다오), 선셋 프라이빗 요트. 신라호텔 피날레. 미슐랭 다수 포함 20+ 식사. 모든 프라이빗 이동 + 국내선 항공.</p></div>`
+  },
+  'korea-for-two': {
+    en: `<h3>Korea for Two — 13 Days / 12 Nights · $16,500/couple</h3><div class="itinerary"><div class="day">Honeymoon / Couples Edition — All Premium Upgrades</div><p>All top suites (Four Seasons Presidential, Park Hyatt Busan Diplomat, JW Marriott Jeju Penthouse). Private jet Seoul–Jeju (Gulfstream). Helicopter tour of Hallasan crater. Private Korean chef for two nights. Hanbok wedding photoshoot at Gyeongbokgung with professional team. Couple's spa every 3 days. Champagne on arrival in every city. 24/7 WhatsApp concierge. The most romantic way to experience Korea — exclusively private, no group activities.</p></div>`,
+    ko: `<h3>Korea for Two — 13일 / 12박 · $16,500/커플</h3><div class="itinerary"><div class="day">허니문 / 커플 에디션 — 올 프리미엄 업그레이드</div><p>전 구간 최상위 스위트 (포시즌스 프레지덴셜, 파크하얏트 부산 디플로맷, JW메리어트 제주 펜트하우스). 서울-제주 프라이빗 제트. 한라산 헬기 투어. 2박 프라이빗 셰프. 경복궁 한복 웨딩 촬영 (전문 팀). 3일마다 커플 스파. 도시마다 도착 샴페인. 24/7 왓츠앱 컨시어지. 한국을 경험하는 가장 로맨틱한 방법 — 완전 프라이빗, 그룹 활동 없음.</p></div>`
+  },
+  'seoul-flash': {
+    en: `<h3>Seoul in a Flash — 4 Days / 3 Nights · $1,180/person</h3><div class="itinerary"><div class="day">Day 1 — Arrival & Myeongdong</div><p>AREX self-transfer → Ibis Insadong → Welcome dinner at Myeongdong Kyoja (since 1966) → Myeongdong street food crawl → Optional N Seoul Tower</p><div class="day">Day 2 — Royal Seoul</div><p>Gyeongbokgung Palace with hanbok → Tosokchon Samgyetang → Bukchon Hanok Village → Insadong free time → Ikseon-dong hanok alley → Korean BBQ + soju dinner → Optional noraebang</p><div class="day">Day 3 — DMZ & Hongdae</div><p>Group DMZ half-day tour → Lunch near Hongdae → Free afternoon (concept cafes, vintage shops) → Korean fried chicken dinner → Club crawl (2 clubs included)</p><div class="day">Day 4 — Markets & Departure</div><p>Gwangjang Market food crawl → DDP photo session → Free time → Departure gift: K-beauty set → AREX to airport</p><p style="margin-top:16px"><strong>Group size:</strong> 8–12 travelers. <strong>Includes:</strong> 3 nights 3.5★, 5 meals, DMZ, hanbok, T-money card, WiFi egg, guide.</p></div>`,
+    ko: `<h3>Seoul in a Flash — 4일 / 3박 · $1,180/인</h3><div class="itinerary"><div class="day">1일차 — 도착 & 명동</div><p>AREX 자가 이동 → 이비스 인사동 → 명동교자 환영 만찬 (1966년 전통) → 명동 길거리 음식 투어 → N서울타워 옵션</p><div class="day">2일차 — 로열 서울</div><p>경복궁 + 한복 → 토속촌 삼계탕 → 북촌 한옥마을 → 인사동 자유시간 → 익선동 한옥 골목 → 한식 BBQ + 소주 → 노래방 옵션</p><div class="day">3일차 — DMZ & 홍대</div><p>그룹 DMZ 반나절 투어 → 홍대 점심 → 자유 오후 (컨셉 카페, 빈티지 샵) → 치맥 디너 → 클럽 크롤링 (2곳 입장 포함)</p><div class="day">4일차 — 시장 & 출발</div><p>광장시장 먹방 → DDP 포토 → 자유시간 → K-뷰티 기념품 → AREX 공항</p></div>`
+  },
+  'korean-discovery': {
+    en: `<h3>Korean Discovery — 7 Days / 6 Nights · $2,180/person</h3><div class="itinerary"><div class="day">Route: Seoul (3N) → Gyeongju (1N) → Busan (2N)</div><p>Group tour (8–12 travelers). KTX bullet train to Gyeongju. Bulguksa Temple, Seokguram Grotto, Cheomseongdae, Donggung Palace night lights. Busan: Gamcheon Culture Village, Jagalchi Fish Market, Haedong Yonggungsa seaside temple, Haeundae Beach. All the Korean essentials at an incredible value. Seoul DMZ, palace, Hongdae nightlife. Local BBQ, market food crawls, and a guide who becomes your friend.</p></div>`,
+    ko: `<h3>Korean Discovery — 7일 / 6박 · $2,180/인</h3><div class="itinerary"><div class="day">코스: 서울(3박) → 경주(1박) → 부산(2박)</div><p>소그룹 투어 (8–12명). KTX로 경주 이동. 불국사, 석굴암, 첨성대, 동궁과 월지 야경. 부산: 감천문화마을, 자갈치시장, 해동용궁사, 해운대. 서울 DMZ, 경복궁, 홍대 나이트라이프. 로컬 BBQ, 시장 먹방. 친구가 되어주는 가이드와 함께.</p></div>`
+  },
+  'ultimate-korea': {
+    en: `<h3>Ultimate Korea — 13 Days / 12 Nights · $3,980/person</h3><div class="itinerary"><div class="day">Route: Seoul (4N) → Andong (1N) → Gyeongju (2N) → Busan (2N) → Jeju (3N)</div><p>The full peninsula, small-group style (8–12 travelers). Andong Hahoe Village + mask dance + hanok stay. Gyeongju UNESCO heritage deep dive. Jeju Island: Seongsan Ilchulbong, haenyeo divers, Hallasan hike, O'Sulloc tea fields, black pork BBQ. Flights to Jeju included. The most comprehensive standard-tier Korea experience. 18+ meals, all transport, WiFi, guide for all 13 days.</p></div>`,
+    ko: `<h3>Ultimate Korea — 13일 / 12박 · $3,980/인</h3><div class="itinerary"><div class="day">코스: 서울(4박) → 안동(1박) → 경주(2박) → 부산(2박) → 제주(3박)</div><p>한반도 완주, 소그룹 (8–12명). 안동 하회마을 + 탈춤 + 한옥 숙박. 경주 유네스코 유산 딥다이브. 제주: 성산일출봉, 해녀 체험, 한라산 트레킹, 오설록 차밭, 흑돼지 BBQ. 제주 항공 포함. 가장 포괄적인 스탠다드 티어 한국 경험. 18+ 식사, 모든 교통, WiFi, 13일 내내 가이드.</p></div>`
+  },
+  'california-golf': {
+    en: `<h3>California Golf & Culture — 13 Days / 12 Nights</h3><div class="itinerary"><div class="day">Route: LA → Santa Barbara → Solvang → Carlsbad → Temecula → LA</div><p>Premium 13-day tour from Korea. 10+ rounds at championship courses: <strong>Sandpiper GC</strong> (Golf Digest Top 50, ocean views), <strong>Trump National</strong> (cliffside fairways), <strong>The Crossings at Carlsbad</strong>, <strong>Golf Club of California</strong>, <strong>Cross Creek</strong>, <strong>Alisal Ranch</strong>, <strong>Warner Springs Ranch</strong>. Korean-speaking guide throughout. Michelin & local dining. Santa Barbara wine country, Solvang Danish village, San Diego coast. All-inclusive: accommodation, green fees, meals, transport, guide.</p><p style="margin-top:16px"><strong>Golf Courses:</strong> 5 championship courses rated 4.3★+. <strong>Best season:</strong> March–November. <strong>Group size:</strong> Private (2–8 golfers). <strong>For pricing and availability:</strong> Contact us.</p></div>`,
+    ko: `<h3>캘리포니아 골프 & 문화 — 13일 / 12박</h3><div class="itinerary"><div class="day">코스: LA → 샌타바버라 → 솔뱅 → 칼즈배드 → 테메큘라 → LA</div><p>한국 출발 프리미엄 13일 투어. 10+ 라운드 챔피언십 코스: <strong>샌드파이퍼 GC</strong> (Golf Digest Top 50, 오션뷰), <strong>트럼프 내셔널</strong> (절벽 페어웨이), <strong>더 크로싱스 앳 칼즈배드</strong>, <strong>골프클럽 오브 캘리포니아</strong>, <strong>크로스 크릭</strong>, <strong>알리살 랜치</strong>, <strong>워너 스프링스 랜치</strong>. 한국인 가이드 전일정 동행. 미슐랭 & 로컬 다이닝. 샌타바버라 와인 컨트리, 솔뱅 덴마크 마을, 샌디에이고 해안. 올인클루시브: 숙박, 그린피, 식사, 이동, 가이드.</p><p style="margin-top:16px"><strong>골프 코스:</strong> 평점 4.3★+ 5대 챔피언십. <strong>최적기:</strong> 3월–11월. <strong>인원:</strong> 프라이빗 (2–8명). <strong>가격 및 예약 문의:</strong> 연락 주세요.</p></div>`
+  }
+};
+
+function openModal(key) {
+  var lang = document.documentElement.getAttribute('data-lang') || 'en';
+  var content = ITINERARIES[key] ? (ITINERARIES[key][lang] || ITINERARIES[key]['en']) : '<p>Details coming soon.</p>';
+  document.getElementById('modal-body').innerHTML = content;
+  document.getElementById('modal-overlay').classList.add('show');
+}
+function closeModal(e) {
+  if (e && e.target !== document.getElementById('modal-overlay')) return;
+  document.getElementById('modal-overlay').classList.remove('show');
+}
+document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeModal(); });
+
+function scrollToTop() { window.scrollTo({top:0,behavior:'smooth'}); }
+</script>
+</body>
+</html>
