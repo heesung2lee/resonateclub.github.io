@@ -316,9 +316,9 @@ Resonate Club operates two core service lines.
 
 #### Stage 5: Business Surety Insurance (Weeks 6-7)
 
-* **Surety Amount**: KRW 100,000,000 (Tourism Promotion Act Enforcement Decree, Article 15)
+* **Surety Amount**: KRW 50,000,000 base (Tourism Promotion Act Enforcement Decree, Article 15; additional KRW 200M for planned tours)
 * **Insurance Type**: Travel Agency Business Surety Insurance (Seoul Guarantee Insurance or specialized insurer)
-* **Premium**: 10-20% of surety amount (estimated at KRW 10M-20M annually)
+* **Premium**: 0.5-1% of surety amount (estimated at KRW 500K-1M annually)
 * Immediately subscribed upon receipt of Travel Agency Registration Certificate
 
 #### Stage 6: Supporting Infrastructure Setup (Weeks 6-8, Parallel)
@@ -368,16 +368,16 @@ Resonate Club operates two core service lines.
 
 | Item | Annual Amount (KRW) | Notes |
 |---|---|---|
-| **Office Rent** | 12,000,000 | KRW 1M/month, small Haeundae office |
+| **Office Rent** | 9,600,000 | KRW 800K/month, small Haeundae office |
 | **Office Deposit** | 10,000,000 | One-time initial payment |
-| **Surety Insurance Premium** | 15,000,000 | KRW 100M surety amount, 15% annual rate applied |
+| **Surety Insurance Premium** | 1,000,000 | KRW 50M surety amount, 1% annual rate applied (actual 0.5-1%) |
 | **Website Development & Operations** | 5,000,000 | Initial build + annual maintenance |
 | **Digital Marketing** | 24,000,000 | KRW 2M/month (Google, Instagram, Naver ads) |
 | **Overseas Tour Escort Personnel** | 36,000,000 | KRW 3M/month (freelance contract basis) |
 | **Accounting & Tax Agency** | 3,600,000 | KRW 300K/month |
 | **Telecom & Office Supplies** | 2,400,000 | KRW 200K/month |
-| **Contingency Reserve** | 12,000,000 | KRW 1M/month, emergency operating funds |
-| **Total** | **~120,000,000** | Annual fixed costs |
+| **Miscellaneous Expenses** | 2,400,000 | KRW 200K/month, irregular spending (replaces contingency reserve) |
+| **Total** | **~94,000,000** | Annual fixed costs (incl. deposit) |
 
 ### 6.4 Total Required Funds
 
@@ -386,11 +386,11 @@ Resonate Club operates two core service lines.
 | Capital (Paid-in) | 100,000,000 | Mandatory for Comprehensive Travel Agency |
 | Initial Establishment Costs | 2,500,000 | |
 | Office Deposit | 10,000,000 | |
-| Annual Operating Costs | 120,000,000 | |
-| Working Capital (Reserve) | 20,000,000-70,000,000 | Buffer for seasonal/exchange rate fluctuations |
-| **Total Liquidity Required** | **~150,000,000-200,000,000** | |
+| Annual Operating Costs (excl. deposit) | 84,000,000 | |
+| Working Capital (Reserve) | 10,000,000-30,000,000 | Buffer for seasonal/exchange rate fluctuations (bank deposit) |
+| **Total Liquidity Required** | **~110,000,000-150,000,000** | |
 
-> **Recommendation**: Secure total initial liquidity of **KRW 200,000,000** to ensure stable operations in the first year. Of this, KRW 100M is committed as statutory capital, with the remaining KRW 100M serving as operating funds and reserves.
+> **Recommendation**: Secure total initial liquidity of **KRW 150,000,000** to ensure stable operations in the first year. Of this, KRW 100M is committed as statutory capital, with the remaining KRW 50M serving as operating funds and reserves. This is a realistic budget reduced by KRW 50M from the previous estimate of KRW 200M.
 
 ---
 
@@ -413,8 +413,8 @@ Requirements under Tourism Promotion Act, Article 4 and Enforcement Decree, Appe
 | Requirement | Standard | Compliance Plan |
 |---|---|---|
 | **Capital** | KRW 100M+ | Representative Director cash contribution of KRW 100M → stock payment verification |
-| **Office** | Office in Haeundae-gu | Lease agreement execution (officetel/small office ~KRW 1M/month) |
-| **Surety Insurance** | KRW 100M business surety insurance | Seoul Guarantee Insurance subscription (annual premium ~KRW 15M) |
+| **Office** | Office in Haeundae-gu | Lease agreement execution (officetel/small office ~KRW 800K/month) |
+| **Surety Insurance** | KRW 50M (base) business surety insurance | Seoul Guarantee Insurance subscription (annual premium ~KRW 500K-1M) |
 | **Personnel** | 1+ licensed overseas tour escort | Freelance contract with qualified holder |
 | **Facilities** | Office furniture, communications equipment | PC, printer, telephone, internet, etc. |
 | **Business Plan** | Detailed business plan | Submission based on this proposal |
@@ -502,17 +502,17 @@ Resonate Club's core revenue model is **Cost-Plus Markup**.
 | Line A Gross Profit | 132,000,000 |
 | Line B Gross Profit | 132,000,000 |
 | **Annual Gross Profit** | **264,000,000** |
-| Annual Operating Costs | (120,000,000) |
-| **Operating Income** | **~144,000,000** |
-| Operating Margin | ~54.5% |
+| Annual Operating Costs | (94,000,000) |
+| **Operating Income** | **~170,000,000** |
+| Operating Margin | ~64.4% |
 
 ### 8.4 3-Year Revenue Projection
 
 | Year | Line A Profit | Line B Profit | Gross Profit | Operating Costs | Operating Income | Notes |
 |---|---|---|---|---|---|---|
-| **Year 1** (2026 H2~) | 132M | 132M | 264M | 120M | **144M** | Conservative scenario |
-| **Year 2** (2027) | 240M | 260M | 500M | 150M | **350M** | Brand growth, repeat customers |
-| **Year 3** (2028) | 400M | 350M | 750M | 200M | **550M** | Partner expansion, staff hiring |
+| **Year 1** (2026 H2~) | 132M | 132M | 264M | 94M | **170M** | Conservative scenario |
+| **Year 2** (2027) | 240M | 260M | 500M | 120M | **380M** | Brand growth, repeat customers |
+| **Year 3** (2028) | 400M | 350M | 750M | 180M | **570M** | Partner expansion, staff hiring |
 
 ---
 
@@ -722,7 +722,7 @@ established       Marketing        Brand elevation  platform
                   strengthened
                   
 Revenue 264M     Revenue 500M     Revenue 750M    Revenue 2B+
-Op Income 144M   Op Income 350M   Op Income 550M  Op Income 1.2B+
+Op Income 170M   Op Income 380M   Op Income 570M  Op Income 1.2B+
 ```
 
 ---
@@ -744,7 +744,7 @@ The establishment of Resonate Club as a Comprehensive Travel Agency holds high b
 * A cost-based 40% markup model provides a **transparent and predictable revenue structure**.
 
 #### Legal Perspective
-* A sufficient funding plan has been established to meet Comprehensive Travel Agency registration requirements under the Tourism Promotion Act (KRW 100M capital, KRW 100M surety insurance).
+* A sufficient funding plan has been established to meet Comprehensive Travel Agency registration requirements under the Tourism Promotion Act (KRW 100M capital, KRW 50M surety insurance).
 * A **systematic 6-8 week roadmap** from corporation establishment to business launch is in place.
 
 ### 12.2 Key Success Factors
