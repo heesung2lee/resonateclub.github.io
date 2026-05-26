@@ -1,348 +1,345 @@
-<!DOCTYPE html>
-<html lang="en" data-lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Resonate Club — Premium Korea & USA Travel</title>
-<meta name="description" content="Resonate Club — Premium curated travel packages. Discover Korea inbound tours & USA golf tours from Korea.">
-<meta name="theme-color" content="#1a3450">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-<style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--navy:#1a3450;--gold:#d4af37;--navy-light:#264460;--cream:#fdf8ed}
-html{font-size:16px;scroll-behavior:smooth}
-body{font-family:-apple-system,"Noto Sans KR",sans-serif;background:#fff;color:#1a1a2e;-webkit-font-smoothing:antialiased}
-[data-lang="en"] .ko{display:none!important}
-[data-lang="ko"] .en{display:none!important}
-
-nav{position:fixed;top:0;left:0;right:0;z-index:300;height:56px;display:flex;align-items:center;justify-content:space-between;padding:0 20px;background:rgba(255,255,255,.96);backdrop-filter:blur(20px);border-bottom:1px solid #eee}
-.nav-logo{font-family:"Playfair Display",serif;font-size:20px;font-weight:700;color:var(--gold);letter-spacing:.02em;cursor:pointer}
-.nav-links{display:flex;gap:4px;align-items:center}
-.nav-links a{font-size:13px;color:#5c6a7a;text-decoration:none;padding:6px 12px;border-radius:4px;transition:all .2s}
-.nav-links a:hover{background:#f5eed6;color:var(--navy)}
-.btn-lang{font-size:12px;font-weight:500;background:none;border:1px solid rgba(212,175,55,.3);color:var(--gold);padding:6px 14px;border-radius:4px;cursor:pointer;transition:all .2s}
-.btn-lang:hover{background:var(--cream)}
-
-/* Hero */
-.hero{min-height:90vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:100px 20px 60px;background:linear-gradient(160deg,var(--navy) 0%,var(--navy-light) 50%,#0d1f30 100%);color:#fff;position:relative;overflow:hidden}
-.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 70% 30%,rgba(212,175,55,.08) 0%,transparent 60%)}
-.hero h1{font-family:"Playfair Display",serif;font-size:clamp(34px,7vw,64px);font-weight:700;color:var(--gold);margin-bottom:12px;letter-spacing:-.01em;position:relative}
-.hero .sub{font-size:clamp(14px,2.5vw,18px);color:rgba(255,255,255,.65);max-width:540px;margin-bottom:32px;line-height:1.6;position:relative}
-.hero .cta-group{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;position:relative}
-.btn-pri{display:inline-block;font-size:14px;font-weight:600;background:var(--gold);color:var(--navy);border:none;padding:13px 32px;border-radius:4px;cursor:pointer;text-decoration:none;transition:all .2s}
-.btn-pri:hover{background:#c49a2c;transform:translateY(-1px)}
-.btn-sec{display:inline-block;font-size:14px;font-weight:500;background:transparent;color:#fff;border:2px solid rgba(255,255,255,.4);padding:13px 32px;border-radius:4px;cursor:pointer;text-decoration:none;transition:all .2s}
-.btn-sec:hover{border-color:rgba(255,255,255,.7)}
-
-/* Section */
-section{padding:80px 20px;max-width:1100px;margin:0 auto}
-.sec-title{text-align:center;margin-bottom:48px}
-.sec-title h2{font-family:"Playfair Display",serif;font-size:clamp(26px,4vw,38px);color:var(--navy);margin-bottom:8px}
-.sec-title .tag{display:inline-block;font-size:12px;font-weight:600;letter-spacing:.12em;color:var(--gold);text-transform:uppercase;margin-bottom:8px}
-
-/* Tier toggle */
-.tier-toggle{display:flex;justify-content:center;gap:8px;margin-bottom:40px}
-.tier-btn{font-size:13px;font-weight:500;background:none;border:1px solid #e0e0e0;color:#5c6a7a;padding:8px 20px;border-radius:4px;cursor:pointer;transition:all .2s}
-.tier-btn.active{background:var(--navy);color:var(--gold);border-color:var(--navy)}
-
-/* Package cards */
-.pkg-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px}
-.pkg-card{background:#fff;border:1px solid #eee;border-radius:8px;overflow:hidden;transition:all .3s;display:flex;flex-direction:column}
-.pkg-card:hover{box-shadow:0 8px 30px rgba(0,0,0,.1);transform:translateY(-2px)}
-.pkg-img{height:180px;background:linear-gradient(135deg,var(--navy-light),var(--navy));display:flex;align-items:center;justify-content:center;position:relative}
-.pkg-img .pkg-icon{font-size:48px;opacity:.3;color:#fff}
-.pkg-badge{position:absolute;top:12px;right:12px;background:var(--gold);color:var(--navy);font-size:11px;font-weight:700;padding:4px 12px;border-radius:4px}
-.pkg-body{padding:24px;flex:1;display:flex;flex-direction:column}
-.pkg-body h3{font-size:18px;font-weight:700;color:var(--navy);margin-bottom:4px}
-.pkg-body .dur{font-size:13px;color:#888;margin-bottom:12px}
-.pkg-body .desc{font-size:13px;color:#555;line-height:1.6;margin-bottom:16px;flex:1}
-.pkg-body .price{font-size:22px;font-weight:700;color:var(--navy);margin-bottom:4px}
-.pkg-body .price small{font-size:12px;font-weight:400;color:#888}
-.pkg-body .route{font-size:11px;color:var(--gold);font-weight:500;margin-bottom:16px}
-.pkg-btn{display:inline-block;width:100%;text-align:center;font-size:13px;font-weight:600;background:var(--navy);color:var(--gold);border:none;padding:12px;border-radius:4px;cursor:pointer;text-decoration:none;transition:all .2s}
-.pkg-btn:hover{background:var(--navy-light)}
-
-/* Highlight bar */
-.highlight-bar{background:var(--cream);padding:32px 0;text-align:center}
-.highlight-bar .items{display:flex;justify-content:center;gap:40px;flex-wrap:wrap;max-width:900px;margin:0 auto;padding:0 20px}
-.highlight-bar .item{text-align:center}
-.highlight-bar .item .num{font-family:"Playfair Display",serif;font-size:28px;font-weight:700;color:var(--navy)}
-.highlight-bar .item .lbl{font-size:12px;color:#888;margin-top:2px}
-
-/* Contact */
-#contact{background:var(--navy);color:#fff;text-align:center}
-#contact .sec-title h2{color:var(--gold)}
-#contact .sec-title .tag{color:rgba(255,255,255,.5)}
-#contact p{max-width:500px;margin:0 auto 24px;color:rgba(255,255,255,.65);font-size:14px;line-height:1.7}
-.contact-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
-
-footer{background:#0d1f30;color:rgba(255,255,255,.4);text-align:center;padding:32px 20px;font-size:12px;letter-spacing:.04em}
-
-/* Modal */
-.modal-overlay{display:none;position:fixed;inset:0;z-index:500;background:rgba(0,0,0,.6);align-items:center;justify-content:center}
-.modal-overlay.show{display:flex}
-.modal{background:#fff;border-radius:8px;padding:32px;max-width:600px;width:90%;max-height:80vh;overflow-y:auto;position:relative}
-.modal h3{font-size:20px;color:var(--navy);margin-bottom:16px}
-.modal .itinerary{font-size:13px;line-height:1.8;color:#555}
-.modal .itinerary h4{color:var(--navy);margin:14px 0 4px;font-size:15px}
-.modal .itinerary .day{color:var(--gold);font-weight:600;margin-top:10px}
-.modal-close{position:absolute;top:12px;right:16px;font-size:22px;border:none;background:none;cursor:pointer;color:#888}
-.modal-close:hover{color:#333}
-
-/* Responsive */
-@media(max-width:640px){
-  .nav-links a{font-size:11px;padding:4px 8px}
-  .pkg-grid{grid-template-columns:1fr}
-  section{padding:60px 16px}
-  .hero{padding:80px 16px 40px}
-}
-</style>
-</head>
-<body>
-
-<nav>
-  <div class="nav-logo" onclick="scrollToTop()">RESONATE CLUB</div>
-  <div class="nav-links">
-    <a href="#korea" class="en">Korea Tours</a><a href="#korea" class="ko">한국 투어</a>
-    <a href="#usa" class="en">USA Tours</a><a href="#usa" class="ko">미국 투어</a>
-    <a href="#contact" class="en">Contact</a><a href="#contact" class="ko">문의</a>
-    <button class="btn-lang" onclick="toggleLang()"><span id="langLabel">KO</span></button>
-  </div>
-</nav>
-
-<!-- Hero -->
-<section class="hero">
-  <h1>RESONATE CLUB</h1>
-  <div class="sub en">Premium curated journeys between Korea and the United States — where culture, cuisine, and world-class golf converge.</div>
-  <div class="sub ko">한국과 미국을 잇는 프리미엄 큐레이션 여행 — 문화, 미식, 그리고 세계적인 골프가 만나는 곳.</div>
-  <div class="cta-group">
-    <a href="#korea" class="btn-pri en">Explore Korea Packages</a>
-    <a href="#korea" class="btn-pri ko">한국 패키지 보기</a>
-    <a href="#usa" class="btn-sec en">USA Golf Tours</a>
-    <a href="#usa" class="btn-sec ko">미국 골프 투어</a>
-  </div>
-</section>
-
-<!-- Highlight bar -->
-<div class="highlight-bar">
-  <div class="items">
-    <div class="item"><div class="num">2</div><div class="lbl en">Korea Packages</div><div class="lbl ko">한국 패키지</div></div>
-    <div class="item"><div class="num">5-7D</div><div class="lbl en">California Golf Tour</div><div class="lbl ko">캘리포니아 골프 투어</div></div>
-    <div class="item"><div class="num">5★</div><div class="lbl en">Curated Experience</div><div class="lbl ko">프리미엄 큐레이션</div></div>
-    <div class="item"><div class="num">24/7</div><div class="lbl en">Concierge</div><div class="lbl ko">컨시어지</div></div>
-  </div>
-</div>
-
-<!-- KOREA INBOUND PACKAGES -->
-<section id="korea">
-  <div class="sec-title">
-    <div class="tag en">KOREA INBOUND</div><div class="tag ko">한국 인바운드</div>
-    <h2 class="en">Discover Korea</h2><h2 class="ko">한국을 발견하다</h2>
-  </div>
-
-  <div class="pkg-grid">
-
-    <div class="pkg-card">
-      <div class="pkg-img"><span class="pkg-icon">⛩️</span><span class="pkg-badge en">Most Popular</span><span class="pkg-badge ko">베스트</span></div>
-      <div class="pkg-body">
-        <h3 class="en">Korean Odyssey</h3><h3 class="ko">Korean Odyssey</h3>
-        <div class="dur en">7 Days / 6 Nights</div><div class="dur ko">7일 / 6박</div>
-        <div class="desc en">Seoul → Gyeongju → Busan. UNESCO temples, KTX bullet train, private yacht, K-pop studio, Michelin dining, DMZ, beach sunsets.</div>
-        <div class="desc ko">서울 → 경주 → 부산. 유네스코 사찰, KTX, 프라이빗 요트, K팝 스튜디오, 미슐랭, DMZ, 해변 석양.</div>
-        <div class="price">$5,490 <small>/person</small></div>
-        <div class="route en">Route: Seoul → Gyeongju → Busan</div><div class="route ko">코스: 서울 → 경주 → 부산</div>
-        <button class="pkg-btn" onclick="openModal('korean-odyssey')"><span class="en">View Itinerary →</span><span class="ko">일정 보기 →</span></button>
-      </div>
-    </div>
-
-    <div class="pkg-card">
-      <div class="pkg-img"><span class="pkg-icon">🌋</span><span class="pkg-badge en">Ultimate</span><span class="pkg-badge ko">얼티밋</span></div>
-      <div class="pkg-body">
-        <h3 class="en">Complete Korea</h3><h3 class="ko">Complete Korea</h3>
-        <div class="dur en">13 Days / 12 Nights</div><div class="dur ko">13일 / 12박</div>
-        <div class="desc en">The full peninsula: Seoul → Andong → Gyeongju → Busan → Jeju. Helicopter, hanok stays, Hallasan hike, haenyeo divers, private jets.</div>
-        <div class="desc ko">한반도 완전일주: 서울 → 안동 → 경주 → 부산 → 제주. 헬리콥터, 한옥 숙박, 한라산 트레킹, 해녀 체험, 프라이빗 제트.</div>
-        <div class="price">$11,900 <small>/person</small></div>
-        <div class="route en">Route: Seoul → Andong → Gyeongju → Busan → Jeju</div><div class="route ko">코스: 서울 → 안동 → 경주 → 부산 → 제주</div>
-        <button class="pkg-btn" onclick="openModal('complete-korea')"><span class="en">View Itinerary →</span><span class="ko">일정 보기 →</span></button>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- USA GOLF TOURS (Korea → California) -->
-<section id="usa" style="background:#f9f9f9">
-  <div class="sec-title">
-    <div class="tag en">USA GOLF TOURS</div><div class="tag ko">미국 골프 투어</div>
-    <h2 class="en">California Championship Golf</h2><h2 class="ko">캘리포니아 챔피언십 골프</h2>
-    <p style="max-width:600px;margin:8px auto 0;color:#888;font-size:14px" class="en">Premium golf packages from Korea — Trump National, Sandpiper GC, Hidden Valley GC. All-inclusive with Korean guide. Transparent 40% markup pricing.</p>
-    <p style="max-width:600px;margin:8px auto 0;color:#888;font-size:14px" class="ko">한국 출발 프리미엄 골프 패키지 — 트럼프 내셔널, 샌드파이퍼 GC, 히든밸리 GC. 한국인 가이드 올인클루시브. 투명한 40% 마크업 가격.</p>
-  </div>
-
-  <!-- Package Selector Tabs -->
-  <div class="tier-toggle" style="margin-bottom:32px">
-    <button class="tier-btn active" onclick="switchUSAPkg('premier')" id="tab-premier">
-      <span class="en">✦ Trump Premier</span><span class="ko">✦ 트럼프 프리미어</span>
-      <span style="font-size:10px;opacity:.6;display:block" class="en">6N/7D · 4 Rounds</span>
-      <span style="font-size:10px;opacity:.6;display:block" class="ko">6박7일 · 4라운드</span>
-    </button>
-    <button class="tier-btn" onclick="switchUSAPkg('elite')" id="tab-elite">
-      <span class="en">✦ Trump Elite</span><span class="ko">✦ 트럼프 엘리트</span>
-      <span style="font-size:10px;opacity:.6;display:block" class="en">5N/6D · 3 Rounds</span>
-      <span style="font-size:10px;opacity:.6;display:block" class="ko">5박6일 · 3라운드</span>
-    </button>
-  </div>
-
-  <!-- Package Premier -->
-  <div id="usa-premier" class="pkg-grid">
-    <div class="pkg-card" style="grid-column:1/-1;max-width:700px;margin:0 auto">
-      <div class="pkg-img">
-        <span class="pkg-icon">🏌️</span>
-        <span class="pkg-badge en">40% Markup</span><span class="pkg-badge ko">40% 마크업</span>
-      </div>
-      <div class="pkg-body">
-        <h3 class="en">Trump Premier — Golf Package</h3><h3 class="ko">트럼프 프리미어 — 골프 패키지</h3>
-        <div class="dur en">6 Nights / 7 Days · 4 Championship Rounds</div><div class="dur ko">6박 7일 · 챔피언십 4라운드</div>
-        <div class="desc en">
-          <strong>⛳ Courses:</strong> Trump National LA ×1, Sandpiper GC ×2 (free replay), Hidden Valley GC ×1<br>
-          <strong>🏨 Stay:</strong> 5★ Beverly Wilshire tier · 6 nights<br>
-          <strong>🚐 Transport:</strong> Private driver/guide + airport RT · Korean-speaking<br>
-          <strong>🍽️ Dining:</strong> All meals included + 2 Michelin/fine dining dinners<br>
-          <strong>📦 Insurance:</strong> Tips & contingency included<br>
-          <strong>💰 Transparent 40% markup</strong> on all costs — no hidden fees
-        </div>
-        <div class="desc ko">
-          <strong>⛳ 코스:</strong> 트럼프 내셔널 LA ×1, 샌드파이퍼 GC ×2 (무료 재플레이), 히든밸리 GC ×1<br>
-          <strong>🏨 숙박:</strong> 5★ 베벌리 윌셔 티어 · 6박<br>
-          <strong>🚐 교통:</strong> 프라이빗 드라이버/가이드 + 공항 픽업 · 한국어<br>
-          <strong>🍽️ 식사:</strong> 전 식사 포함 + 미슐랭/파인다이닝 2회<br>
-          <strong>📦 기타:</strong> 보험·팁·예비비 포함<br>
-          <strong>💰 모든 원가에 투명한 40% 마크업</strong> — 숨은 비용 없음
-        </div>
-        <div class="price">$6,579 <small>/person</small></div>
-        <div class="route en">Cost: $4,569 · Margin: $2,010 (44.0%) ✦ Sandpiper free replay included</div>
-        <div class="route ko">원가: $4,569 · 마진: $2,010 (44.0%) ✦ 샌드파이퍼 무료 재플레이 포함</div>
-        <button class="pkg-btn" onclick="openModal('trump-premier')"><span class="en">View Full Itinerary →</span><span class="ko">전체 일정 보기 →</span></button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Package Elite (hidden by default) -->
-  <div id="usa-elite" class="pkg-grid" style="display:none">
-    <div class="pkg-card" style="grid-column:1/-1;max-width:700px;margin:0 auto">
-      <div class="pkg-img">
-        <span class="pkg-icon">🌟</span>
-        <span class="pkg-badge en">40% Markup</span><span class="pkg-badge ko">40% 마크업</span>
-      </div>
-      <div class="pkg-body">
-        <h3 class="en">Trump Elite — Golf Package</h3><h3 class="ko">트럼프 엘리트 — 골프 패키지</h3>
-        <div class="dur en">5 Nights / 6 Days · 3 Championship Rounds</div><div class="dur ko">5박 6일 · 챔피언십 3라운드</div>
-        <div class="desc en">
-          <strong>⛳ Courses:</strong> Trump National LA ×2, Hidden Valley GC ×1<br>
-          <strong>🏨 Stay:</strong> 5★ Beverly Wilshire tier · 5 nights<br>
-          <strong>🚐 Transport:</strong> Private driver/guide + airport RT · Korean-speaking<br>
-          <strong>🍽️ Dining:</strong> All meals included + 2 Michelin/fine dining dinners<br>
-          <strong>📦 Insurance:</strong> Tips & contingency included<br>
-          <strong>💰 Transparent 40% markup</strong> on all costs — no hidden fees
-        </div>
-        <div class="desc ko">
-          <strong>⛳ 코스:</strong> 트럼프 내셔널 LA ×2, 히든밸리 GC ×1<br>
-          <strong>🏨 숙박:</strong> 5★ 베벌리 윌셔 티어 · 5박<br>
-          <strong>🚐 교통:</strong> 프라이빗 드라이버/가이드 + 공항 픽업 · 한국어<br>
-          <strong>🍽️ 식사:</strong> 전 식사 포함 + 미슐랭/파인다이닝 2회<br>
-          <strong>📦 기타:</strong> 보험·팁·예비비 포함<br>
-          <strong>💰 모든 원가에 투명한 40% 마크업</strong> — 숨은 비용 없음
-        </div>
-        <div class="price">$5,669 <small>/person</small></div>
-        <div class="route en">Cost: $4,049 · Margin: $1,620 (40.0%) ✦ Double Trump for ocean-cliff mastery</div>
-        <div class="route ko">원가: $4,049 · 마진: $1,620 (40.0%) ✦ 트럼프 2회로 오션클리프 마스터리</div>
-        <button class="pkg-btn" onclick="openModal('trump-elite')"><span class="en">View Full Itinerary →</span><span class="ko">전체 일정 보기 →</span></button>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Contact -->
-<section id="contact">
-  <div class="sec-title">
-    <div class="tag en">CONTACT</div><div class="tag ko">문의</div>
-    <h2 class="en">Let's Plan Your Journey</h2><h2 class="ko">여행을 계획해보세요</h2>
-  </div>
-  <p class="en">Every itinerary is tailored to you. Reach out and we'll craft the perfect Korea or California experience — at your pace, your style, your budget.</p>
-  <p class="ko">모든 일정은 당신에게 맞춰집니다. 연락 주시면 완벽한 한국 또는 캘리포니아 경험을 만들어드립니다 — 당신의 속도, 스타일, 예산에 맞게.</p>
-  <div class="contact-btns">
-    <a href="https://open.kakao.com/o/sresonatetour" target="_blank" class="btn-pri" style="background:#fee500;color:#391b1b">💬 KakaoTalk</a>
-    <a href="mailto:resonateclub@gmail.com" class="btn-sec">✉️ Email</a>
-  </div>
-</section>
-
-<footer>
-  © 2026 Resonate Club · resonatetour.com & resonateclub.com · Premium Korea ↔ USA Travel
-</footer>
-
-<!-- Modal -->
-<div class="modal-overlay" id="modal-overlay" onclick="closeModal(event)">
-  <div class="modal" id="modal-content" onclick="event.stopPropagation()">
-    <button class="modal-close" onclick="closeModal()">✕</button>
-    <div id="modal-body"></div>
-  </div>
-</div>
-
-<script>
-// Language
-let curLang = 'en';
-function toggleLang() {
-  curLang = curLang === 'en' ? 'ko' : 'en';
-  document.documentElement.setAttribute('data-lang', curLang);
-  document.getElementById('langLabel').textContent = curLang === 'en' ? 'KO' : 'EN';
-}
-document.getElementById('langLabel').textContent = 'KO';
-
-// USA Package toggle
-function switchUSAPkg(pkg) {
-  document.querySelectorAll('.tier-btn').forEach(b => b.classList.remove('active'));
-  var tab = document.getElementById('tab-' + pkg);
-  if (tab) tab.classList.add('active');
-  document.getElementById('usa-premier').style.display = pkg === 'premier' ? '' : 'none';
-  document.getElementById('usa-elite').style.display = pkg === 'elite' ? '' : 'none';
-}
-
-
-// Modal
-const ITINERARIES = {
-  'korean-odyssey': {
-    en: `<h3>Korean Odyssey — 7 Days / 6 Nights · $5,490/person</h3><div class="itinerary"><div class="day">Day 1 — Arrival & Han River</div><p>Incheon VIP → Josun Palace Gangnam → Private Han River yacht dinner (5-course, Banpo Bridge fountain show)</p><div class="day">Day 2 — Royal & Traditional Seoul</div><p>Gyeongbokgung + hanbok → Balwoo Gongyang temple cuisine (Michelin) → Insadong gallery + hanji artisan + tea ceremony → Kwon Sook Soo (2★) → Ikseon-dong craft makgeolli</p><div class="day">Day 3 — DMZ & K-Culture Deep Dive</div><p>Private DMZ tour → HYBE Insight or SMTOWN → K-pop recording studio session → Hongdae street culture + BBQ → Club crawl</p><div class="day">Day 4 — Seoul → Gyeongju</div><p>KTX First Class → Lahan Select Gyeongju → Bulguksa Temple + Seokguram Grotto + Cheomseongdae → Donggung Palace night walk → Hanwoo BBQ</p><div class="day">Day 5 — Gyeongju → Busan</div><p>Golgulsa Sunmudo → Signiel Busan → Millak Raw Fish Center → Haedong Yonggungsa → Haeundae sunset → Michelin dinner</p><div class="day">Day 6 — Busan Culture & Coast</div><p>Gamcheon Culture Village → Jagalchi Fish Market → Private yacht → Farewell dinner with makgeolli toast</p><div class="day">Day 7 — Departure</div><p>Donginbi red ginseng spa → Gimhae Airport or KTX to Incheon → VIP lounge → Premium gift</p><p style="margin-top:16px"><strong>Includes:</strong> 6 nights luxury, 12+ meals (3 Michelin), private guide, KTX + transfers, WiFi, departure gift.</p></div>`,
-    ko: `<h3>Korean Odyssey — 7일 / 6박 · $5,490/인</h3><div class="itinerary"><div class="day">1일차 — 도착 & 한강</div><p>인천 VIP → 조선팰리스 강남 → 한강 프라이빗 요트 디너</p><div class="day">2일차 — 로열 & 전통 서울</div><p>경복궁+한복 → 발우공양 사찰음식 → 인사동 갤러리+한지 장인+다도 → 권숙수 (2스타) → 익선동 수제 막걸리</p><div class="day">3일차 — DMZ & K-컬처</div><p>프라이빗 DMZ → 하이브 인사이트 또는 SMTOWN → K팝 녹음실 → 홍대 길거리 문화+BBQ → VIP 클럽</p><div class="day">4일차 — 서울 → 경주</div><p>KTX 퍼스트 클래스 → 라한셀렉트 경주 → 불국사+석굴암+첨성대 → 동궁과 월지 야경 → 한우 BBQ</p><div class="day">5일차 — 경주 → 부산</div><p>골굴사 선무도 → 시그니엘 부산 → 민락동 활어회 → 해동용궁사 → 해운대 석양 → 미슐랭 디너</p><div class="day">6일차 — 부산 문화 & 해안</div><p>감천문화마을 → 자갈치시장 → 프라이빗 요트 → 막걸리 건배 환송 만찬</p><div class="day">7일차 — 출발</div><p>동인비 홍삼 스파 → 김해공항 또는 KTX 인천 → VIP 라운지 → 프리미엄 기념품</p></div>`
-  },
-  'complete-korea': {
-    en: `<h3>Complete Korea — 13 Days / 12 Nights · $11,900/person</h3><div class="itinerary"><div class="day">Route: Seoul (4N) → Andong (1N) → Gyeongju (2N) → Busan (2N) → Jeju (3N)</div><p>The ultimate Korean journey. Helicopter transfer, Four Seasons Seoul, private palace dining, Changdeokgung Secret Garden, 3★ La Yeon at The Shilla. Andong Hahoe Village mask dance, Dosan Seowon sunrise. Gyeongju UNESCO deep dive. Park Hyatt Busan, Jeju Island: Hallasan hike, haenyeo divers, O'Sulloc tea fields, Bonte Museum, private yacht. 20+ meals with multiple Michelin stars. All private transport + domestic flights.</p><p style="margin-top:16px"><strong>Includes:</strong> 12 nights ultra-luxury, 20+ meals, domestic flights, yacht, spa, departure gift.</p></div>`,
-    ko: `<h3>Complete Korea — 13일 / 12박 · $11,900/인</h3><div class="itinerary"><div class="day">코스: 서울(4박) → 안동(1박) → 경주(2박) → 부산(2박) → 제주(3박)</div><p>한국 여행의 결정판. 헬리콥터 옵션, 포시즌스 서울, 한국의집 프라이빗 궁중 만찬, 창덕궁 비원, 신라호텔 라연 (3스타). 안동 하회마을 탈춤, 도산서원 새벽. 경주 유네스코 딥다이브. 파크하얏트 부산, 제주: 한라산 트레킹, 해녀 체험, 오설록 차밭, 본태박물관, 선셋 프라이빗 요트. 20+ 식사. 모든 프라이빗 이동 + 국내선 항공.</p></div>`
-  },
-  'trump-premier': {
-    en: `<h3>Trump Premier — 6 Nights / 7 Days · $6,579/person · 40% Markup</h3><div class="itinerary"><div class="day">⛳ Courses: Trump National LA ×1 · Sandpiper GC ×2 (free replay) · Hidden Valley GC ×1</div><p><strong>4 championship rounds at California's finest courses.</strong> Transparent pricing: every cost + 40% markup. Sandpiper free replay saves $130. Korean-speaking guide.</p><div class="day">Day 1 — Arrival & LA Welcome</div><p>LAX VIP Meet & Greet → Beverly Wilshire tier → Welcome dinner at <strong>Bestia</strong> → Santa Monica Pier</p><div class="day">Day 2 — Sandpiper GC (Round 1)</div><p>Coastal drive to Santa Barbara → <strong>Sandpiper Golf Club</strong> — oceanfront championship, Pacific views → <strong>La Super-Rica Taqueria</strong> → State Street, Old Mission → <strong>The Lark</strong></p><div class="day">Day 3 — Sandpiper GC (Round 2 — FREE Replay) + Wine</div><p>Second round at <strong>Sandpiper GC</strong> — FREE replay (cost $0, value $212) → Solvang → <strong>Santa Ynez Valley wine trail</strong> 3 wineries → <strong>Stonehouse</strong> (San Ysidro Ranch)</p><div class="day">Day 4 — Trump National LA</div><p>Rancho Palos Verdes → <strong>Trump National Golf Club LA</strong> — cliffside fairways, iconic Hole 18 → Griffith Observatory sunset → <strong>K-Town BBQ</strong></p><div class="day">Day 5 — Hidden Valley GC & Temecula</div><p>Norco → <strong>Hidden Valley Golf Club</strong> — hilly terrain, Par-3 15th → Temecula Valley wine → <strong>Ponte Vineyard Inn</strong> dinner</p><div class="day">Day 6 — LA Grand Finale</div><p>Getty Center → Beverly Hills lunch (Spago) → Rodeo Drive → Farewell Michelin: <strong>n/naka</strong> (2★) → Perch rooftop</p><div class="day">Day 7 — Departure</div><p>Wi Spa → The Grove → LAX VIP → Premium gift</p><p><strong>Pricing:</strong> Cost $4,569/person → 40% markup → <strong>$6,579/person</strong>. Includes: 6N 5★, 4 rounds, all meals (2 Michelin), driver/guide, insurance. Excludes: flights.</p></div>`,
-    ko: `<h3>트럼프 프리미어 — 6박 7일 · $6,579/인 · 40% 마크업</h3><div class="itinerary"><div class="day">⛳ 코스: 트럼프 내셔널 LA ×1 · 샌드파이퍼 GC ×2 (무료 재플레이) · 히든밸리 GC ×1</div><p><strong>캘리포니아 최고 코스 4라운드 챔피언십.</strong> 투명 가격: 모든 원가 + 40% 마크업. 샌드파이퍼 무료 재플레이로 $130 절감. 한국인 가이드 동행.</p><div class="day">1일차 — 도착 & LA</div><p>LAX VIP 미트앤그리트 → 베벌리 윌셔 티어 → 환영 만찬 <strong>Bestia</strong> → 산타모니카 피어</p><div class="day">2일차 — 샌드파이퍼 GC (1R)</div><p>샌타바버라 해안 드라이브 → <strong>샌드파이퍼 GC</strong> — 오션프론트 18홀 → <strong>La Super-Rica</strong> → 올드 미션 → <strong>The Lark</strong></p><div class="day">3일차 — 샌드파이퍼 GC (2R · 무료 재플레이) + 와인</div><p><strong>샌드파이퍼 GC</strong> 2라운드 — 무료 재플레이 ($0, 가치 $212) → 솔뱅 → <strong>산타이네즈 와인 트레일</strong> 3곳 → <strong>Stonehouse</strong></p><div class="day">4일차 — 트럼프 내셔널 LA</div><p>랜초 팔로스 버디스 → <strong>트럼프 내셔널 GC</strong> — 절벽 페어웨이, 18번홀 → 그리피스 선셋 → <strong>코리아타운 BBQ</strong></p><div class="day">5일차 — 히든밸리 GC & 테메큘라</div><p>노코 → <strong>히든밸리 GC</strong> — 구릉, 파3 15번홀 → 테메큘라 와인 → <strong>폰테 빈야드 인</strong></p><div class="day">6일차 — LA 피날레</div><p>게티 센터 → 비버리힐스 (Spago) → 로데오 → 환송 미슐랭: <strong>n/naka</strong> (2★) → 퍼치 루프탑</p><div class="day">7일차 — 출발</div><p>Wi Spa → 더 그로브 → LAX VIP → 기념품</p><p><strong>가격:</strong> 원가 $4,569/인 → 40% 마크업 → <strong>$6,579/인</strong>. 포함: 5★ 6박, 4R, 전식사(미슐랭 2회), 가이드, 보험. 불포함: 항공.</p></div>`
-  },
-  'trump-elite': {
-    en: `<h3>Trump Elite — 5 Nights / 6 Days · $5,669/person · 40% Markup</h3><div class="itinerary"><div class="day">⛳ Courses: Trump National LA ×2 · Hidden Valley GC ×1</div><p><strong>3 championship rounds with double Trump for ocean-cliff mastery.</strong> Focused premium package. Transparent 40% markup pricing.</p><div class="day">Day 1 — Arrival & Santa Monica</div><p>LAX VIP → Beverly Wilshire tier → Santa Monica Beach walk → Welcome dinner at <strong>Providence</strong> (2★ Michelin)</p><div class="day">Day 2 — Trump National LA (Round 1)</div><p>Rancho Palos Verdes → <strong>Trump National Golf Club LA</strong> — cliffside championship 18 holes → Clubhouse lunch → Terranea cliff walk → <strong>n/naka</strong> (2★) or <strong>Bestia</strong></p><div class="day">Day 3 — Hidden Valley GC & Temecula</div><p>Norco → <strong>Hidden Valley Golf Club</strong> — hilly terrain, Par-3 15th → Temecula wine → <strong>Ponte Winery</strong> tasting → <strong>The Restaurant at Ponte</strong></p><div class="day">Day 4 — Trump National LA (Round 2)</div><p><strong>Trump National LA</strong> — different tee boxes, new challenge → Getty Center → Beverly Hills dinner: <strong>Spago</strong> or <strong>Mastro's</strong></p><div class="day">Day 5 — LA Culture & Farewell</div><p>Griffith Observatory → Hollywood Sign → Koreatown K-BBQ → Rodeo Drive → Farewell: <strong>Maude</strong> or <strong>Perch</strong> rooftop</p><div class="day">Day 6 — Departure</div><p>Wi Spa → The Grove → LAX VIP → Premium gift</p><p><strong>Pricing:</strong> Cost $4,049/person → 40% markup → <strong>$5,669/person</strong>. Includes: 5N 5★, 3 rounds, all meals (2 Michelin), driver/guide, insurance. Excludes: flights.</p></div>`,
-    ko: `<h3>트럼프 엘리트 — 5박 6일 · $5,669/인 · 40% 마크업</h3><div class="itinerary"><div class="day">⛳ 코스: 트럼프 내셔널 LA ×2 · 히든밸리 GC ×1</div><p><strong>트럼프 2회 플레이로 오션클리프 마스터리.</strong> 집중 프리미엄 패키지. 투명 40% 마크업.</p><div class="day">1일차 — 도착 & 산타모니카</div><p>LAX VIP → 베벌리 윌셔 티어 → 산타모니카 비치 산책 → <strong>Providence</strong> (2★ 미슐랭)</p><div class="day">2일차 — 트럼프 내셔널 LA (1R)</div><p>랜초 팔로스 버디스 → <strong>트럼프 내셔널 GC</strong> — 절벽 18홀 → 클럽하우스 → 테라네아 절벽 산책 → <strong>n/naka</strong> (2★) 또는 <strong>Bestia</strong></p><div class="day">3일차 — 히든밸리 GC & 테메큘라</div><p>노코 → <strong>히든밸리 GC</strong> — 구릉, 파3 15번홀 → 테메큘라 와인 → <strong>폰테 와이너리</strong> → <strong>더 레스토랑 앳 폰테</strong></p><div class="day">4일차 — 트럼프 내셔널 LA (2R)</div><p><strong>트럼프 내셔널 LA</strong> — 다른 티박스, 새 도전 → 게티 센터 → 비버리힐스: <strong>Spago</strong> 또는 <strong>Mastro's</strong></p><div class="day">5일차 — LA 문화 & 환송</div><p>그리피스 천문대 → 할리우드 사인 → 코리아타운 K-BBQ → 로데오 → 환송: <strong>Maude</strong> 또는 <strong>Perch</strong></p><div class="day">6일차 — 출발</div><p>Wi Spa → 더 그로브 → LAX VIP → 기념품</p><p><strong>가격:</strong> 원가 $4,049/인 → 40% 마크업 → <strong>$5,669/인</strong>. 포함: 5★ 5박, 3R, 전식사(미슐랭 2회), 가이드, 보험. 불포함: 항공.</p></div>`
-  }
-};
-
-function openModal(key) {
-  var lang = document.documentElement.getAttribute('data-lang') || 'en';
-  var content = ITINERARIES[key] ? (ITINERARIES[key][lang] || ITINERARIES[key]['en']) : '<p>Details coming soon.</p>';
-  document.getElementById('modal-body').innerHTML = content;
-  document.getElementById('modal-overlay').classList.add('show');
-}
-function closeModal(e) {
-  if (e && e.target !== document.getElementById('modal-overlay')) return;
-  document.getElementById('modal-overlay').classList.remove('show');
-}
-document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeModal(); });
-
-function scrollToTop() { window.scrollTo({top:0,behavior:'smooth'}); }
-</script>
-</body>
-</html>
+     1|<!DOCTYPE html>
+     2|<html lang="en" data-lang="en">
+     3|<head>
+     4|<meta charset="UTF-8">
+     5|<meta name="viewport" content="width=device-width,initial-scale=1">
+     6|<title>Resonate Club — Premium Korea & USA Travel</title>
+     7|<meta name="description" content="Resonate Club — Premium curated travel packages. Discover Korea inbound tours & USA golf tours from Korea.">
+     8|<meta name="theme-color" content="#1a3450">
+     9|<link rel="preconnect" href="https://fonts.googleapis.com">
+    10|<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    11|<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    12|<style>
+    13|*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    14|:root{--navy:#1a3450;--gold:#d4af37;--navy-light:#264460;--cream:#fdf8ed}
+    15|html{font-size:16px;scroll-behavior:smooth}
+    16|body{font-family:-apple-system,"Noto Sans KR",sans-serif;background:#fff;color:#1a1a2e;-webkit-font-smoothing:antialiased}
+    17|[data-lang="en"] .ko{display:none!important}
+    18|[data-lang="ko"] .en{display:none!important}
+    19|
+    20|nav{position:fixed;top:0;left:0;right:0;z-index:300;height:56px;display:flex;align-items:center;justify-content:space-between;padding:0 20px;background:rgba(255,255,255,.96);backdrop-filter:blur(20px);border-bottom:1px solid #eee}
+    21|.nav-logo{font-family:"Playfair Display",serif;font-size:20px;font-weight:700;color:var(--gold);letter-spacing:.02em;cursor:pointer}
+    22|.nav-links{display:flex;gap:4px;align-items:center}
+    23|.nav-links a{font-size:13px;color:#5c6a7a;text-decoration:none;padding:6px 12px;border-radius:4px;transition:all .2s}
+    24|.nav-links a:hover{background:#f5eed6;color:var(--navy)}
+    25|.btn-lang{font-size:12px;font-weight:500;background:none;border:1px solid rgba(212,175,55,.3);color:var(--gold);padding:6px 14px;border-radius:4px;cursor:pointer;transition:all .2s}
+    26|.btn-lang:hover{background:var(--cream)}
+    27|
+    28|/* Hero */
+    29|.hero{min-height:90vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:100px 20px 60px;background:linear-gradient(160deg,var(--navy) 0%,var(--navy-light) 50%,#0d1f30 100%);color:#fff;position:relative;overflow:hidden}
+    30|.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 70% 30%,rgba(212,175,55,.08) 0%,transparent 60%)}
+    31|.hero h1{font-family:"Playfair Display",serif;font-size:clamp(34px,7vw,64px);font-weight:700;color:var(--gold);margin-bottom:12px;letter-spacing:-.01em;position:relative}
+    32|.hero .sub{font-size:clamp(14px,2.5vw,18px);color:rgba(255,255,255,.65);max-width:540px;margin-bottom:32px;line-height:1.6;position:relative}
+    33|.hero .cta-group{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;position:relative}
+    34|.btn-pri{display:inline-block;font-size:14px;font-weight:600;background:var(--gold);color:var(--navy);border:none;padding:13px 32px;border-radius:4px;cursor:pointer;text-decoration:none;transition:all .2s}
+    35|.btn-pri:hover{background:#c49a2c;transform:translateY(-1px)}
+    36|.btn-sec{display:inline-block;font-size:14px;font-weight:500;background:transparent;color:#fff;border:2px solid rgba(255,255,255,.4);padding:13px 32px;border-radius:4px;cursor:pointer;text-decoration:none;transition:all .2s}
+    37|.btn-sec:hover{border-color:rgba(255,255,255,.7)}
+    38|
+    39|/* Section */
+    40|section{padding:80px 20px;max-width:1100px;margin:0 auto}
+    41|.sec-title{text-align:center;margin-bottom:48px}
+    42|.sec-title h2{font-family:"Playfair Display",serif;font-size:clamp(26px,4vw,38px);color:var(--navy);margin-bottom:8px}
+    43|.sec-title .tag{display:inline-block;font-size:12px;font-weight:600;letter-spacing:.12em;color:var(--gold);text-transform:uppercase;margin-bottom:8px}
+    44|
+    45|/* Tier toggle */
+    46|.tier-toggle{display:flex;justify-content:center;gap:8px;margin-bottom:40px}
+    47|.tier-btn{font-size:13px;font-weight:500;background:none;border:1px solid #e0e0e0;color:#5c6a7a;padding:8px 20px;border-radius:4px;cursor:pointer;transition:all .2s}
+    48|.tier-btn.active{background:var(--navy);color:var(--gold);border-color:var(--navy)}
+    49|
+    50|/* Package cards */
+    51|.pkg-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px}
+    52|.pkg-card{background:#fff;border:1px solid #eee;border-radius:8px;overflow:hidden;transition:all .3s;display:flex;flex-direction:column}
+    53|.pkg-card:hover{box-shadow:0 8px 30px rgba(0,0,0,.1);transform:translateY(-2px)}
+    54|.pkg-img{height:180px;background:linear-gradient(135deg,var(--navy-light),var(--navy));display:flex;align-items:center;justify-content:center;position:relative}
+    55|.pkg-img .pkg-icon{font-size:48px;opacity:.3;color:#fff}
+    56|.pkg-badge{position:absolute;top:12px;right:12px;background:var(--gold);color:var(--navy);font-size:11px;font-weight:700;padding:4px 12px;border-radius:4px}
+    57|.pkg-body{padding:24px;flex:1;display:flex;flex-direction:column}
+    58|.pkg-body h3{font-size:18px;font-weight:700;color:var(--navy);margin-bottom:4px}
+    59|.pkg-body .dur{font-size:13px;color:#888;margin-bottom:12px}
+    60|.pkg-body .desc{font-size:13px;color:#555;line-height:1.6;margin-bottom:16px;flex:1}
+    61|.pkg-body .price{font-size:22px;font-weight:700;color:var(--navy);margin-bottom:4px}
+    62|.pkg-body .price small{font-size:12px;font-weight:400;color:#888}
+    63|.pkg-body .route{font-size:11px;color:var(--gold);font-weight:500;margin-bottom:16px}
+    64|.pkg-btn{display:inline-block;width:100%;text-align:center;font-size:13px;font-weight:600;background:var(--navy);color:var(--gold);border:none;padding:12px;border-radius:4px;cursor:pointer;text-decoration:none;transition:all .2s}
+    65|.pkg-btn:hover{background:var(--navy-light)}
+    66|
+    67|/* Highlight bar */
+    68|.highlight-bar{background:var(--cream);padding:32px 0;text-align:center}
+    69|.highlight-bar .items{display:flex;justify-content:center;gap:40px;flex-wrap:wrap;max-width:900px;margin:0 auto;padding:0 20px}
+    70|.highlight-bar .item{text-align:center}
+    71|.highlight-bar .item .num{font-family:"Playfair Display",serif;font-size:28px;font-weight:700;color:var(--navy)}
+    72|.highlight-bar .item .lbl{font-size:12px;color:#888;margin-top:2px}
+    73|
+    74|/* Contact */
+    75|#contact{background:var(--navy);color:#fff;text-align:center}
+    76|#contact .sec-title h2{color:var(--gold)}
+    77|#contact .sec-title .tag{color:rgba(255,255,255,.5)}
+    78|#contact p{max-width:500px;margin:0 auto 24px;color:rgba(255,255,255,.65);font-size:14px;line-height:1.7}
+    79|.contact-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+    80|
+    81|footer{background:#0d1f30;color:rgba(255,255,255,.4);text-align:center;padding:32px 20px;font-size:12px;letter-spacing:.04em}
+    82|
+    83|/* Modal */
+    84|.modal-overlay{display:none;position:fixed;inset:0;z-index:500;background:rgba(0,0,0,.6);align-items:center;justify-content:center}
+    85|.modal-overlay.show{display:flex}
+    86|.modal{background:#fff;border-radius:8px;padding:32px;max-width:600px;width:90%;max-height:80vh;overflow-y:auto;position:relative}
+    87|.modal h3{font-size:20px;color:var(--navy);margin-bottom:16px}
+    88|.modal .itinerary{font-size:13px;line-height:1.8;color:#555}
+    89|.modal .itinerary h4{color:var(--navy);margin:14px 0 4px;font-size:15px}
+    90|.modal .itinerary .day{color:var(--gold);font-weight:600;margin-top:10px}
+    91|.modal-close{position:absolute;top:12px;right:16px;font-size:22px;border:none;background:none;cursor:pointer;color:#888}
+    92|.modal-close:hover{color:#333}
+    93|
+    94|/* Responsive */
+    95|@media(max-width:640px){
+    96|  .nav-links a{font-size:11px;padding:4px 8px}
+    97|  .pkg-grid{grid-template-columns:1fr}
+    98|  section{padding:60px 16px}
+    99|  .hero{padding:80px 16px 40px}
+   100|}
+   101|</style>
+   102|</head>
+   103|<body>
+   104|
+   105|<nav>
+   106|  <div class="nav-logo" onclick="scrollToTop()">RESONATE CLUB</div>
+   107|  <div class="nav-links">
+   108|    <a href="#korea" class="en">Korea Tours</a><a href="#korea" class="ko">한국 투어</a>
+   109|    <a href="#usa" class="en">USA Tours</a><a href="#usa" class="ko">미국 투어</a>
+   110|    <a href="#contact" class="en">Contact</a><a href="#contact" class="ko">문의</a>
+   111|    <button class="btn-lang" onclick="toggleLang()"><span id="langLabel">KO</span></button>
+   112|  </div>
+   113|</nav>
+   114|
+   115|<!-- Hero -->
+   116|<section class="hero">
+   117|  <h1>RESONATE CLUB</h1>
+   118|  <div class="sub en">Premium curated journeys between Korea and the United States — where culture, cuisine, and world-class golf converge.</div>
+   119|  <div class="sub ko">한국과 미국을 잇는 프리미엄 큐레이션 여행 — 문화, 미식, 그리고 세계적인 골프가 만나는 곳.</div>
+   120|  <div class="cta-group">
+   121|    <a href="#korea" class="btn-pri en">Explore Korea Packages</a>
+   122|    <a href="#korea" class="btn-pri ko">한국 패키지 보기</a>
+   123|    <a href="#usa" class="btn-sec en">USA Golf Tours</a>
+   124|    <a href="#usa" class="btn-sec ko">미국 골프 투어</a>
+   125|  </div>
+   126|</section>
+   127|
+   128|<!-- Highlight bar -->
+   129|<div class="highlight-bar">
+   130|  <div class="items">
+   131|    <div class="item"><div class="num">2</div><div class="lbl en">Korea Packages</div><div class="lbl ko">한국 패키지</div></div>
+   132|    <div class="item"><div class="num">5-7D</div><div class="lbl en">California Golf Tour</div><div class="lbl ko">캘리포니아 골프 투어</div></div>
+   133|    <div class="item"><div class="num">5★</div><div class="lbl en">Curated Experience</div><div class="lbl ko">프리미엄 큐레이션</div></div>
+   134|    <div class="item"><div class="num">24/7</div><div class="lbl en">Concierge</div><div class="lbl ko">컨시어지</div></div>
+   135|  </div>
+   136|</div>
+   137|
+   138|<!-- KOREA INBOUND PACKAGES -->
+   139|<section id="korea">
+   140|  <div class="sec-title">
+   141|    <div class="tag en">KOREA INBOUND</div><div class="tag ko">한국 인바운드</div>
+   142|    <h2 class="en">Discover Korea</h2><h2 class="ko">한국을 발견하다</h2>
+   143|  </div>
+   144|
+   145|  <div class="pkg-grid">
+   146|
+   147|    <div class="pkg-card">
+   148|      <div class="pkg-img"><span class="pkg-icon">⛩️</span><span class="pkg-badge en">Most Popular</span><span class="pkg-badge ko">베스트</span></div>
+   149|      <div class="pkg-body">
+   150|        <h3 class="en">Korean Odyssey</h3><h3 class="ko">Korean Odyssey</h3>
+   151|        <div class="dur en">7 Days / 6 Nights</div><div class="dur ko">7일 / 6박</div>
+   152|        <div class="desc en">Seoul → Gyeongju → Busan. UNESCO temples, KTX bullet train, private yacht, K-pop studio, Michelin dining, DMZ, beach sunsets.</div>
+   153|        <div class="desc ko">서울 → 경주 → 부산. 유네스코 사찰, KTX, 프라이빗 요트, K팝 스튜디오, 미슐랭, DMZ, 해변 석양.</div>
+   154|        <div class="price">$5,490 <small>/person</small></div>
+   155|        <div class="route en">Route: Seoul → Gyeongju → Busan</div><div class="route ko">코스: 서울 → 경주 → 부산</div>
+   156|        <button class="pkg-btn" onclick="openModal('korean-odyssey')"><span class="en">View Itinerary →</span><span class="ko">일정 보기 →</span></button>
+   157|      </div>
+   158|    </div>
+   159|
+   160|    <div class="pkg-card">
+   161|      <div class="pkg-img"><span class="pkg-icon">🌋</span><span class="pkg-badge en">Ultimate</span><span class="pkg-badge ko">얼티밋</span></div>
+   162|      <div class="pkg-body">
+   163|        <h3 class="en">Complete Korea</h3><h3 class="ko">Complete Korea</h3>
+   164|        <div class="dur en">13 Days / 12 Nights</div><div class="dur ko">13일 / 12박</div>
+   165|        <div class="desc en">The full peninsula: Seoul → Andong → Gyeongju → Busan → Jeju. Helicopter, hanok stays, Hallasan hike, haenyeo divers, private jets.</div>
+   166|        <div class="desc ko">한반도 완전일주: 서울 → 안동 → 경주 → 부산 → 제주. 헬리콥터, 한옥 숙박, 한라산 트레킹, 해녀 체험, 프라이빗 제트.</div>
+   167|        <div class="price">$11,900 <small>/person</small></div>
+   168|        <div class="route en">Route: Seoul → Andong → Gyeongju → Busan → Jeju</div><div class="route ko">코스: 서울 → 안동 → 경주 → 부산 → 제주</div>
+   169|        <button class="pkg-btn" onclick="openModal('complete-korea')"><span class="en">View Itinerary →</span><span class="ko">일정 보기 →</span></button>
+   170|      </div>
+   171|    </div>
+   172|  </div>
+   173|</section>
+   174|
+   175|<!-- USA GOLF TOURS (Korea → California) -->
+   176|<section id="usa" style="background:#f9f9f9">
+   177|  <div class="sec-title">
+   178|    <div class="tag en">USA GOLF TOURS</div><div class="tag ko">미국 골프 투어</div>
+   179|    <h2 class="en">California Championship Golf</h2><h2 class="ko">캘리포니아 챔피언십 골프</h2>
+   180|    <p style="max-width:600px;margin:8px auto 0;color:#888;font-size:14px" class="en">Premium golf packages from Korea — Trump National, Sandpiper GC, Hidden Valley GC. All-inclusive with Korean guide.</p>
+   181|    <p style="max-width:600px;margin:8px auto 0;color:#888;font-size:14px" class="ko">한국 출발 프리미엄 골프 패키지 — 트럼프 내셔널, 샌드파이퍼 GC, 히든밸리 GC. 한국인 가이드 올인클루시브.</p>
+   182|  </div>
+   183|
+   184|  <!-- Package Selector Tabs -->
+   185|  <div class="tier-toggle" style="margin-bottom:32px">
+   186|    <button class="tier-btn active" onclick="switchUSAPkg('premier')" id="tab-premier">
+   187|      <span class="en">✦ Trump Premier</span><span class="ko">✦ 트럼프 프리미어</span>
+   188|      <span style="font-size:10px;opacity:.6;display:block" class="en">6N/7D · 4 Rounds</span>
+   189|      <span style="font-size:10px;opacity:.6;display:block" class="ko">6박7일 · 4라운드</span>
+   190|    </button>
+   191|    <button class="tier-btn" onclick="switchUSAPkg('elite')" id="tab-elite">
+   192|      <span class="en">✦ Trump Elite</span><span class="ko">✦ 트럼프 엘리트</span>
+   193|      <span style="font-size:10px;opacity:.6;display:block" class="en">5N/6D · 3 Rounds</span>
+   194|      <span style="font-size:10px;opacity:.6;display:block" class="ko">5박6일 · 3라운드</span>
+   195|    </button>
+   196|  </div>
+   197|
+   198|  <!-- Package Premier -->
+   199|  <div id="usa-premier" class="pkg-grid">
+   200|    <div class="pkg-card" style="grid-column:1/-1;max-width:700px;margin:0 auto">
+   201|      <div class="pkg-img">
+   202|        <span class="pkg-icon">🏌️</span>
+   203|        <span class="pkg-badge en">All-Inclusive</span><span class="pkg-badge ko">올인클루시브</span>
+   204|      </div>
+   205|      <div class="pkg-body">
+   206|        <h3 class="en">Trump Premier — Golf Package</h3><h3 class="ko">트럼프 프리미어 — 골프 패키지</h3>
+   207|        <div class="dur en">6 Nights / 7 Days · 4 Championship Rounds</div><div class="dur ko">6박 7일 · 챔피언십 4라운드</div>
+   208|        <div class="desc en">
+   209|          <strong>⛳ Courses:</strong> Trump National LA ×1, Sandpiper GC ×2 (free replay), Hidden Valley GC ×1<br>
+   210|          <strong>🏨 Stay:</strong> 5★ Beverly Wilshire tier · 6 nights<br>
+   211|          <strong>🚐 Transport:</strong> Private driver/guide + airport RT · Korean-speaking<br>
+   212|          <strong>🍽️ Dining:</strong> All meals included + 2 Michelin/fine dining dinners<br>
+   213|          <strong>📦 Insurance:</strong> Tips & contingency included<br>
+   214|   215|        </div>
+   216|        <div class="desc ko">
+   217|          <strong>⛳ 코스:</strong> 트럼프 내셔널 LA ×1, 샌드파이퍼 GC ×2 (무료 재플레이), 히든밸리 GC ×1<br>
+   218|          <strong>🏨 숙박:</strong> 5★ 베벌리 윌셔 티어 · 6박<br>
+   219|          <strong>🚐 교통:</strong> 프라이빗 드라이버/가이드 + 공항 픽업 · 한국어<br>
+   220|          <strong>🍽️ 식사:</strong> 전 식사 포함 + 미슐랭/파인다이닝 2회<br>
+   221|          <strong>📦 기타:</strong> 보험·팁·예비비 포함<br>
+   222|   223|        </div>
+   224|        <div class="price">$6,579 <small>/person</small></div>
+   225|        <div class="route en">All-inclusive: golf · hotel · meals · transport · guide · insurance</div>
+   226|        <div class="route ko">올인클루시브: 골프 · 호텔 · 식사 · 교통 · 가이드 · 보험</div>
+   227|        <button class="pkg-btn" onclick="openModal('trump-premier')"><span class="en">View Full Itinerary →</span><span class="ko">전체 일정 보기 →</span></button>
+   228|      </div>
+   229|    </div>
+   230|  </div>
+   231|
+   232|  <!-- Package Elite (hidden by default) -->
+   233|  <div id="usa-elite" class="pkg-grid" style="display:none">
+   234|    <div class="pkg-card" style="grid-column:1/-1;max-width:700px;margin:0 auto">
+   235|      <div class="pkg-img">
+   236|        <span class="pkg-icon">🌟</span>
+   237|        <span class="pkg-badge en">All-Inclusive</span><span class="pkg-badge ko">올인클루시브</span>
+   238|      </div>
+   239|      <div class="pkg-body">
+   240|        <h3 class="en">Trump Elite — Golf Package</h3><h3 class="ko">트럼프 엘리트 — 골프 패키지</h3>
+   241|        <div class="dur en">5 Nights / 6 Days · 3 Championship Rounds</div><div class="dur ko">5박 6일 · 챔피언십 3라운드</div>
+   242|        <div class="desc en">
+   243|          <strong>⛳ Courses:</strong> Trump National LA ×2, Hidden Valley GC ×1<br>
+   244|          <strong>🏨 Stay:</strong> 5★ Beverly Wilshire tier · 5 nights<br>
+   245|          <strong>🚐 Transport:</strong> Private driver/guide + airport RT · Korean-speaking<br>
+   246|          <strong>🍽️ Dining:</strong> All meals included + 2 Michelin/fine dining dinners<br>
+   247|          <strong>📦 Insurance:</strong> Tips & contingency included<br>
+   248|   249|        </div>
+   250|        <div class="desc ko">
+   251|          <strong>⛳ 코스:</strong> 트럼프 내셔널 LA ×2, 히든밸리 GC ×1<br>
+   252|          <strong>🏨 숙박:</strong> 5★ 베벌리 윌셔 티어 · 5박<br>
+   253|          <strong>🚐 교통:</strong> 프라이빗 드라이버/가이드 + 공항 픽업 · 한국어<br>
+   254|          <strong>🍽️ 식사:</strong> 전 식사 포함 + 미슐랭/파인다이닝 2회<br>
+   255|          <strong>📦 기타:</strong> 보험·팁·예비비 포함<br>
+   256|   257|        </div>
+   258|        <div class="price">$5,669 <small>/person</small></div>
+   259|        <div class="route en">All-inclusive: golf · hotel · meals · transport · guide · insurance</div>
+   260|        <div class="route ko">올인클루시브: 골프 · 호텔 · 식사 · 교통 · 가이드 · 보험</div>
+   261|        <button class="pkg-btn" onclick="openModal('trump-elite')"><span class="en">View Full Itinerary →</span><span class="ko">전체 일정 보기 →</span></button>
+   262|      </div>
+   263|    </div>
+   264|  </div>
+   265|</section>
+   266|
+   267|<!-- Contact -->
+   268|<section id="contact">
+   269|  <div class="sec-title">
+   270|    <div class="tag en">CONTACT</div><div class="tag ko">문의</div>
+   271|    <h2 class="en">Let's Plan Your Journey</h2><h2 class="ko">여행을 계획해보세요</h2>
+   272|  </div>
+   273|  <p class="en">Every itinerary is tailored to you. Reach out and we'll craft the perfect Korea or California experience — at your pace, your style, your budget.</p>
+   274|  <p class="ko">모든 일정은 당신에게 맞춰집니다. 연락 주시면 완벽한 한국 또는 캘리포니아 경험을 만들어드립니다 — 당신의 속도, 스타일, 예산에 맞게.</p>
+   275|  <div class="contact-btns">
+   276|    <a href="https://open.kakao.com/o/sresonatetour" target="_blank" class="btn-pri" style="background:#fee500;color:#391b1b">💬 KakaoTalk</a>
+   277|    <a href="mailto:resonateclub@gmail.com" class="btn-sec">✉️ Email</a>
+   278|  </div>
+   279|</section>
+   280|
+   281|<footer>
+   282|  © 2026 Resonate Club · resonatetour.com & resonateclub.com · Premium Korea ↔ USA Travel
+   283|</footer>
+   284|
+   285|<!-- Modal -->
+   286|<div class="modal-overlay" id="modal-overlay" onclick="closeModal(event)">
+   287|  <div class="modal" id="modal-content" onclick="event.stopPropagation()">
+   288|    <button class="modal-close" onclick="closeModal()">✕</button>
+   289|    <div id="modal-body"></div>
+   290|  </div>
+   291|</div>
+   292|
+   293|<script>
+   294|// Language
+   295|let curLang = 'en';
+   296|function toggleLang() {
+   297|  curLang = curLang === 'en' ? 'ko' : 'en';
+   298|  document.documentElement.setAttribute('data-lang', curLang);
+   299|  document.getElementById('langLabel').textContent = curLang === 'en' ? 'KO' : 'EN';
+   300|}
+   301|document.getElementById('langLabel').textContent = 'KO';
+   302|
+   303|// USA Package toggle
+   304|function switchUSAPkg(pkg) {
+   305|  document.querySelectorAll('.tier-btn').forEach(b => b.classList.remove('active'));
+   306|  var tab = document.getElementById('tab-' + pkg);
+   307|  if (tab) tab.classList.add('active');
+   308|  document.getElementById('usa-premier').style.display = pkg === 'premier' ? '' : 'none';
+   309|  document.getElementById('usa-elite').style.display = pkg === 'elite' ? '' : 'none';
+   310|}
+   311|
+   312|
+   313|// Modal
+   314|const ITINERARIES = {
+   315|  'korean-odyssey': {
+   316|    en: `<h3>Korean Odyssey — 7 Days / 6 Nights · $5,490/person</h3><div class="itinerary"><div class="day">Day 1 — Arrival & Han River</div><p>Incheon VIP → Josun Palace Gangnam → Private Han River yacht dinner (5-course, Banpo Bridge fountain show)</p><div class="day">Day 2 — Royal & Traditional Seoul</div><p>Gyeongbokgung + hanbok → Balwoo Gongyang temple cuisine (Michelin) → Insadong gallery + hanji artisan + tea ceremony → Kwon Sook Soo (2★) → Ikseon-dong craft makgeolli</p><div class="day">Day 3 — DMZ & K-Culture Deep Dive</div><p>Private DMZ tour → HYBE Insight or SMTOWN → K-pop recording studio session → Hongdae street culture + BBQ → Club crawl</p><div class="day">Day 4 — Seoul → Gyeongju</div><p>KTX First Class → Lahan Select Gyeongju → Bulguksa Temple + Seokguram Grotto + Cheomseongdae → Donggung Palace night walk → Hanwoo BBQ</p><div class="day">Day 5 — Gyeongju → Busan</div><p>Golgulsa Sunmudo → Signiel Busan → Millak Raw Fish Center → Haedong Yonggungsa → Haeundae sunset → Michelin dinner</p><div class="day">Day 6 — Busan Culture & Coast</div><p>Gamcheon Culture Village → Jagalchi Fish Market → Private yacht → Farewell dinner with makgeolli toast</p><div class="day">Day 7 — Departure</div><p>Donginbi red ginseng spa → Gimhae Airport or KTX to Incheon → VIP lounge → Premium gift</p><p style="margin-top:16px"><strong>Includes:</strong> 6 nights luxury, 12+ meals (3 Michelin), private guide, KTX + transfers, WiFi, departure gift.</p></div>`,
+   317|    ko: `<h3>Korean Odyssey — 7일 / 6박 · $5,490/인</h3><div class="itinerary"><div class="day">1일차 — 도착 & 한강</div><p>인천 VIP → 조선팰리스 강남 → 한강 프라이빗 요트 디너</p><div class="day">2일차 — 로열 & 전통 서울</div><p>경복궁+한복 → 발우공양 사찰음식 → 인사동 갤러리+한지 장인+다도 → 권숙수 (2스타) → 익선동 수제 막걸리</p><div class="day">3일차 — DMZ & K-컬처</div><p>프라이빗 DMZ → 하이브 인사이트 또는 SMTOWN → K팝 녹음실 → 홍대 길거리 문화+BBQ → VIP 클럽</p><div class="day">4일차 — 서울 → 경주</div><p>KTX 퍼스트 클래스 → 라한셀렉트 경주 → 불국사+석굴암+첨성대 → 동궁과 월지 야경 → 한우 BBQ</p><div class="day">5일차 — 경주 → 부산</div><p>골굴사 선무도 → 시그니엘 부산 → 민락동 활어회 → 해동용궁사 → 해운대 석양 → 미슐랭 디너</p><div class="day">6일차 — 부산 문화 & 해안</div><p>감천문화마을 → 자갈치시장 → 프라이빗 요트 → 막걸리 건배 환송 만찬</p><div class="day">7일차 — 출발</div><p>동인비 홍삼 스파 → 김해공항 또는 KTX 인천 → VIP 라운지 → 프리미엄 기념품</p></div>`
+   318|  },
+   319|  'complete-korea': {
+   320|    en: `<h3>Complete Korea — 13 Days / 12 Nights · $11,900/person</h3><div class="itinerary"><div class="day">Route: Seoul (4N) → Andong (1N) → Gyeongju (2N) → Busan (2N) → Jeju (3N)</div><p>The ultimate Korean journey. Helicopter transfer, Four Seasons Seoul, private palace dining, Changdeokgung Secret Garden, 3★ La Yeon at The Shilla. Andong Hahoe Village mask dance, Dosan Seowon sunrise. Gyeongju UNESCO deep dive. Park Hyatt Busan, Jeju Island: Hallasan hike, haenyeo divers, O'Sulloc tea fields, Bonte Museum, private yacht. 20+ meals with multiple Michelin stars. All private transport + domestic flights.</p><p style="margin-top:16px"><strong>Includes:</strong> 12 nights ultra-luxury, 20+ meals, domestic flights, yacht, spa, departure gift.</p></div>`,
+   321|    ko: `<h3>Complete Korea — 13일 / 12박 · $11,900/인</h3><div class="itinerary"><div class="day">코스: 서울(4박) → 안동(1박) → 경주(2박) → 부산(2박) → 제주(3박)</div><p>한국 여행의 결정판. 헬리콥터 옵션, 포시즌스 서울, 한국의집 프라이빗 궁중 만찬, 창덕궁 비원, 신라호텔 라연 (3스타). 안동 하회마을 탈춤, 도산서원 새벽. 경주 유네스코 딥다이브. 파크하얏트 부산, 제주: 한라산 트레킹, 해녀 체험, 오설록 차밭, 본태박물관, 선셋 프라이빗 요트. 20+ 식사. 모든 프라이빗 이동 + 국내선 항공.</p></div>`
+   322|  },
+   323|  'trump-premier': {
+   324|    en: `<h3>Trump Premier — 6 Nights / 7 Days · $6,579/person</h3><div class="itinerary"><div class="day">⛳ Courses: Trump National LA ×1 · Sandpiper GC ×2 (free replay) · Hidden Valley GC ×1</div><p><strong>4 championship rounds at California's finest courses.</strong> Korean-speaking guide.</p><div class="day">Day 1 — Arrival & LA Welcome</div><p>LAX VIP Meet & Greet → Beverly Wilshire tier → Welcome dinner at <strong>Bestia</strong> → Santa Monica Pier</p><div class="day">Day 2 — Sandpiper GC (Round 1)</div><p>Coastal drive to Santa Barbara → <strong>Sandpiper Golf Club</strong> — oceanfront championship, Pacific views → <strong>La Super-Rica Taqueria</strong> → State Street, Old Mission → <strong>The Lark</strong></p><div class="day">Day 3 — Sandpiper GC (Round 2 — FREE Replay) + Wine</div><p>Second round at <strong>Sandpiper GC</strong> — FREE replay → Solvang → <strong>Santa Ynez Valley wine trail</strong> 3 wineries → <strong>Stonehouse</strong> (San Ysidro Ranch)</p><div class="day">Day 4 — Trump National LA</div><p>Rancho Palos Verdes → <strong>Trump National Golf Club LA</strong> — cliffside fairways, iconic Hole 18 → Griffith Observatory sunset → <strong>K-Town BBQ</strong></p><div class="day">Day 5 — Hidden Valley GC & Temecula</div><p>Norco → <strong>Hidden Valley Golf Club</strong> — hilly terrain, Par-3 15th → Temecula Valley wine → <strong>Ponte Vineyard Inn</strong> dinner</p><div class="day">Day 6 — LA Grand Finale</div><p>Getty Center → Beverly Hills lunch (Spago) → Rodeo Drive → Farewell Michelin: <strong>n/naka</strong> (2★) → Perch rooftop</p><div class="day">Day 7 — Departure</div><p>Wi Spa → The Grove → LAX VIP → Premium gift</p><p><strong>All-inclusive price:</strong> <strong>$6,579/person</strong>. Includes: 6 nights 5★, 4 championship rounds, all meals (2 Michelin dinners), private driver/guide, airport transfers, insurance. Excludes: international flights.</p></div>`,
+   325|    ko: `<h3>트럼프 프리미어 — 6박 7일 · $6,579/인</h3><div class="itinerary"><div class="day">⛳ 코스: 트럼프 내셔널 LA ×1 · 샌드파이퍼 GC ×2 (무료 재플레이) · 히든밸리 GC ×1</div><p><strong>캘리포니아 최고 코스 4라운드 챔피언십.</strong> 한국인 가이드 동행.</p><div class="day">1일차 — 도착 & LA</div><p>LAX VIP 미트앤그리트 → 베벌리 윌셔 티어 → 환영 만찬 <strong>Bestia</strong> → 산타모니카 피어</p><div class="day">2일차 — 샌드파이퍼 GC (1R)</div><p>샌타바버라 해안 드라이브 → <strong>샌드파이퍼 GC</strong> — 오션프론트 18홀 → <strong>La Super-Rica</strong> → 올드 미션 → <strong>The Lark</strong></p><div class="day">3일차 — 샌드파이퍼 GC (2R · 무료 재플레이) + 와인</div><p><strong>샌드파이퍼 GC</strong> 2라운드 — 무료 재플레이 → 솔뱅 → <strong>산타이네즈 와인 트레일</strong> 3곳 → <strong>Stonehouse</strong></p><div class="day">4일차 — 트럼프 내셔널 LA</div><p>랜초 팔로스 버디스 → <strong>트럼프 내셔널 GC</strong> — 절벽 페어웨이, 18번홀 → 그리피스 선셋 → <strong>코리아타운 BBQ</strong></p><div class="day">5일차 — 히든밸리 GC & 테메큘라</div><p>노코 → <strong>히든밸리 GC</strong> — 구릉, 파3 15번홀 → 테메큘라 와인 → <strong>폰테 빈야드 인</strong></p><div class="day">6일차 — LA 피날레</div><p>게티 센터 → 비버리힐스 (Spago) → 로데오 → 환송 미슐랭: <strong>n/naka</strong> (2★) → 퍼치 루프탑</p><div class="day">7일차 — 출발</div><p>Wi Spa → 더 그로브 → LAX VIP → 기념품</p><p><strong>올인클루시브 가격:</strong> <strong>$6,579/인</strong>. 포함: 5★ 6박, 챔피언십 4라운드, 전 식사(미슐랭 2회), 프라이빗 드라이버/가이드, 공항 픽업, 보험. 불포함: 국제선 항공.</p></div>`
+   326|  },
+   327|  'trump-elite': {
+   328|    en: `<h3>Trump Elite — 5 Nights / 6 Days · $5,669/person</h3><div class="itinerary"><div class="day">⛳ Courses: Trump National LA ×2 · Hidden Valley GC ×1</div><p><strong>3 championship rounds with double Trump for ocean-cliff mastery.</strong> Focused premium package. </p><div class="day">Day 1 — Arrival & Santa Monica</div><p>LAX VIP → Beverly Wilshire tier → Santa Monica Beach walk → Welcome dinner at <strong>Providence</strong> (2★ Michelin)</p><div class="day">Day 2 — Trump National LA (Round 1)</div><p>Rancho Palos Verdes → <strong>Trump National Golf Club LA</strong> — cliffside championship 18 holes → Clubhouse lunch → Terranea cliff walk → <strong>n/naka</strong> (2★) or <strong>Bestia</strong></p><div class="day">Day 3 — Hidden Valley GC & Temecula</div><p>Norco → <strong>Hidden Valley Golf Club</strong> — hilly terrain, Par-3 15th → Temecula wine → <strong>Ponte Winery</strong> tasting → <strong>The Restaurant at Ponte</strong></p><div class="day">Day 4 — Trump National LA (Round 2)</div><p><strong>Trump National LA</strong> — different tee boxes, new challenge → Getty Center → Beverly Hills dinner: <strong>Spago</strong> or <strong>Mastro's</strong></p><div class="day">Day 5 — LA Culture & Farewell</div><p>Griffith Observatory → Hollywood Sign → Koreatown K-BBQ → Rodeo Drive → Farewell: <strong>Maude</strong> or <strong>Perch</strong> rooftop</p><div class="day">Day 6 — Departure</div><p>Wi Spa → The Grove → LAX VIP → Premium gift</p><p><strong>All-inclusive price:</strong> <strong>$5,669/person</strong>. Includes: 5 nights 5★, 3 championship rounds, all meals (2 Michelin dinners), private driver/guide, airport transfers, insurance. Excludes: international flights.</p></div>`,
+   329|    ko: `<h3>트럼프 엘리트 — 5박 6일 · $5,669/인</h3><div class="itinerary"><div class="day">⛳ 코스: 트럼프 내셔널 LA ×2 · 히든밸리 GC ×1</div><p><strong>트럼프 2회 플레이로 오션클리프 마스터리.</strong> 집중 프리미엄 패키지. </p><div class="day">1일차 — 도착 & 산타모니카</div><p>LAX VIP → 베벌리 윌셔 티어 → 산타모니카 비치 산책 → <strong>Providence</strong> (2★ 미슐랭)</p><div class="day">2일차 — 트럼프 내셔널 LA (1R)</div><p>랜초 팔로스 버디스 → <strong>트럼프 내셔널 GC</strong> — 절벽 18홀 → 클럽하우스 → 테라네아 절벽 산책 → <strong>n/naka</strong> (2★) 또는 <strong>Bestia</strong></p><div class="day">3일차 — 히든밸리 GC & 테메큘라</div><p>노코 → <strong>히든밸리 GC</strong> — 구릉, 파3 15번홀 → 테메큘라 와인 → <strong>폰테 와이너리</strong> → <strong>더 레스토랑 앳 폰테</strong></p><div class="day">4일차 — 트럼프 내셔널 LA (2R)</div><p><strong>트럼프 내셔널 LA</strong> — 다른 티박스, 새 도전 → 게티 센터 → 비버리힐스: <strong>Spago</strong> 또는 <strong>Mastro's</strong></p><div class="day">5일차 — LA 문화 & 환송</div><p>그리피스 천문대 → 할리우드 사인 → 코리아타운 K-BBQ → 로데오 → 환송: <strong>Maude</strong> 또는 <strong>Perch</strong></p><div class="day">6일차 — 출발</div><p>Wi Spa → 더 그로브 → LAX VIP → 기념품</p><p><strong>올인클루시브 가격:</strong> <strong>$5,669/인</strong>. 포함: 5★ 5박, 챔피언십 3라운드, 전 식사(미슐랭 2회), 프라이빗 드라이버/가이드, 공항 픽업, 보험. 불포함: 국제선 항공.</p></div>`
+   330|  }
+   331|};
+   332|
+   333|function openModal(key) {
+   334|  var lang = document.documentElement.getAttribute('data-lang') || 'en';
+   335|  var content = ITINERARIES[key] ? (ITINERARIES[key][lang] || ITINERARIES[key]['en']) : '<p>Details coming soon.</p>';
+   336|  document.getElementById('modal-body').innerHTML = content;
+   337|  document.getElementById('modal-overlay').classList.add('show');
+   338|}
+   339|function closeModal(e) {
+   340|  if (e && e.target !== document.getElementById('modal-overlay')) return;
+   341|  document.getElementById('modal-overlay').classList.remove('show');
+   342|}
+   343|document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeModal(); });
+   344|
+   345|function scrollToTop() { window.scrollTo({top:0,behavior:'smooth'}); }
+   346|</script>
+   347|</body>
+   348|</html>
+   349|
