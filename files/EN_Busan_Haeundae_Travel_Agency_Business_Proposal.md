@@ -1,4 +1,4 @@
-# Resonate Club Comprehensive Travel Agency Business Proposal
+# Resonate Club Domestic & International Travel Agency Business Proposal
 
 ---
 
@@ -28,7 +28,7 @@
 | **Company Name** | Resonate Club Inc. (리조네이트 클럽 주식회사) |
 | **Representative** | Heesung Lee |
 | **Corporate Form** | One-Person Corporation (1인 주식회사) |
-| **Business Type** | Comprehensive Travel Agency (종합여행업) |
+| **Business Type** | Domestic & International Travel Agency (국내외여행업) |
 | **Registered Office** | Busan, Haeundae-gu, Republic of Korea |
 | **Websites** | www.resonateclub.com / www.resonatetour.com |
 | **Planned Establishment** | Second Half of 2026 |
@@ -275,7 +275,7 @@ Resonate Club operates two core service lines.
 | Category | Governing Law | Description |
 |---|---|---|
 | **Corporation Establishment** | Commercial Act, Articles 288-328 | Stock company establishment procedures |
-| **Comprehensive Travel Agency Registration** | Tourism Promotion Act, Article 4; Enforcement Decree, Appendix 1 | Travel agency registration requirements and procedures |
+| **Domestic & International Travel Agency Registration** | Tourism Promotion Act, Article 4; Enforcement Decree, Appendix 1 | Travel agency registration requirements and procedures |
 | **Business Registration** | Value-Added Tax Act, Article 8 | Business registration application |
 | **Surety Insurance** | Tourism Promotion Act Enforcement Decree, Article 15 | Mandatory business surety insurance |
 
@@ -301,7 +301,7 @@ Resonate Club operates two core service lines.
 * Required Documents: Corporate Registration Certificate, Articles of Incorporation copy, Lease Agreement, Business Registration Application
 * Processing time: ~5-7 business days
 
-#### Stage 4: Comprehensive Travel Agency Registration (Weeks 3-6)
+#### Stage 4: Domestic & International Travel Agency Registration (Weeks 3-6)
 
 * **Competent Authority**: Busan Haeundae-gu Office (Culture & Tourism Division)
 * **Required Documents**:
@@ -335,7 +335,7 @@ Resonate Club operates two core service lines.
 | 1 | Corporation Establishment Preparation | 1 week | D+7 |
 | 2 | Corporation Registration | 1-2 weeks | D+21 |
 | 3 | Business Registration | 1 week | D+28 |
-| 4 | Comprehensive Travel Agency Registration | 2-4 weeks | D+56 |
+| 4 | Domestic & International Travel Agency Registration | 2-4 weeks | D+56 |
 | 5 | Surety Insurance Subscription | 1 week | D+63 |
 | 6 | Infrastructure Setup | 6-8 weeks (parallel) | D+56 |
 | **Total Duration** | | **Approximately 6-8 weeks** | **Around D+60** |
@@ -348,9 +348,9 @@ Resonate Club operates two core service lines.
 
 | Item | Amount (KRW) | Notes |
 |---|---|---|
-| **Paid-in Capital** | 50,000,000 | Satisfies minimum requirement for International Travel Agency under Tourism Promotion Act (KRW 30M) |
+| **Paid-in Capital** | 50,000,000 | Satisfies minimum requirement for Domestic & International Travel Agency under Tourism Promotion Act (KRW 50M) |
 | Shares Issued (2,000 shares) | 50,000,000 | KRW 25,000 per share, fully subscribed by Representative Director |
-| **Statutory Capital Compliance** | **Compliant** | Satisfies International Travel Agency registration threshold |
+| **Statutory Capital Compliance** | **Compliant** | Satisfies Domestic & International Travel Agency registration threshold |
 
 ### 6.2 Initial Establishment Costs
 
@@ -361,11 +361,11 @@ Resonate Club operates two core service lines.
 | Travel Agency Registration Fee | 50,000 | Haeundae-gu Office revenue stamps |
 | Surety Insurance (1 year) | 1,000,000 | Based on surety amount, 0.5-1% annual rate |
 | Office Deposit | 1,000,000 | One-time initial payment |
-| Office Initial Equipment | 2,000,000 | PC, printer, furniture, etc. |
+| Office Initial Equipment | 1,000,000 | PC, printer, furniture, etc. |
 | Website & Domain | 50,000 | Domain registration & initial hosting |
 | Telecom Installation | 100,000 | Internet & phone setup |
 | Miscellaneous | 500,000 | Contingency |
-| **Subtotal** | **5,100,000** | Excluding capital |
+| **Subtotal** | **4,100,000** | Excluding capital |
 
 ### 6.3 Monthly Fixed Costs (Annual Operating Costs, Year 1)
 
@@ -386,11 +386,11 @@ Resonate Club operates two core service lines.
 
 | Category | Amount (KRW) | Notes |
 |---|---|---|
-| Capital (Paid-in) | 50,000,000 | Mandatory for International Travel Agency |
-| Initial Establishment Costs | 5,100,000 | |
+| Capital (Paid-in) | 50,000,000 | Mandatory for Domestic & International Travel Agency |
+| Initial Establishment Costs | 4,100,000 | |
 | 1-Year Business Fixed Costs | 13,596,000 | |
 | Working Capital (Reserve) | 5,000,000-15,000,000 | Buffer for seasonal/exchange rate fluctuations (bank deposit) |
-| **Total Liquidity Required** | **~74,000,000-84,000,000** | |
+| **Total Liquidity Required** | **~73,000,000-83,000,000** | |
 
 > **Recommendation**: Secure total initial liquidity of **KRW 80,000,000** to ensure stable operations in the first year. Of this, KRW 50M is committed as statutory capital, with the remaining KRW 30M serving as operating funds and reserves.
 
@@ -404,11 +404,11 @@ Resonate Club operates two core service lines.
 |---|---|---|---|---|
 | 1 | Corporation Registration | Commercial Act | Busan District Court, Eastern Branch | 1-2 weeks |
 | 2 | Business Registration | Value-Added Tax Act | Haeundae Tax Office | 1 week |
-| 3 | Comprehensive Travel Agency Registration | Tourism Promotion Act, Art. 4 | Haeundae-gu Office | 2-4 weeks |
+| 3 | Domestic & International Travel Agency Registration | Tourism Promotion Act, Art. 4 | Haeundae-gu Office | 2-4 weeks |
 | 4 | Business Surety Insurance | Tourism Promotion Act Enforcement Decree | Seoul Guarantee Insurance, etc. | 1 week |
 | 5 | Overseas Tour Escort Registration | Tourism Promotion Act, Art. 38 | Korea Tourism Organization | Hire qualified personnel |
 
-### 7.2 Comprehensive Travel Agency Registration Requirements Compliance Plan
+### 7.2 Domestic & International Travel Agency Registration Requirements Compliance Plan
 
 Requirements under Tourism Promotion Act, Article 4 and Enforcement Decree, Appendix 1:
 
@@ -659,7 +659,7 @@ Resonate Club's core revenue model is **Cost-Plus Markup**.
 
 | Quarter | Key Objectives | Detailed Activities |
 |---|---|---|
-| **Q1-Q2** | Complete corporation establishment & licensing | Corporate registration, Comprehensive Travel Agency registration, surety insurance |
+| **Q1-Q2** | Complete corporation establishment & licensing | Corporate registration, Domestic & International Travel Agency registration, surety insurance |
 | **Q2** | Website launch | Launch resonateclub.com, resonatetour.com |
 | **Q2** | Partnership contracts | 3 California golf courses, 3 LA hotels, 2 transportation providers |
 | **Q3** | First customer acquisition | Early-bird promotions, influencer seed tours |
@@ -667,7 +667,7 @@ Resonate Club's core revenue model is **Cost-Plus Markup**.
 
 #### Key KPIs
 
-* ✅ Corporation establishment and Comprehensive Travel Agency registration completed
+* ✅ Corporation establishment and Domestic & International Travel Agency registration completed
 * ✅ 3,000+ monthly website visitors achieved
 * ✅ 10 initial package bookings secured
 * ✅ Gross profit of KRW 150M achieved
@@ -733,7 +733,7 @@ Op Income 250M   Op Income 480M   Op Income 720M  Op Income 1.2B+
 
 ### 12.1 Business Viability
 
-The establishment of Resonate Club as a Comprehensive Travel Agency holds high business viability based on the following rationale.
+The establishment of Resonate Club as a Domestic & International Travel Agency holds high business viability based on the following rationale.
 
 #### Market Perspective
 * Overseas golf travel demand among **Korea's 6.24 million golf population** is growing at 12.5% CAGR, with a clear premiumization trend.
@@ -743,7 +743,7 @@ The establishment of Resonate Club as a Comprehensive Travel Agency holds high b
 #### Competitive Perspective
 * Founder Heesung Lee's **US local network and bicultural understanding** constitute an irreplaceable competitive advantage.
 * The **digital-first one-person corporation** model secures high profitability with minimal fixed costs.
-* A cost-based 40% markup model provides a **transparent and predictable revenue structure**.
+* A cost-based 40% markup model provides a **predictable revenue structure**.
 
 #### Legal Perspective
 * A sufficient funding plan has been established to meet travel agency registration requirements under the Tourism Promotion Act (KRW 50M capital, KRW 50M surety insurance).
@@ -759,7 +759,7 @@ The establishment of Resonate Club as a Comprehensive Travel Agency holds high b
 
 ### 12.3 Final Recommendation
 
-In accordance with the plan presented in this business proposal, we seek to **establish Resonate Club Inc. in Haeundae-gu, Busan in the second half of 2026**, register as a Comprehensive Travel Agency, and set a new standard for premium travel connecting Korea and the United States.
+In accordance with the plan presented in this business proposal, we seek to **establish Resonate Club Inc. in Haeundae-gu, Busan in the second half of 2026**, register as a Domestic & International Travel Agency, and set a new standard for premium travel connecting Korea and the United States.
 
 Resonate Club commits to contributing to the premiumization and globalization of Korea's travel industry, not as a mere travel agency, but as a **"curator designing experiences where customers and destinations resonate."**
 
@@ -771,4 +771,4 @@ Resonate Club commits to contributing to the premiumization and globalization of
 
 ---
 
-> ※ This business proposal may be utilized as a business plan for Comprehensive Travel Agency registration application under Article 4 of the Tourism Promotion Act and as an investment proposal. All financial figures are estimates as of May 2026 and may be adjusted based on actual market conditions and exchange rate fluctuations.
+> ※ This business proposal may be utilized as a business plan for Domestic & International Travel Agency registration application under Article 4 of the Tourism Promotion Act and as an investment proposal. All financial figures are estimates as of May 2026 and may be adjusted based on actual market conditions and exchange rate fluctuations.
