@@ -32,7 +32,7 @@
 | **Registered Office** | Busan, Haeundae-gu, Republic of Korea |
 | **Websites** | www.resonateclub.com / www.resonatetour.com |
 | **Planned Establishment** | Second Half of 2026 |
-| **Paid-in Capital** | KRW 100,000,000 (~USD 75,000) |
+| **Paid-in Capital** | KRW 50,000,000 (~USD 37,000) |
 | **Primary Services** | Korea→USA Golf Tours / USA→Korea Inbound Luxury Tours |
 
 ### 1.2 Business Vision
@@ -265,8 +265,8 @@ Resonate Club operates two core service lines.
 | **Corporate Form** | One-Person Corporation (Joint-Stock Company under Commercial Act) |
 | **Company Name** | Resonate Club Inc. (리조네이트 클럽 주식회사) |
 | **Registered Office** | Haeundae-gu, Busan ※Exact address to be confirmed upon lease agreement submission |
-| **Capital** | KRW 100,000,000, fully contributed by sole shareholder |
-| **Issued Shares** | 2,000 common shares (par value KRW 5,000, issue price KRW 50,000) |
+| **Capital** | KRW 50,000,000, fully contributed by sole shareholder |
+| **Issued Shares** | 2,000 common shares (par value KRW 5,000, issue price KRW 25,000) |
 | **Fiscal Year** | January 1 – December 31 annually |
 | **Directors & Auditors** | Representative Director: Heesung Lee (1 person) — Auditor appointment exempted (capital below KRW 1 billion) |
 
@@ -348,49 +348,51 @@ Resonate Club operates two core service lines.
 
 | Item | Amount (KRW) | Notes |
 |---|---|---|
-| **Paid-in Capital** | 100,000,000 | Minimum requirement for Comprehensive Travel Agency under Tourism Promotion Act |
-| Shares Issued (2,000 shares) | 100,000,000 | KRW 50,000 per share, fully subscribed by Representative Director |
-| **Statutory Capital Compliance** | **Compliant** | Satisfies KRW 100M Comprehensive Travel Agency registration threshold |
+| **Paid-in Capital** | 50,000,000 | Satisfies minimum requirement for International Travel Agency under Tourism Promotion Act (KRW 30M) |
+| Shares Issued (2,000 shares) | 50,000,000 | KRW 25,000 per share, fully subscribed by Representative Director |
+| **Statutory Capital Compliance** | **Compliant** | Satisfies International Travel Agency registration threshold |
 
 ### 6.2 Initial Establishment Costs
 
 | Item | Amount (KRW) | Notes |
 |---|---|---|
-| Registration License Tax | ~80,000 | Payable upon corporate registration |
-| Notary Articles of Incorporation Fee | ~300,000 | If delegated to law firm |
-| Corporate Registration Fee | ~30,000 | Registry office filing fee |
-| Business Registration Fee | Free | Tax office in-person submission |
-| Travel Agency Registration Fee | ~50,000 | Haeundae-gu Office revenue stamps |
-| Legal Advisory Fee (Optional) | 1,000,000-2,000,000 | If delegated to attorney/judicial scrivener |
-| **Subtotal** | **~1,500,000-2,500,000** | Subject to variation |
+| Corporation Registration | 400,000 | Registration tax, notary, court fees |
+| Business Registration | Free | Tax office in-person submission |
+| Travel Agency Registration Fee | 50,000 | Haeundae-gu Office revenue stamps |
+| Surety Insurance (1 year) | 1,000,000 | Based on surety amount, 0.5-1% annual rate |
+| Office Deposit | 1,000,000 | One-time initial payment |
+| Office Initial Equipment | 2,000,000 | PC, printer, furniture, etc. |
+| Website & Domain | 50,000 | Domain registration & initial hosting |
+| Telecom Installation | 100,000 | Internet & phone setup |
+| Miscellaneous | 500,000 | Contingency |
+| **Subtotal** | **5,100,000** | Excluding capital |
 
-### 6.3 Annual Operating Costs (Year 1)
+### 6.3 Monthly Fixed Costs (Annual Operating Costs, Year 1)
 
-| Item | Annual Amount (KRW) | Notes |
-|---|---|---|
-| **Office Rent** | 9,600,000 | KRW 800K/month, small Haeundae office |
-| **Office Deposit** | 10,000,000 | One-time initial payment |
-| **Surety Insurance Premium** | 1,000,000 | KRW 50M surety amount, 1% annual rate applied (actual 0.5-1%) |
-| **Website Development & Operations** | 5,000,000 | Initial build + annual maintenance |
-| **Digital Marketing** | 24,000,000 | KRW 2M/month (Google, Instagram, Naver ads) |
-| **Overseas Tour Escort Personnel** | 36,000,000 | KRW 3M/month (freelance contract basis) |
-| **Accounting & Tax Agency** | 3,600,000 | KRW 300K/month |
-| **Telecom & Office Supplies** | 2,400,000 | KRW 200K/month |
-| **Miscellaneous Expenses** | 2,400,000 | KRW 200K/month, irregular spending (replaces contingency reserve) |
-| **Total** | **~94,000,000** | Annual fixed costs (incl. deposit) |
+| Item | Monthly (KRW) | Annual (KRW) | Notes |
+|---|---|---|---|
+| **Office Rent** | 350,000 | 4,200,000 | Small Haeundae office |
+| **Surety Insurance Premium** | 83,000 | 1,000,000 | Annual premium ÷ 12 months |
+| **Accounting & Tax Agency** | 300,000 | 3,600,000 | |
+| **Telecom & Office Supplies** | 200,000 | 2,400,000 | |
+| **Miscellaneous Expenses** | 200,000 | 2,400,000 | Irregular spending |
+| **Monthly Fixed Total (Business)** | **1,133,000** | **13,596,000** | |
+| **Housing Rent (separate)** | 700,000 | 8,400,000 | (Personal, outside business) |
+| **Monthly Total (Business+Housing)** | **1,833,000** | **21,996,000** | |
+
+> ※ Variable costs such as website development, marketing, and tour escort personnel are covered by tour operating revenue
 
 ### 6.4 Total Required Funds
 
 | Category | Amount (KRW) | Notes |
 |---|---|---|
-| Capital (Paid-in) | 100,000,000 | Mandatory for Comprehensive Travel Agency |
-| Initial Establishment Costs | 2,500,000 | |
-| Office Deposit | 10,000,000 | |
-| Annual Operating Costs (excl. deposit) | 84,000,000 | |
-| Working Capital (Reserve) | 10,000,000-30,000,000 | Buffer for seasonal/exchange rate fluctuations (bank deposit) |
-| **Total Liquidity Required** | **~110,000,000-150,000,000** | |
+| Capital (Paid-in) | 50,000,000 | Mandatory for International Travel Agency |
+| Initial Establishment Costs | 5,100,000 | |
+| 1-Year Business Fixed Costs | 13,596,000 | |
+| Working Capital (Reserve) | 5,000,000-15,000,000 | Buffer for seasonal/exchange rate fluctuations (bank deposit) |
+| **Total Liquidity Required** | **~74,000,000-84,000,000** | |
 
-> **Recommendation**: Secure total initial liquidity of **KRW 150,000,000** to ensure stable operations in the first year. Of this, KRW 100M is committed as statutory capital, with the remaining KRW 50M serving as operating funds and reserves. This is a realistic budget reduced by KRW 50M from the previous estimate of KRW 200M.
+> **Recommendation**: Secure total initial liquidity of **KRW 80,000,000** to ensure stable operations in the first year. Of this, KRW 50M is committed as statutory capital, with the remaining KRW 30M serving as operating funds and reserves.
 
 ---
 
@@ -412,9 +414,9 @@ Requirements under Tourism Promotion Act, Article 4 and Enforcement Decree, Appe
 
 | Requirement | Standard | Compliance Plan |
 |---|---|---|
-| **Capital** | KRW 100M+ | Representative Director cash contribution of KRW 100M → stock payment verification |
-| **Office** | Office in Haeundae-gu | Lease agreement execution (officetel/small office ~KRW 800K/month) |
-| **Surety Insurance** | KRW 50M (base) business surety insurance | Seoul Guarantee Insurance subscription (annual premium ~KRW 500K-1M) |
+| **Capital** | KRW 50M+ | Representative Director cash contribution of KRW 50M → stock payment verification |
+| **Office** | Office in Haeundae-gu | Lease agreement execution (officetel/small office ~KRW 350K/month) |
+| **Surety Insurance** | KRW 50M (base) business surety insurance | Seoul Guarantee Insurance subscription (annual premium ~KRW 1M) |
 | **Personnel** | 1+ licensed overseas tour escort | Freelance contract with qualified holder |
 | **Facilities** | Office furniture, communications equipment | PC, printer, telephone, internet, etc. |
 | **Business Plan** | Detailed business plan | Submission based on this proposal |
@@ -502,17 +504,17 @@ Resonate Club's core revenue model is **Cost-Plus Markup**.
 | Line A Gross Profit | 132,000,000 |
 | Line B Gross Profit | 132,000,000 |
 | **Annual Gross Profit** | **264,000,000** |
-| Annual Operating Costs | (94,000,000) |
-| **Operating Income** | **~170,000,000** |
-| Operating Margin | ~64.4% |
+| Annual Operating Costs | (13,596,000) |
+| **Operating Income** | **~250,400,000** |
+| Operating Margin | ~94.9% |
 
 ### 8.4 3-Year Revenue Projection
 
 | Year | Line A Profit | Line B Profit | Gross Profit | Operating Costs | Operating Income | Notes |
 |---|---|---|---|---|---|---|
-| **Year 1** (2026 H2~) | 132M | 132M | 264M | 94M | **170M** | Conservative scenario |
-| **Year 2** (2027) | 240M | 260M | 500M | 120M | **380M** | Brand growth, repeat customers |
-| **Year 3** (2028) | 400M | 350M | 750M | 180M | **570M** | Partner expansion, staff hiring |
+| **Year 1** (2026 H2~) | 132M | 132M | 264M | 13.6M | **250.4M** | Conservative scenario |
+| **Year 2** (2027) | 240M | 260M | 500M | 20M | **480M** | Brand growth, repeat customers |
+| **Year 3** (2028) | 400M | 350M | 750M | 30M | **720M** | Partner expansion, staff hiring |
 
 ---
 
@@ -722,7 +724,7 @@ established       Marketing        Brand elevation  platform
                   strengthened
                   
 Revenue 264M     Revenue 500M     Revenue 750M    Revenue 2B+
-Op Income 170M   Op Income 380M   Op Income 570M  Op Income 1.2B+
+Op Income 250M   Op Income 480M   Op Income 720M  Op Income 1.2B+
 ```
 
 ---
@@ -744,7 +746,7 @@ The establishment of Resonate Club as a Comprehensive Travel Agency holds high b
 * A cost-based 40% markup model provides a **transparent and predictable revenue structure**.
 
 #### Legal Perspective
-* A sufficient funding plan has been established to meet Comprehensive Travel Agency registration requirements under the Tourism Promotion Act (KRW 100M capital, KRW 50M surety insurance).
+* A sufficient funding plan has been established to meet travel agency registration requirements under the Tourism Promotion Act (KRW 50M capital, KRW 50M surety insurance).
 * A **systematic 6-8 week roadmap** from corporation establishment to business launch is in place.
 
 ### 12.2 Key Success Factors
