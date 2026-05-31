@@ -22,8 +22,17 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;height:56px;display:flex;ali
 .nav-links{display:flex;gap:4px;align-items:center}
 .nav-links a{font-size:13px;color:#5c6a7a;text-decoration:none;padding:6px 12px;border-radius:4px;transition:all .2s}
 .nav-links a:hover{background:#f5eed6;color:var(--navy)}
-.btn-lang{font-size:12px;font-weight:500;background:none;border:1px solid rgba(212,175,55,.3);color:var(--gold);padding:6px 14px;border-radius:4px;cursor:pointer;transition:all .2s}
+.btn-lang{font-size:12px;font-weight:500;background:none;border:1px solid rgba(212,175,55,.3);color:var(--gold);padding:6px 14px;border-radius:4px;cursor:pointer;transition:all .2s;position:relative}
 .btn-lang:hover{background:var(--cream)}
+
+.lc-dropdown{display:none;position:absolute;top:48px;right:20px;background:#fff;border:1px solid #eee;border-radius:8px;box-shadow:0 8px 30px rgba(0,0,0,.12);z-index:400;min-width:200px;overflow:hidden}
+.lc-dropdown.show{display:block}
+.lc-section{padding:8px 0;border-bottom:1px solid #f0f0f0}
+.lc-section:last-child{border-bottom:none}
+.lc-section-title{font-size:10px;font-weight:600;color:#aaa;text-transform:uppercase;letter-spacing:.06em;padding:6px 16px 4px}
+.lc-option{display:block;width:100%;text-align:left;font-size:13px;font-weight:500;color:#5c6a7a;background:none;border:none;padding:8px 16px;cursor:pointer;transition:all .15s}
+.lc-option:hover{background:#f5eed6;color:var(--navy)}
+.lc-option.active{color:var(--navy);font-weight:700;background:#fdf8ed}
 
 .hero{min-height:90vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:100px 20px 60px;background:linear-gradient(160deg,var(--navy) 0%,var(--navy-light) 50%,#0d1f30 100%);color:#fff;position:relative;overflow:hidden}
 .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 70% 30%,rgba(212,175,55,.08) 0%,transparent 60%)}
@@ -111,7 +120,19 @@ footer{background:#0d1f30;color:rgba(255,255,255,.4);text-align:center;padding:3
     <a href="#korea" class="en">Korea</a><a href="#korea" class="ko">한국</a>
     <a href="#vip" class="en">VIP Events</a><a href="#vip" class="ko">VIP 이벤트</a>
     <a href="#contact" class="en">Contact</a><a href="#contact" class="ko">문의</a>
-    <button class="btn-lang" onclick="toggleLang()"><span id="langLabel">KO</span></button>
+    <button class="btn-lang" onclick="toggleLangCurrency(event)" id="lcBtn"><span id="lcLabel">EN · USD</span> ▾</button>
+    <div class="lc-dropdown" id="lcDropdown">
+      <div class="lc-section">
+        <div class="lc-section-title">Language / 언어</div>
+        <button class="lc-option active" onclick="setLang('en',this)">🇺🇸 English</button>
+        <button class="lc-option" onclick="setLang('ko',this)">🇰🇷 한국어</button>
+      </div>
+      <div class="lc-section">
+        <div class="lc-section-title">Currency / 통화</div>
+        <button class="lc-option active" onclick="setCurrency('USD',this)">$ USD</button>
+        <button class="lc-option" onclick="setCurrency('KRW',this)">₩ KRW</button>
+      </div>
+    </div>
   </div>
 </nav>
 
@@ -317,11 +338,11 @@ footer{background:#0d1f30;color:rgba(255,255,255,.4);text-align:center;padding:3
         </div>
         <div class="pkg-note en">
           <strong>⚠️ Limited to 8 guests.</strong> Minimum 7 — full refund if canceled.<br>
-          Deposit: $3,000 · Cancellation deadline: May 15, 2026 · Flights not included.
+          Deposit: <span data-price-usd="3000">$3,000</span> · Cancellation deadline: May 15, 2026 · Flights not included.
         </div>
         <div class="pkg-note ko">
           <strong>⚠️ 단 8명 한정.</strong> 최소 7명 — 미달 시 전액 환불.<br>
-          예약금: $3,000 · 취소 기준일: 2026년 5월 15일 · 항공권 별도.
+          예약금: <span data-price-usd="3000">$3,000</span> · 취소 기준일: 2026년 5월 15일 · 항공권 별도.
         </div>
         <div class="price">Inquire for Price</div>
         <div class="route en">All-inclusive: premium tickets · 2 championship rounds · masterclass · hotel · meals · transport</div>
@@ -359,14 +380,71 @@ footer{background:#0d1f30;color:rgba(255,255,255,.4);text-align:center;padding:3
 </div>
 
 <script>
-// Language
+// Language + Currency state
 let curLang = 'en';
-function toggleLang() {
-  curLang = curLang === 'en' ? 'ko' : 'en';
-  document.documentElement.setAttribute('data-lang', curLang);
-  document.getElementById('langLabel').textContent = curLang === 'en' ? 'KO' : 'EN';
+let curCurrency = 'USD';
+const EXCHANGE_RATE = 1350; // 1 USD = 1,350 KRW
+
+function updateLCButton() {
+  var curLabel = (curLang === 'en' ? 'EN' : 'KO') + ' · ' + curCurrency;
+  document.getElementById('lcLabel').textContent = curLabel;
 }
-document.getElementById('langLabel').textContent = 'KO';
+
+function toggleLangCurrency(e) {
+  e.stopPropagation();
+  var dd = document.getElementById('lcDropdown');
+  dd.classList.toggle('show');
+}
+
+function setLang(lang, btn) {
+  curLang = lang;
+  document.documentElement.setAttribute('data-lang', lang);
+  // Highlight active language
+  var dd = document.getElementById('lcDropdown');
+  dd.querySelectorAll('.lc-section:first-child .lc-option').forEach(function(b,i){
+    b.classList.toggle('active', (i===0 && lang==='en') || (i===1 && lang==='ko'));
+  });
+  updateLCButton();
+  convertPrices();
+}
+
+function setCurrency(curr, btn) {
+  curCurrency = curr;
+  // Highlight active currency
+  var dd = document.getElementById('lcDropdown');
+  dd.querySelectorAll('.lc-section:last-child .lc-option').forEach(function(b,i){
+    b.classList.toggle('active', (i===0 && curr==='USD') || (i===1 && curr==='KRW'));
+  });
+  updateLCButton();
+  convertPrices();
+}
+
+function convertPrices() {
+  // Convert any numeric prices on the page
+  document.querySelectorAll('[data-price-usd]').forEach(function(el){
+    var usd = parseFloat(el.getAttribute('data-price-usd'));
+    if (!isNaN(usd)) {
+      if (curCurrency === 'KRW') {
+        var krw = Math.round(usd * EXCHANGE_RATE / 1000) * 1000;
+        el.textContent = '₩' + krw.toLocaleString();
+      } else {
+        el.textContent = '$' + usd.toLocaleString();
+      }
+    }
+  });
+}
+
+// Close dropdown on outside click
+document.addEventListener('click', function(e) {
+  var dd = document.getElementById('lcDropdown');
+  var btn = document.getElementById('lcBtn');
+  if (dd && btn && !btn.contains(e.target) && !dd.contains(e.target)) {
+    dd.classList.remove('show');
+  }
+});
+
+// Init
+updateLCButton();
 
 // USA Package toggle
 function switchUSAPkg(pkg) {
