@@ -26,12 +26,12 @@
 | Item | Details |
 |---|---|
 | **Company Name** | Resonate Club Inc. (리조네이트 클럽 주식회사) |
-| **Representative** | Heesung Lee |
+| **Representative** | Hee Sung Lee |
 | **Corporate Form** | One-Person Corporation (1인 주식회사) |
-| **Business Type** | Domestic & International Travel Agency (국내외여행업) |
+| **Business Type** | Domestic & International Travel Agency (국내외여행업, Planning Travel Agency / 기획여행사) |
 | **Registered Office** | Busan, Haeundae-gu, Republic of Korea |
 | **Websites** | www.resonateclub.com / www.resonatetour.com |
-| **Planned Establishment** | Second Half of 2026 |
+| **Planned Establishment** | September 2026 |
 | **Paid-in Capital** | KRW 50,000,000 (~USD 37,000) |
 | **Primary Services** | Korea→USA Golf Tours / USA→Korea Inbound Luxury Tours |
 
@@ -72,7 +72,8 @@ South Korea has established itself as one of the world's most golf-passionate na
 
 #### 2.1.3 Founder's Competitive Advantage
 
-* **US Local Network**: Founder Heesung Lee, based on his California residency experience, possesses close networks with local golf courses, hotels, and transportation providers.
+* **20+ Years US Residency**: Founder Hee Sung Lee has resided in the United States for over 20 years, building an extensive network across California's premier golf courses, hotels, and transportation providers.
+* **Industry Hands-On Experience**: Years of working directly at US golf courses have provided deep, practical understanding of golf industry systems and infrastructure — including tee time reservation systems, course management, and member services operations.
 * **Bilingual & Bicultural Competency**: Fluent in Korean and English with deep understanding of both cultures, enabling precise identification of customer needs.
 * **Digital-Native Approach**: Website-based online booking systems and digital marketing capabilities enable efficient one-person corporate operations.
 
@@ -250,7 +251,7 @@ Resonate Club operates two core service lines.
 
 | | **Strengths** | **Weaknesses** |
 |---|---|---|
-| **Internal** | • Founder's cross-border network & expertise<br> • Digital-first low-cost structure<br> • Premium niche market focus<br> • High customization capability | • Initial absence of brand recognition<br> • Scale constraints from single-person operation<br> • Difficulty in early customer acquisition<br> • External partner dependency |
+| **Internal** | • Founder's 20+yr US residency, golf course experience & cross-border expertise<br> • Digital-first low-cost structure<br> • Premium niche market focus<br> • High customization capability | • Initial absence of brand recognition<br> • Scale constraints from single-person operation<br> • Difficulty in early customer acquisition<br> • External partner dependency |
 | **External** | **Opportunities** | **Threats** |
 | | • Accelerating global K-culture spread<br> • Continuous growth of Korean golf population<br> • Increasing experiential consumption among aging affluent populations<br> • KRW weakness enhancing inbound competitiveness | • Large agency market entry<br> • Airfare & fuel price volatility<br> • Geopolitical risks (US-China relations, etc.)<br> • Exchange rate volatility risk |
 
@@ -268,7 +269,7 @@ Resonate Club operates two core service lines.
 | **Capital** | KRW 50,000,000, fully contributed by sole shareholder |
 | **Issued Shares** | 2,000 common shares (par value KRW 5,000, issue price KRW 25,000) |
 | **Fiscal Year** | January 1 – December 31 annually |
-| **Directors & Auditors** | Representative Director: Heesung Lee (1 person) — Auditor appointment exempted (capital below KRW 1 billion) |
+| **Directors & Auditors** | Representative Director: Hee Sung Lee (1 person) — Auditor appointment exempted (capital below KRW 1 billion) |
 
 ### 5.2 Legal Basis
 
@@ -741,7 +742,7 @@ The establishment of Resonate Club as a Domestic & International Travel Agency h
 * Both markets present **premium niche opportunities** that large travel agencies have not adequately addressed.
 
 #### Competitive Perspective
-* Founder Heesung Lee's **US local network and bicultural understanding** constitute an irreplaceable competitive advantage.
+* Founder Hee Sung Lee's **20+ years US residency, golf course hands-on experience, and bicultural understanding** constitute an irreplaceable competitive advantage.
 * The **digital-first one-person corporation** model secures high profitability with minimal fixed costs.
 * A cost-based 40% markup model provides a **predictable revenue structure**.
 
@@ -765,8 +766,8 @@ Resonate Club commits to contributing to the premiumization and globalization of
 
 ---
 
-**Prepared by**: Heesung Lee
-**Date**: May 2026
+**Prepared By**: Hee Sung Lee
+**Prepared Date**: August 1, 2026
 **Contact**: www.resonateclub.com
 
 ---
