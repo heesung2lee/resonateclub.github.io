@@ -34,12 +34,14 @@ Resonate Club is a **premium travel platform connecting Korea and the United Sta
 
 ### A. Korea→USA Golf Tours (Outbound Golf)
 - **Target**: Korean high-net-worth golfers with annual income of KRW 100M+
+- **Packages**: Trump Premier (6N/7D·4 rounds), Trump Elite (5N/6D·3 rounds)
 - **Key Courses**: Trump National LA, Sandpiper GC, Hidden Valley GC, and other premier California golf courses
 - **Operating Model**: Small private groups of 2-8 persons with dedicated guide
-- **Pricing**: Premium customized service-based pricing
+- **Pricing**: Premium customized service-based pricing (cost +40% markup)
 
 ### B. USA→Korea Inbound Luxury Tours (Future Expansion)
 - **Target**: American luxury travelers with $150,000+ annual income
+- **Packages**: Korea Golf Premier (Incheon→Jeju→Namhae→Seoul, 11N/12D), Korea Discovery (Seoul→Gyeongju→Busan→Jeju, 12N/13D)
 - **Key Content**: K-culture experiences, premium golf, Michelin fine dining
 - **Operating Model**: To be launched after comprehensive travel agency upgrade (capital increase to KRW 100M + registration change)
 
@@ -100,15 +102,15 @@ Resonate Club is a **premium travel platform connecting Korea and the United Sta
 
 | Item | Details |
 |---|---|
-| Primary Service | Korea→USA premium golf tours |
-| Annual Target | 6 groups (average 4 persons, ~$6,579/person) |
-| Projected Revenue | ~KRW 51,500,000 |
+| Primary Service | Korea→USA premium golf tours (Trump Premier·Elite) |
+| Annual Target | 12 groups (average 4 persons, avg ~$8,747/person) |
+| Projected Revenue | ~KRW 137,000,000 |
 | Annual Fixed Costs | ~KRW 13,600,000 |
-| Variable Costs (green fees, hotels, meals, guide) | ~KRW 28,500,000 |
-| **Operating Profit (pre-tax)** | **~KRW 9,300,000** |
-| Operating Margin | ~18% |
+| Variable Costs (green fees, hotels, meals, guide) | ~KRW 72,000,000 |
+| **Operating Profit (pre-tax)** | **~KRW 51,400,000** |
+| Operating Margin | ~37% |
 
-> ※ With 10 groups/year, net profit increases to ~KRW 18,700,000. After comprehensive travel agency upgrade with inbound services added, annual revenue projected to increase by KRW 20-50M.
+> ※ With 24 groups/year, net profit increases to ~KRW 124,000,000. After comprehensive travel agency upgrade with inbound services added, annual revenue projected to increase by KRW 300-500M.
 
 ---
 

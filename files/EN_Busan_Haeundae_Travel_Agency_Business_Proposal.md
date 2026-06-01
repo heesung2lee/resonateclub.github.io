@@ -96,6 +96,8 @@ Resonate Club operates two core service lines.
 
 ### 3.1 Service Line A: Korea→USA Golf Tours (Outbound Golf)
 
+### 3.1 Service Line A: Korea→USA Golf Tours (Outbound Golf)
+
 **Target Customer**: Korean high-net-worth golfers with annual income of KRW 100M+
 
 **Primary Golf Courses (California)**:
@@ -106,20 +108,44 @@ Resonate Club operates two core service lines.
 | **Sandpiper GC** | Goleta, CA | Coastal links course, free replay rounds | $130 | $182 |
 | **Hidden Valley GC** | Norco, CA | Desert + valley blend, strategic layout | $109 | $153 |
 
-#### Sample Package Configurations
+**Package Configurations**:
 
-#### [5-Day Premium Golf Package] — "California Golf Odyssey"
+#### [Trump Premier] — 6 Nights / 7 Days · 4 Rounds
+
 * **Day 1**: Incheon → LAX premium economy flight, airport pickup, 5-star hotel check-in (JW Marriott LA Live)
 * **Day 2**: Trump National LA 18-hole round + caddie fee included, evening beachside dinner
-* **Day 3**: Sandpiper GC 36 holes (free replay), Santa Barbara winery tour
+* **Day 3**: Sandpiper GC 36 holes (free replay included), Santa Barbara winery tour
 * **Day 4**: Hidden Valley GC 18-hole round, LA shopping tour (Beverly Hills Rodeo Drive)
+* **Day 5**: Additional golf round (course selection) or free day, premium dinner
+* **Day 6**: Free time and shopping, evening airport transfer
+* **Day 7**: LAX → Incheon return
+
+| Item | Cost (USD) |
+|---|---|
+| Airfare (Round-trip Premium Economy) | $1,800 |
+| Accommodation (5-star, 6 nights) | $1,800 |
+| Golf Rounds (4 rounds) | $866 |
+| Private Vehicle & Driver (5 days) | $1,000 |
+| Meals & Incidentals | $800 |
+| Guide & Interpretation | $700 |
+| **Total Cost** | **$6,966** |
+| **Sell Price (+40% markup)** | **$9,752** |
+| **Expected Profit per Person** | **$2,786 (~KRW 3.66M)** |
+
+#### [Trump Elite] — 5 Nights / 6 Days · 3 Rounds
+
+* **Day 1**: Incheon → LAX premium economy flight, airport pickup, 5-star hotel check-in
+* **Day 2**: Trump National LA 18-hole round + caddie fee included, evening beachside dinner
+* **Day 3**: Sandpiper GC 18 holes, Santa Barbara winery tour
+* **Day 4**: Hidden Valley GC 18-hole round, LA shopping tour (Beverly Hills)
 * **Day 5**: Free time and airport transfer, LAX → Incheon return
+* **Day 6**: Arrival in Incheon
 
 | Item | Cost (USD) |
 |---|---|
 | Airfare (Round-trip Premium Economy) | $1,800 |
 | Accommodation (5-star, 4 nights) | $1,200 |
-| Golf Rounds (3 courses, 5 rounds) | $629 |
+| Golf Rounds (3 rounds) | $629 |
 | Private Vehicle & Driver (4 days) | $800 |
 | Meals & Incidentals | $600 |
 | Guide & Interpretation | $500 |
@@ -127,24 +153,9 @@ Resonate Club operates two core service lines.
 | **Sell Price (+40% markup)** | **$7,741** |
 | **Expected Profit per Person** | **$2,212 (~KRW 2.9M)** |
 
-#### [3-Day Weekend Golf Intensive Package] — "Golf Express"
-* **Day 1 (Fri)**: Incheon → LAX evening departure, early morning arrival + hotel check-in
-* **Day 2 (Sat)**: Trump National LA 18 holes + Sandpiper GC 18 holes (Challenge Day)
-* **Day 3 (Sun)**: Hidden Valley GC 18 holes, LAX → Incheon return
+**Operating Model**: Run in groups of minimum 2, maximum 8 persons. Airfare uses group discount rates from partner airlines (Korean Air, Asiana). Golf course tee times and rates secured through advance seasonal contracts. All packages are fully customizable.
 
-| Item | Cost (USD) |
-|---|---|
-| Airfare (Round-trip Business Class) | $3,200 |
-| Accommodation (5-star, 2 nights) | $600 |
-| Golf Rounds (3 courses, 3 rounds) | $449 |
-| Private Vehicle & Driver (2 days) | $400 |
-| Meals & Incidentals | $350 |
-| Guide & Interpretation | $250 |
-| **Total Cost** | **$5,249** |
-| **Sell Price (+40% markup)** | **$7,349** |
-| **Expected Profit per Person** | **$2,100 (~KRW 2.76M)** |
-
-**Operating Model**: Run in groups of minimum 2, maximum 8 persons. Airfare uses group discount rates from partner airlines (Korean Air, Asiana). Golf course tee times and rates secured through advance seasonal contracts.
+### 3.2 Service Line B: USA→Korea Inbound Luxury Tours
 
 ### 3.2 Service Line B: USA→Korea Inbound Luxury Tours
 
@@ -160,34 +171,51 @@ Resonate Club operates two core service lines.
 | **Luxury Shopping** | Cheongdam-dong luxury boutique VIP shopping, Insadong antiques & art tour |
 | **Gastronomy** | Michelin-starred restaurant reservations, Hanwoo omakase, traditional liquor tasting |
 
-#### [7-Day Luxury Korea Experience Package] — "Soul of Korea"
+#### [Korea Golf Premier] — Incheon → Jeju (4N) → Namhae (2N) → Seoul/Incheon (5N)
 
 | Day | Itinerary |
 |---|---|
-| **Day 1** | Incheon Airport arrival, private limousine pickup, Signiel Seoul check-in, Han River night view dinner cruise |
-| **Day 2** | Gyeongbokgung private guided tour + hanbok experience, Samcheong-dong gallery tour, Michelin 3-star Jungsik dinner |
-| **Day 3** | K-POP dance class (YG/HYBE affiliated), Cheongdam-dong VIP shopping, Apgujeong Rodeo |
-| **Day 4** | Transfer to Jeju (domestic business class), Jeju Woojeong Hills CC round, private yacht sunset tour |
-| **Day 5** | Jeju Osulloc Tea Museum, Seongsan Ilchulbong, haenyeo (female diver) experience, black pork omakase |
-| **Day 6** | Transfer to Busan (KTX first class), Park Hyatt Haeundae check-in, Haedong Yonggungsa Temple visit, Gwangan Bridge night tour |
-| **Day 7** | Busan Jagalchi Market private tour, Incheon/Gimhae Airport departure |
+| **Day 1-4** | Jeju Island: Private yacht sunset tour, premium golf at Woojeong Hills/Pinx, Osulloc Tea Museum, Seongsan Ilchulbong, haenyeo experience, black pork omakase |
+| **Day 5-6** | Namhae: Championship rounds at South Cape/Namhae CC, German Village visit, coastal scenic drive |
+| **Day 7-11** | Seoul/Incheon: Gyeongbokgung hanbok experience, Cheongdam-dong VIP shopping, Michelin fine dining, K-POP experience, free day |
+| **Day 12** | Incheon Airport departure |
 
 | Item | Cost (USD) |
 |---|---|
 | US↔Korea Round-trip Airfare (Business) | $4,500 |
-| Domestic Transport (Domestic flight + KTX First Class) | $500 |
-| Accommodation (6 nights, 5-star + premium resort) | $3,000 |
-| Private Vehicle & Guide (7 days) | $2,100 |
-| Meals (Michelin + fine dining, 10 meals) | $1,500 |
-| Golf Round (1 round, Woojeong Hills) | $350 |
-| Experience Programs | $800 |
-| **Total Cost** | **$12,750** |
-| **Sell Price (+40% markup)** | **$17,850** |
-| **Expected Profit per Person** | **$5,100 (~KRW 6.7M)** |
+| Domestic Transport (Domestic flights + KTX First Class) | $600 |
+| Accommodation (11 nights, 5-star + premium resorts) | $5,500 |
+| Private Vehicle & Guide (12 days) | $3,600 |
+| Meals (Michelin + fine dining included) | $2,500 |
+| Golf Rounds (4-5 rounds) | $1,600 |
+| Experience Programs | $1,200 |
+| **Total Cost** | **$19,500** |
+| **Sell Price (+40% markup)** | **$27,300** |
+| **Expected Profit per Person** | **$7,800 (~KRW 10.25M)** |
 
-**Operating Model**: Customer acquisition through partnerships with US-based boutique travel agencies. All services are fully customizable with a dedicated guide accompanying the entire itinerary.
+#### [Korea Discovery] — Seoul (4N) → Gyeongju (2N) → Busan (2N) → Jeju (4N)
 
----
+| Day | Itinerary |
+|---|---|
+| **Day 1-4** | Seoul: Signiel Seoul check-in, Gyeongbokgung private guided tour + hanbok, Cheongdam-dong VIP shopping, Michelin fine dining, K-POP experience |
+| **Day 5-6** | Gyeongju: KTX First Class transfer, Bulguksa·Seokguram UNESCO tour, Silla Millennium Park, Hanwoo omakase |
+| **Day 7-8** | Busan: Park Hyatt Haeundae, Haedong Yonggungsa Temple, Gwangan Bridge night view, Jagalchi Market private tour |
+| **Day 9-12** | Jeju: Domestic flight, private yacht tour, Seongsan Ilchulbong, Osulloc, haenyeo experience, black pork omakase |
+| **Day 13** | Incheon Airport departure |
+
+| Item | Cost (USD) |
+|---|---|
+| US↔Korea Round-trip Airfare (Business) | $4,500 |
+| Domestic Transport (Domestic flights + KTX First Class) | $700 |
+| Accommodation (12 nights, 5-star + premium resorts) | $6,000 |
+| Private Vehicle & Guide (13 days) | $3,900 |
+| Meals (Michelin + fine dining included) | $2,800 |
+| Experience Programs | $1,800 |
+| **Total Cost** | **$19,700** |
+| **Sell Price (+40% markup)** | **$27,580** |
+| **Expected Profit per Person** | **$7,880 (~KRW 10.35M)** |
+
+**Operating Model**: Customer acquisition through US-based boutique travel agency partnerships and Resonate Club's own network. All services are fully customizable with a dedicated guide accompanying the entire itinerary.
 
 ## 4. Market Analysis
 
@@ -460,25 +488,23 @@ Resonate Club's core revenue model is **Cost-Plus Markup**.
 
 ### 8.2 Package Revenue Analysis
 
+### 8.2 Package Revenue Analysis
+
 #### A: Korea→USA Golf Tours
 
-| Package | Cost (USD) | Sell Price (USD) | Profit/Person (USD) | Profit/Person (KRW) | Min. Pax | Profit/Booking (KRW) |
-|---|---|---|---|---|---|---|
-| 5-Day Premium | $5,529 | $7,741 | $2,212 | ~2,900,000 | 2 | ~5,800,000 |
-| 3-Day Weekend Intensive | $5,249 | $7,349 | $2,100 | ~2,760,000 | 2 | ~5,520,000 |
-| 7-Day VIP Full Course* | $8,500 | $12,750 | $4,250 | ~5,580,000 | 2 | ~11,160,000 |
-
-*\*VIP Full Course: Trump National + Sandpiper + Hidden Valley + Pebble Beach added*
+| Package | Duration | Cost (USD) | Sell Price (USD) | Profit/Person (USD) | Profit/Person (KRW) | Min. Pax | Profit/Booking (KRW) |
+|---|---|---|---|---|---|---|---|
+| Trump Premier | 6N/7D | $6,966 | $9,752 | $2,786 | ~3,660,000 | 2 | ~7,320,000 |
+| Trump Elite | 5N/6D | $5,529 | $7,741 | $2,212 | ~2,900,000 | 2 | ~5,800,000 |
 
 #### B: USA→Korea Inbound
 
-| Package | Cost (USD) | Sell Price (USD) | Profit/Person (USD) | Profit/Person (KRW) | Min. Pax | Profit/Booking (KRW) |
-|---|---|---|---|---|---|---|
-| 7-Day Luxury | $12,750 | $17,850 | $5,100 | ~6,700,000 | 2 | ~13,400,000 |
-| 5-Day K-Culture Intensive | $8,200 | $11,480 | $3,280 | ~4,300,000 | 2 | ~8,600,000 |
-| 10-Day Full Package* | $18,500 | $27,750 | $9,250 | ~12,150,000 | 2 | ~24,300,000 |
+| Package | Duration | Cost (USD) | Sell Price (USD) | Profit/Person (USD) | Profit/Person (KRW) | Min. Pax | Profit/Booking (KRW) |
+|---|---|---|---|---|---|---|---|
+| Korea Golf Premier | 11N/12D | $19,500 | $27,300 | $7,800 | ~10,250,000 | 2 | ~20,500,000 |
+| Korea Discovery | 12N/13D | $19,700 | $27,580 | $7,880 | ~10,350,000 | 2 | ~20,700,000 |
 
-*\*10-Day Full Package: Seoul + Jeju + Busan + Gyeongju full course*
+### 8.3 Annual Revenue Estimate (Year 1, Conservative Scenario)
 
 ### 8.3 Annual Revenue Estimate (Year 1, Conservative Scenario)
 
@@ -487,35 +513,35 @@ Resonate Club's core revenue model is **Cost-Plus Markup**.
 | Category | Monthly Target | Annual Total | Notes |
 |---|---|---|---|
 | Departures | 2/month (avg. 4 pax) | 24/year | Concentrated in peak seasons (spring/fall) |
-| Average Profit/Booking | ~KRW 5.5M | — | |
-| **Annual Profit** | — | **~KRW 132M** | |
+| Average Profit/Booking | ~KRW 6.5M | — | Trump Premier/Elite average |
+| **Annual Profit** | — | **~KRW 156M** | |
 
 #### Line B: Inbound Luxury
 
 | Category | Monthly Target | Annual Total | Notes |
 |---|---|---|---|
 | Departures | 1/month (avg. 2 pax) | 12/year | Evenly distributed year-round |
-| Average Profit/Booking | ~KRW 11M | — | |
-| **Annual Profit** | — | **~KRW 132M** | |
+| Average Profit/Booking | ~KRW 20.6M | — | Golf Premier/Discovery average |
+| **Annual Profit** | — | **~KRW 247.2M** | |
 
 #### Consolidated
 
-| Category | Annual Amount (KRW) |
+| Item | Annual Amount (KRW) |
 |---|---|
-| Line A Gross Profit | 132,000,000 |
-| Line B Gross Profit | 132,000,000 |
-| **Annual Gross Profit** | **264,000,000** |
+| Line A Gross Profit | 156,000,000 |
+| Line B Gross Profit | 247,200,000 |
+| **Annual Gross Profit** | **403,200,000** |
 | Annual Operating Costs | (13,596,000) |
-| **Operating Income** | **~250,400,000** |
-| Operating Margin | ~94.9% |
+| **Operating Profit** | **~389,600,000** |
+| Operating Margin | ~96.6% |
 
 ### 8.4 3-Year Revenue Projection
 
 | Year | Line A Profit | Line B Profit | Gross Profit | Operating Costs | Operating Income | Notes |
 |---|---|---|---|---|---|---|
-| **Year 1** (2026 H2~) | 132M | 132M | 264M | 13.6M | **250.4M** | Conservative scenario |
-| **Year 2** (2027) | 240M | 260M | 500M | 20M | **480M** | Brand growth, repeat customers |
-| **Year 3** (2028) | 400M | 350M | 750M | 30M | **720M** | Partner expansion, staff hiring |
+| **Year 1** (Sept 2026~) | 156M | 247.2M | 403.2M | 13.6M | **389.6M** | Conservative scenario |
+| **Year 2** (2027) | 312M | 494.4M | 806.4M | 20M | **786.4M** | Brand growth, repeat customers |
+| **Year 3** (2028) | 468M | 741.6M | 1,209.6M | 30M | **1,179.6M** | Partner expansion, staff hiring |
 
 ---
 
