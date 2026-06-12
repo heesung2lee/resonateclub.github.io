@@ -114,8 +114,15 @@ def create_doc1_us_investor():
         "will serve as Representative Director (CEO) and own 10% equity (200 shares). The corporation "
         "will be registered as a Domestic & International Travel Agency (국내외여행업 / 기획여행사) "
         "in Haeundae-gu, Busan, under the Foreign Investment Promotion Act (FIPA).\n\n"
-        "The investor's minimum cash requirement is approximately KRW 135 million (~USD $100,000) "
-        "covering paid-in capital (KRW 100M, well above KRW 50M statutory minimum for 국내외여행업) and initial setup costs (KRW 35M). The investor qualifies "
+        "The investor's minimum cash requirement is approximately KRW 130 million (~USD $96,300) "
+        "covering paid-in capital (KRW 100M, well above KRW 50M statutory minimum for 국내외여행업), "
+        "initial setup costs (KRW 5M), and 1-year operating reserve (KRW 25M).\n\n"
+        "CRITICAL: As a planned travel operator (기획여행사), the corporation must carry KRW 230M "
+        "in guarantee insurance (KRW 30M base + KRW 200M planned travel addition per Tourism Promotion "
+        "Act Enforcement Rules Schedule 3). The annual premium is approximately KRW 2.3M (~1% rate) — "
+        "a cost, not a deposit. This insurance protects customer prepayments in case of business failure "
+        "and is legally required before registration.\n\n"
+        "The investor qualifies "
         "for a D-8-1 Corporate Investment Visa with full residency rights, family accompaniment, "
         "tax incentives, and a pathway to permanent residency (F-5)."
     )
@@ -228,8 +235,8 @@ def create_doc1_us_investor():
             ["Investor 90%", "90,000,000", "$66,700", "1,800 shares at KRW 50,000/share"],
             ["CEO 10%", "10,000,000", "$7,400", "200 shares — from personal funds"],
             ["Initial Setup Costs", "~5,000,000", "$3,700", "Registration fees, notary, office deposit, equipment"],
-            ["1-Year Operating Reserve", "~20,000,000", "$14,800", "Monthly fixed costs × 12 + contingency"],
-            ["TOTAL Recommended", "~125,000,000", "~$92,600", "Covers everything for first year"],
+            ["1-Year Operating Reserve", "~25,000,000", "$18,500", "Monthly fixed costs × 12 + contingency"],
+            ["TOTAL Recommended", "~130,000,000", "~$96,300", "Covers everything for first year"],
         ]
     )
 
@@ -238,12 +245,44 @@ def create_doc1_us_investor():
         ["Item", "Monthly (KRW)", "Annual (KRW)", "Note"],
         [
             ["Office Rent (Haeundae-gu)", "800,000", "9,600,000", "Small office, premium area"],
-            ["Guarantee Insurance (SGI)", "42,000", "500,000", "0.5–1% of KRW 100M bond (국내외+기획여행)"],
+            ["Guarantee Insurance (SGI)", "192,000", "2,300,000", "Base 30M + Planned Travel 200M = 230M total; premium ~1%/year"],
             ["Accounting & Tax Services", "300,000", "3,600,000", "Monthly bookkeeping + annual tax filing"],
             ["Telecom & Office Supplies", "200,000", "2,400,000", "Internet, phone, sundries"],
             ["Miscellaneous", "200,000", "2,400,000", "Bank fees, memberships, etc."],
-            ["Monthly Total", "1,542,000", "18,504,000", ""],
+            ["Monthly Total", "1,692,000", "20,304,000", ""],
         ]
+    )
+
+    add_heading_styled(doc, "4.2.1 Understanding the Guarantee Insurance Requirement", 2)
+    add_body(doc,
+        "Why 230M KRW insurance when the capital is only 100M KRW?\n\n"
+        "The guarantee insurance (영업보증보험) and paid-in capital serve COMPLETELY DIFFERENT functions "
+        "under Korean law. Understanding this distinction is critical:\n\n"
+        "PAID-IN CAPITAL (자본금): Proves the company has minimum operational solvency. This money is "
+        "spent on rent, salaries, marketing, and operations — it provides NO protection to customers.\n\n"
+        "GUARANTEE INSURANCE (영업보증보험): Protects customer PREPAYMENTS. As a planned travel operator "
+        "(기획여행사), Resonate Club collects full payment from customers months before travel. These "
+        "prepayments fund flights, hotels, and golf bookings. If the company fails mid-season, customers "
+        "could lose everything. The insurance bond guarantees customer refunds up to KRW 230M.\n\n"
+        "Why KRW 230M? The math behind the regulation:\n"
+        "• 1 tour group (4 persons × $9,752 × ₩1,350) = ~₩53M in prepayments\n"
+        "• 3-4 overlapping groups during peak season = ~₩160-210M aggregate exposure\n"
+        "• Base insurance (30M) covers broker-type operations\n"
+        "• Planned travel addition (200M) covers the package prepayment risk\n"
+        "• TOTAL 230M ≈ maximum plausible simultaneous customer exposure for a small agency\n\n"
+        "IS IT PROPORTIONAL? The Korean travel industry has long argued that the planned travel surcharge "
+        "(200M) is excessive for small agencies. However, the Tourism Promotion Act Enforcement Rules "
+        "Schedule 3 makes no exceptions — 기획여행 requires BOTH the base insurance AND the additional "
+        "planned travel bonding. This is non-negotiable for registration.\n\n"
+        "Three types of insurance — do not confuse them:\n"
+        "• 영업보증보험 (Guarantee Insurance — mandatory): Covers company FAILURE/BANKRUPTCY only\n"
+        "• 배상책임보험 (Liability Insurance — mandatory): Covers company-caused injury/damage during tours\n"
+        "• 여행자보험 (Travel Insurance — optional): Covers individual traveler medical/accident/cancellation\n\n"
+        "ALTERNATIVE STRATEGY: If the 230M bond proves difficult to obtain from SGI, the company can "
+        "initially register WITHOUT the planned travel designation (국내외여행업 only, broker model), "
+        "operating on a pure booking/commission basis for 6-12 months. After building revenue history, "
+        "upgrade to planned travel status. This lowers the initial bond to 30M but restricts the "
+        "company from creating and selling its own package products directly."
     )
 
     add_heading_styled(doc, "4.3 Revenue Model", 2)
@@ -706,7 +745,12 @@ def create_doc2_ceo_actionplan():
          "☑️ 확보: 국내외여행업 등록증"),
         ("STEP 7: 영업보증보험 가입 (8월 12일 ~ 9월 17일, 병행 진행)",
          "소요 기간: SGI 심사 5~7일 (STEP 6과 병행 가능)\n\n"
-         "국내외여행업 + 기획여행(패키지) 기준 보증금액: 1억원\n\n"
+         "국내외여행업 + 기획여행(패키지) 기준 보증금액: 총 2억 3,000만원\n"
+         "  → 기본 보증: 3,000만원 (국내외여행업)\n"
+         "  → 기획여행 추가 보증: 2억원 (관광진흥법 시행규칙 별표3 — 기본보증 '외에 추가로' 가입)\n\n"
+         "⚠️ 법령 근거: 관광진흥법 시행규칙 [별표 3] 비고 — "
+         "'국내외여행업 또는 종합여행업을 하는 여행업자 중에서 기획여행을 실시하려는 자는 "
+         "해당 업종에 따른 보증보험등에 가입하고 유지하는 것 외에 추가로 기획여행에 따른 보증보험등에 가입하여야 한다.'\n\n"
          "1. 서울보증보험(SGI) 상담 예약 (8월 12일)\n"
          "   - 부산지점: 부산광역시 연제구 법원로 소재\n"
          "   - 필요 서류:\n"
@@ -717,11 +761,11 @@ def create_doc2_ceo_actionplan():
          "     · 대표이사 신용정보 동의서\n\n"
          "2. 보증보험 청약 (8월 14~15일)\n"
          "   - 방식 A: 전액 지급보증 (예치금 0원, 연 보험료 0.5~1.5%)\n"
-         "     → 1억원 × 0.5~1% = 연 50~100만원\n"
+         "     → 2.3억원 × 1% = 연 약 230만원 (월 약 19만원)\n"
          "   - 방식 B: 부분예치 + 지급보증 (심사 통과 어려울 시)\n"
-         "     → 예: 2,000만원 예치 + 8,000만원 지급보증\n\n"
+         "     → 예: 5,000만원 예치 + 1.8억원 지급보증\n\n"
          "3. 보증서 발급 (8월 19~22일)\n\n"
-         "☑️ 확보: 영업보증보험 증권 (구청 등록 제출용)"),
+         "☑️ 확보: 영업보증보험 증권 2건 (기본 + 기획여행 추가, 구청 등록 제출용)"),
         ("STEP 8: 투자자 D-8 비자 지원 및 후속 조치 (9월 ~ )",
          "소요 기간: 30~60일\n\n"
          "9월부터 법인은 정상 영업 가능. 투자자 D-8 비자는 별도 진행.\n\n"
