@@ -115,7 +115,7 @@ def create_doc1_us_investor():
         "will be registered as a Domestic & International Travel Agency (국내외여행업 / 기획여행사) "
         "in Haeundae-gu, Busan, under the Foreign Investment Promotion Act (FIPA).\n\n"
         "The investor's minimum cash requirement is approximately KRW 135 million (~USD $100,000) "
-        "covering paid-in capital (KRW 100M) and initial setup costs (KRW 35M). The investor qualifies "
+        "covering paid-in capital (KRW 100M, well above KRW 50M statutory minimum for 국내외여행업) and initial setup costs (KRW 35M). The investor qualifies "
         "for a D-8-1 Corporate Investment Visa with full residency rights, family accompaniment, "
         "tax incentives, and a pathway to permanent residency (F-5)."
     )
@@ -162,7 +162,7 @@ def create_doc1_us_investor():
         [
             ["Visa Type", "D-8-1 (Corporate Investment)"],
             ["Eligibility", "Foreign national investing ≥ KRW 100M in Korean corporation, owning ≥ 10% voting shares"],
-            ["Investment Requirement", "KRW 100,000,000 minimum — your KRW 90M investment qualifies if combined with total capital of KRW 100M+ and 10%+ share ownership"],
+            ["Investment Requirement", "KRW 100,000,000 minimum (D-8 visa threshold) — your KRW 90M investment qualifies with 10%+ share ownership. Note: travel agency statutory minimum capital is KRW 50M (국내외여행업) — investor-backed total far exceeds this."],
             ["Validity", "5 years per issuance, renewable indefinitely"],
             ["Work Scope", "Only for the invested company — cannot take outside employment"],
         ]
@@ -224,7 +224,7 @@ def create_doc1_us_investor():
     add_table(doc,
         ["Category", "Amount (KRW)", "Amount (USD approx.)", "Notes"],
         [
-            ["Paid-in Capital (100%)", "100,000,000", "$74,000", "Minimum for 국내외여행업 per Tourism Promotion Act"],
+            ["Paid-in Capital (100%)", "100,000,000", "$74,000", "Statutory minimum for 국내외여행업 KRW 50M; actual KRW 100M with investor (exceeds minimum)"],
             ["Investor 90%", "90,000,000", "$66,700", "1,800 shares at KRW 50,000/share"],
             ["CEO 10%", "10,000,000", "$7,400", "200 shares — from personal funds"],
             ["Initial Setup Costs", "~5,000,000", "$3,700", "Registration fees, notary, office deposit, equipment"],
@@ -238,11 +238,11 @@ def create_doc1_us_investor():
         ["Item", "Monthly (KRW)", "Annual (KRW)", "Note"],
         [
             ["Office Rent (Haeundae-gu)", "800,000", "9,600,000", "Small office, premium area"],
-            ["Guarantee Insurance (SGI)", "83,000", "1,000,000", "0.5–1% of KRW 200M bond"],
+            ["Guarantee Insurance (SGI)", "42,000", "500,000", "0.5–1% of KRW 100M bond (국내외+기획여행)"],
             ["Accounting & Tax Services", "300,000", "3,600,000", "Monthly bookkeeping + annual tax filing"],
             ["Telecom & Office Supplies", "200,000", "2,400,000", "Internet, phone, sundries"],
             ["Miscellaneous", "200,000", "2,400,000", "Bank fees, memberships, etc."],
-            ["Monthly Total", "1,583,000", "19,000,000", ""],
+            ["Monthly Total", "1,542,000", "18,504,000", ""],
         ]
     )
 
@@ -258,7 +258,7 @@ def create_doc1_us_investor():
         "• After operating costs: ~KRW 130M (~$96,000) net operating profit\n\n"
         "Year 2 (full calendar):\n"
         "• 24 teams → ~KRW 312M (~$231,000) net profit\n\n"
-        "Future: USA→Korea inbound luxury tours (requires KRW 300M capital upgrade to 종합여행업)"
+        "Future: USA→Korea inbound luxury tours (requires upgrade to 종합여행업 — additional capital per Tourism Promotion Act)"
     )
 
     # ── 5. KEY DECISIONS ──
@@ -706,7 +706,7 @@ def create_doc2_ceo_actionplan():
          "☑️ 확보: 국내외여행업 등록증"),
         ("STEP 7: 영업보증보험 가입 (8월 12일 ~ 9월 17일, 병행 진행)",
          "소요 기간: SGI 심사 5~7일 (STEP 6과 병행 가능)\n\n"
-         "국내외여행업 + 기획여행(패키지) 기준 보증금액: 2억원\n\n"
+         "국내외여행업 + 기획여행(패키지) 기준 보증금액: 1억원\n\n"
          "1. 서울보증보험(SGI) 상담 예약 (8월 12일)\n"
          "   - 부산지점: 부산광역시 연제구 법원로 소재\n"
          "   - 필요 서류:\n"
@@ -717,9 +717,9 @@ def create_doc2_ceo_actionplan():
          "     · 대표이사 신용정보 동의서\n\n"
          "2. 보증보험 청약 (8월 14~15일)\n"
          "   - 방식 A: 전액 지급보증 (예치금 0원, 연 보험료 0.5~1.5%)\n"
-         "     → 2억원 × 0.5~1% = 연 100~300만원\n"
+         "     → 1억원 × 0.5~1% = 연 50~100만원\n"
          "   - 방식 B: 부분예치 + 지급보증 (심사 통과 어려울 시)\n"
-         "     → 예: 4,000만원 예치 + 1.6억원 지급보증\n\n"
+         "     → 예: 2,000만원 예치 + 8,000만원 지급보증\n\n"
          "3. 보증서 발급 (8월 19~22일)\n\n"
          "☑️ 확보: 영업보증보험 증권 (구청 등록 제출용)"),
         ("STEP 8: 투자자 D-8 비자 지원 및 후속 조치 (9월 ~ )",
