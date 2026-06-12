@@ -290,28 +290,214 @@ def create_doc1_us_investor():
             ["Currency fluctuation (KRW/USD)", "Low", "Revenue in USD, costs split KRW/USD — natural hedge"],
             ["Market adoption / slow first season", "Medium", "Conservative Year 1 projections; low fixed cost base"],
             ["Korea political/regulatory changes", "Low", "Travel industry is well-established; FIPA protects foreign investors"],
+            ["US tax compliance penalties", "High", "Form 5471 non-filing = $10,000+ penalty per form per year — engage CPA before investing"],
+            ["PFIC classification risk", "Low", "Active travel business should NOT be PFIC, but confirm with CPA; Form 8621 filing is punitive"],
         ]
     )
 
-    # ── CONTACTS ──
-    add_heading_styled(doc, "7. Key Contacts & Resources", 1)
+    # ── 7. CROSS-BORDER TAX PLANNING ═══════════════════════════════
+    add_heading_styled(doc, "7. Cross-Border Tax Planning & Compliance Timeline", 1)
+    add_body(doc,
+        "This section outlines EVERY tax-related action the investor needs to take — in both the "
+        "United States and Korea — organized chronologically from pre-investment through ongoing "
+        "annual compliance. Engaging a qualified cross-border CPA (U.S. side) and a Korean 세무사 "
+        "(tax accountant) is NOT optional — penalties for non-compliance are severe on both sides."
+    )
+
+    # 7.1
+    add_heading_styled(doc, "7.1 Tax Professionals to Engage", 2)
+    add_table(doc,
+        ["Professional", "Jurisdiction", "When to Engage", "Estimated Cost", "Key Role"],
+        [
+            ["U.S. Cross-Border CPA\n(EA or CPA with intl experience)", "USA (IRS)", "NOW — before any money moves", "$2,500–5,000 initial\n$1,500–3,000/year", "Form 5471, FBAR, FATCA, foreign tax credit (Form 1116), structure advice, PFIC analysis"],
+            ["Korean 세무사\n(Tax Accountant)", "Korea (NTS)", "Jul–Aug 2026 (before 사업자등록)", "₩300,000–500,000/month\n(ongoing bookkeeping)", "Corporate tax filing, VAT returns, payroll tax (if hiring), FIPA incentive applications, withholding tax on dividends"],
+            ["U.S. Estate Planning Attorney\n(if significant net worth)", "USA", "Before investing", "$3,000–7,000 one-time", "Korean situs assets in U.S. estate, gift tax implications of share transfers, QDOT planning if non-citizen spouse"],
+            ["Korean 법무사\n(Legal Administrator)", "Korea", "Jul 2026", "₩500,000–800,000", "Corporation registration, FDI filing, shareholder registry maintenance"],
+        ]
+    )
+
+    # 7.2
+    add_heading_styled(doc, "7.2 Pre-Investment Tax Structuring — NOW Through July 15, 2026", 2)
+    add_body(doc,
+        "⚠️ CRITICAL: The decisions made BEFORE money moves are the most consequential for long-term tax outcomes.\n\n"
+        "Action 1 — Ownership Structure Decision (NOW):\n"
+        "• Option A: Direct individual ownership (investor name directly on Korean shareholder registry)\n"
+        "  → Simpler setup; Form 5471 Category 3 filer; dividends taxed at qualified dividend rates if eligible\n"
+        "• Option B: U.S. LLC/S-Corp as holding entity\n"
+        "  → Added complexity & cost; potential state tax benefits; Form 5471 Category 4 or 5 filer\n"
+        "  → S-Corp CANNOT have foreign shareholders; if investor has non-US family, use LLC or C-Corp\n"
+        "• Recommendation: Start with direct ownership (Option A) unless estate planning or anonymity concerns dictate otherwise.\n\n"
+        "Action 2 — PFIC Analysis (NOW):\n"
+        "• A Passive Foreign Investment Company (PFIC) triggers Form 8621 — one of the most punitive IRS regimes\n"
+        "• Test: >50% passive income OR >50% passive assets = PFIC\n"
+        "• Resonate Club is an ACTIVE travel business — should NOT be PFIC\n"
+        "• GET CPA OPINION LETTER confirming non-PFIC status — do NOT skip this\n\n"
+        "Action 3 — Investment Tracking System Setup (NOW):\n"
+        "• Set up spreadsheet/software to track: investment date, KRW amount, USD exchange rate at each transfer\n"
+        "• Needed for: foreign tax credit calculation, future exit capital gains basis, Section 986(c) exchange rate elections\n\n"
+        "Action 4 — FBAR/Form 8938 Readiness (NOW):\n"
+        "• FBAR (FinCEN Form 114): Required if aggregate foreign accounts >$10,000 at any point in calendar year\n"
+        "• Form 8938 (FATCA): Required if foreign financial assets >$200,000 (single) / $400,000 (married) on Dec 31\n"
+        "• Both are INFORMATION returns (not tax due) — but penalties are $10,000+ per violation\n"
+        "• Plan for the Korean corporate account(s) + any personal Korean accounts to trigger these thresholds\n\n"
+        "Action 5 — Capitalization Strategy (consult CPA):\n"
+        "• Equity vs. shareholder loan mix: loans can be repaid tax-free (vs. dividends subject to withholding)\n"
+        "• Thin capitalization rules in Korea: interest deductions may be limited if debt-to-equity ratio > 2:1\n"
+        "• Recommendation: At least 70% equity, 30% shareholder loan if debt structure desired"
+    )
+
+    # 7.3
+    add_heading_styled(doc, "7.3 Korean FIPA Tax Incentives — Timeline & Application Process", 2)
+
+    add_body(doc,
+        "Under the Foreign Investment Promotion Act (FIPA / 외국인투자촉진법), foreign-invested enterprises "
+        "qualify for the following tax benefits. Each requires proactive APPLICATION — they are not automatic."
+    )
+
+    add_table(doc,
+        ["Incentive", "Benefit", "Duration", "When to Apply", "Who Handles It"],
+        [
+            ["Corporate Income Tax\nReduction (법인세 감면)", "100% exemption years 1-5\n50% reduction years 6-7\n(Applies only to income from the qualified business)", "7 years", "Within FY of first profit\n(or by tax filing deadline)", "Korean 세무사 — files with NTS\n(FIPA Article 121-2, RETI Article 116-2)"],
+            ["Acquisition Tax\nExemption (취득세 면제)", "100% exemption on real estate,\nvehicles, equipment acquired\nfor the business", "15 years from\nbusiness registration", "At time of each\nqualifying purchase", "Korean 세무사 — files with local\ngovernment (지방자치단체)\n(FIPA Article 121-3)"],
+            ["Property Tax\nReduction (재산세 감면)", "100% years 1-5\n50% years 6-15\n(on business property)", "15 years", "Annual — with property\ntax filing (July)", "Korean 세무사"],
+            ["Customs Duty Exemption\n(관세 면제)", "100% exemption on capital\ngoods imported for the business\n(e.g., tour vehicles, camera\nequipment, golf simulators)", "Within 3 years of\nFDI registration", "At each import — file\nwith Korea Customs\nService (관세청)", "Korean 세무사/관세사\nPre-approval: HS Code\n사전심사 recommended"],
+            ["Dividend Withholding\nTax Reduction", "Under US-Korea Tax Treaty:\n15% standard → 10% if 10%+\nownership → possibly 5%", "Ongoing", "When declaring dividends", "Korean 세무사 — reduced\nrate application + U.S. Form\n8833 (treaty-based return\nposition disclosure)"],
+        ]
+    )
+
+    add_body(doc,
+        "⚠️ CRITICAL for FIPA Benefits:\n"
+        "• Must file 외국인투자기업 등록신청 (FDI Enterprise Registration) BEFORE any tax benefit application\n"
+        "• Tax reduction application (조세감면신청서) must be filed within the first taxable year after earning profit\n"
+        "• MISSING the application deadline = permanent loss of the benefit for that year (no retroactive remedy)\n"
+        "• The 세무사 must reference FIPA Article 121-2 through 121-5 and Restriction of Special Taxation Act (조세특례제한법)\n"
+        "• Local tax exemptions require separate application to Busan Metropolitan City / Haeundae-gu office"
+    )
+
+    # 7.4
+    add_heading_styled(doc, "7.4 US-Korea Tax Treaty — Key Provisions", 2)
+    add_table(doc,
+        ["Income Type", "Without Treaty", "With Treaty", "IRS Form"],
+        [
+            ["Dividends (배당소득)", "30% withholding", "15% (standard)\n10% if ≥10% ownership\n5% if ≥10% ownership\n+ certain conditions", "IRS Form 1116\n(Foreign Tax Credit)\nForm 8833 (Treaty Disclosure)"],
+            ["Interest (이자소득)", "30% withholding", "12% (standard)\nMay be reduced/exempt\nfor certain loans", "Form 1116"],
+            ["Royalties (사용료)", "30% withholding", "15% (standard)\n10% for certain IP", "Form 1116"],
+            ["Capital Gains (양도소득)", "May be taxed\nin Korea", "Generally only taxed in\ncountry of residence\n(unless real property)", "Form 1116 + Schedule D\n(if US-situs)"],
+            ["Branch Profits", "20%+ branch tax", "N/A — Korean corporation\nis separate entity", "N/A"],
+        ]
+    )
+
+    add_body(doc,
+        "Key Points:\n"
+        "• Korean withholding tax on dividends (10-15%) is CREDITABLE against U.S. tax liability via Form 1116\n"
+        "• If U.S. tax > Korean tax: pay the difference to IRS. If Korean tax > U.S. tax: carry forward excess credits\n"
+        "• Form 8833 must be filed with U.S. return when claiming treaty benefits (generally required for ≥10% ownership)\n"
+        "• Treaty benefit limitations: must be a \"qualified resident\" of the U.S. under Article 16 (Limitation on Benefits)\n"
+        "• U.S. citizens are ALWAYS taxed on worldwide income regardless of residence — treaty does not override this"
+    )
+
+    # 7.5
+    add_heading_styled(doc, "7.5 Annual U.S. Compliance Obligations (Ongoing)", 2)
+    add_table(doc,
+        ["Form", "Name", "Threshold", "Deadline", "Penalty for Non-Compliance"],
+        [
+            ["Form 5471", "Information Return of U.S. Persons\nwith Respect to Certain Foreign\nCorporations", "10%+ ownership of a foreign\ncorporation (Category 3 filer\nfor 90% shareholder)", "Due with tax return\n(Apr 15 + extensions)", "$10,000 per form per year;\nadditional $10,000–50,000\nfor continued failure\nafter IRS notice"],
+            ["FBAR\n(FinCEN 114)", "Report of Foreign Bank\nand Financial Accounts", "Aggregate foreign accounts\n>$10,000 at any time", "April 15 (auto-extension\nto Oct 15)", "$10,000+ per violation\n(if non-willful); greater of\n$100,000 or 50% of account\nbalance if willful"],
+            ["Form 8938", "Statement of Specified\nForeign Financial Assets\n(FATCA)", ">$200,000 on Dec 31\n(or >$300,000 at any time)\nSingle filer thresholds", "Due with tax return", "$10,000 initial + $10,000\nper 30 days (max $60,000)"],
+            ["Form 1116", "Foreign Tax Credit", "Any foreign taxes paid\nor accrued", "Due with tax return", "Loss of credit (pay double tax\non same income)"],
+            ["Form 8833", "Treaty-Based Return\nPosition Disclosure", "Generally required when\nclaiming treaty benefits with\n≥10% ownership", "Due with tax return", "Potential $1,000 penalty\n(rarely enforced, but\nfailure = weaker audit\nposition)"],
+            ["Form 926", "Return by a Transferor of\nProperty to a Foreign\nCorporation", "Transfer of property\n(including cash) to foreign\ncorporation", "Due with tax return", "$10,000+ per failure"],
+        ]
+    )
+
+    add_body(doc,
+        "⚠️ IMPORTANT NOTES:\n"
+        "• Form 5471 is the HIGHEST RISK compliance item for a 90% shareholder\n"
+        "  - Section 6038 requires detailed financial reporting of the Korean corporation\n"
+        "  - Korean GAAP financials must be translated/reconciled to U.S. GAAP\n"
+        "  - Schedule G (income statement), Schedule H (balance sheet), Schedule M (transactions)\n"
+        "  - The penalty of $10,000 applies EVEN IF NO TAX IS DUE\n\n"
+        "• The Korean corporation must provide the following annually to the investor's CPA:\n"
+        "  - Full financial statements (K-GAAP or IFRS) + Korean tax return\n"
+        "  - Shareholder registry confirming ownership percentage\n"
+        "  - All related-party transaction details (investor ↔ corporation)\n"
+        "  - Details of any capital increases, share transfers, or structural changes\n\n"
+        "• Exchange Rate:\n"
+        "  - Use year-end rate (Dec 31) for balance sheet items\n"
+        "  - Use average annual rate for income statement items\n"
+        "  - Track the exchange rate at each capital contribution date for basis purposes"
+    )
+
+    # 7.6
+    add_heading_styled(doc, "7.6 Integrated Tax Compliance Timeline", 2)
+    add_table(doc,
+        ["When", "Action", "Who", "Deliverable / Result"],
+        [
+            ["NOW\n(Jun 2026)", "① Engage U.S. cross-border CPA\n② PFIC analysis opinion letter\n③ Ownership structure decision\n④ Open tracking spreadsheet for basis/FX", "Investor + CPA", "CPA engagement letter;\nPFIC non-classification opinion;\nFX tracking sheet created"],
+            ["Jul 15, 2026", "⑤ Sign shareholder agreement\n⑥ Prepare source-of-funds documentation", "Investor + CEO", "Signed agreement;\nbank statements, tax returns"],
+            ["Jul 20–25, 2026\n(FDI Stage)", "⑦ File foreign investment notification (KOTRA)\n⑧ Transfer investment funds (track USD-KRW rate!)\n⑨ Obtain FDI registration certificate", "CEO (with investor POA)", "FDI certificate;\nBank remittance receipt\nwith exchange rate recorded"],
+            ["Aug 1–6, 2026\n(Corp. Reg.)", "⑩ Register corporation\n⑪ Open corporate bank account\n⑫ Engage Korean 세무사", "CEO + 법무사", "법인등기부등본;\n세무사 engagement letter"],
+            ["Aug 7–11, 2026\n(Biz Reg.)", "⑬ Register for business (사업자등록)\n⑭ Register for VAT\n⑮ Apply for corporate tax ID (법인세 납세번호)", "CEO + 세무사", "사업자등록증;\nNTS taxpayer number"],
+            ["Sep 2026", "⑯ Apply for FIPA corporate tax reduction\n⑰ Apply for local tax exemptions (취득세/재산세)\n⑱ File FIPA incentive application (조세감면신청서)", "세무사", "FIPA tax benefit\napproval letter from NTS;\nLocal government exemption certificates"],
+            ["Oct 2026 onward\n(upon first asset purchase)", "⑲ For each qualifying capital goods import:\n  - Pre-file HS Code 사전심사 with 관세청\n  - Apply for customs duty exemption\n  - Keep all import documentation", "세무사 + 관세사", "Customs duty exemption;\nAsset register maintained"],
+            ["Mar 2027\n(First Korean tax return)", "⑳ File first corporate tax return (법인세 신고)\n㉑ Claim FIPA tax reduction on first profit\n㉒ File VAT returns (부가세 신고 — quarterly)", "세무사", "Corporate tax return;\nVAT returns"],
+            ["Apr 15, 2027\n(First US tax return with\nforeign holdings)", "㉓ Prepare Korean GAAP→US GAAP reconciliation\n㉔ File Form 5471 (Category 3) with U.S. return\n㉕ File FBAR (FinCEN 114)\n㉖ File Form 1116 (Foreign Tax Credit)\n㉗ File Form 8938 (FATCA)\n㉘ File Form 926 (if applicable)\n㉙ File Form 8833 (Treaty Disclosure)", "Investor + U.S. CPA", "U.S. tax return with all\ninternational information\nforms attached;\nFBAR acknowledgment"],
+            ["Annually thereafter\n(Apr 15 IRS / Mar 31 NTS)", "㉚ Repeat all U.S. reporting (5471, FBAR, 8938, 1116)\n㉛ Korean corporate tax return + VAT\n㉜ Monitor FIPA benefit expiration (Year 6: corporate tax\n   drops to 50%; Year 8: ends entirely)", "CPA + 세무사\n+ Investor", "Annual tax filings;\nFIPA benefit tracking sheet"],
+            ["Upon Dividend\nDeclaration", "㉝ Korean withholding tax at treaty rate (10-15%)\n㉞ Korean 세무사 files reduced rate application\n㉟ U.S. CPA claims foreign tax credit (Form 1116)", "세무사 + CPA", "Dividend payment with\ntreaty-reduced withholding;\nForm 1116 credit claimed"],
+            ["Upon Future\nExit / Sale", "㊱ Korean capital gains treatment (if any)\n㊲ U.S. capital gains tax on sale of foreign corp shares\n㊳ Basis calculation using tracked FX rates\n㊴ Exit tax planning with CPA 12+ months before sale", "CPA + 세무사\n+ Investor", "Exit tax strategy;\nCapital gains calculation"],
+        ]
+    )
+
+    # 7.7
+    add_heading_styled(doc, "7.7 Dividend & Profit Repatriation Strategy", 2)
+    add_body(doc,
+        "How the investor eventually takes money out of Korea matters significantly for tax.\n\n"
+        "Route A — Dividend Distribution (배당):\n"
+        "• Korean corp declares dividend → 10–15% Korean withholding tax → investor receives net\n"
+        "• U.S. tax: dividend included in gross income; foreign tax credit for Korean withholding via Form 1116\n"
+        "• Net U.S. rate: 20% qualified dividend rate – 15% credit = 5% net additional U.S. tax (approx.)\n"
+        "• Best when: profits are significant and reinvestment is not needed\n\n"
+        "Route B — Shareholder Loan Repayment (if structured upfront):\n"
+        "• Principal repayment: tax-free (no withholding)\n"
+        "• Interest: subject to 12% Korean withholding (treaty rate), creditable in U.S.\n"
+        "• Best when: investor provided some capital as debt (see 7.2 § Action 5)\n\n"
+        "Route C — Management/Consulting Fee:\n"
+        "• Korean corp pays fee to U.S. investor for legitimate services (director oversight, strategic consulting)\n"
+        "• Korean deduction for corp; U.S. ordinary income for investor\n"
+        "• Must be at arm's length (transfer pricing documentation required)\n"
+        "• Best when: investor provides genuine, documentable services\n\n"
+        "Route D — Salary (if investor holds D-8 visa and physically works in Korea):\n"
+        "• Korean salary tax + U.S. income tax (foreign earned income exclusion possible via Form 2555)\n"
+        "• Best when: investor physically resides in Korea and actively manages the business\n\n"
+        "⚠️ WARNING: ALL repatriation routes require documentation. Korean tax authority (NTS) "
+        "aggressively audits related-party transactions involving foreign shareholders. Transfer pricing "
+        "rules apply. Maintain board resolutions, invoices, time logs, and arm's-length pricing analyses."
+    )
+
+    # ── 8. CONTACTS ──
+    add_heading_styled(doc, "8. Key Contacts & Resources", 1)
     add_table(doc,
         ["Contact", "Role", "Website / Phone"],
         [
             ["KOTRA Invest KOREA", "FDI registration + incentives", "investkorea.org / +82-1600-7119"],
             ["Busan District Court (East)", "Corporation registration", "busan.scourt.go.kr"],
-            ["Haeundae Tax Office", "Business registration", "nts.go.kr / +82-51-740-2000"],
+            ["Haeundae Tax Office", "Business registration + corporate tax", "nts.go.kr / +82-51-740-2000"],
             ["Haeundae-gu Office", "Travel agency license", "haeundae.go.kr / +82-51-749-4000"],
             ["Seoul Guarantee Insurance (SGI)", "Guarantee insurance bond", "sgi.co.kr / +82-1588-7000"],
             ["Korea Immigration Service", "D-8 visa / ARC", "hikorea.go.kr / 1345"],
             ["Korean Embassy in US", "Visa application", "overseas.mofa.go.kr"],
-            ["Resonate Club Inc. (CEO)", "Hee Sung Lee", "resonatetour.com / heesung2lee@..."],
+            ["Korea Customs Service (관세청)", "HS Code pre-review + customs exemption", "customs.go.kr / +82-1577-8577"],
+            ["National Tax Service (국세청)", "Corporate tax filing, FIPA incentives", "nts.go.kr / +82-126"],
+            ["IRS — International Tax", "Form 5471, FBAR, FATCA questions", "irs.gov / +1-267-941-1000 (Intl)"],
+            ["Resonate Club Inc. (CEO)", "Hee Sung Lee", "resonatetour.com"],
         ]
     )
 
     add_body(doc, "\n---\nThis document is a comprehensive guide based on publicly available information as of June 2026. "
-              "The investor should consult a Korean-licensed legal professional (법무사/변호사) and a cross-border tax "
-              "advisor before executing the investment.")
+              "The investor should consult a Korean-licensed legal professional (법무사/변호사), a U.S. cross-border "
+              "CPA, and a Korean 세무사 before executing the investment. Tax laws, treaty provisions, and FIPA benefit "
+              "rules are subject to change. Penalties for U.S. international information return non-compliance are severe "
+              "($10,000+ per form per year) regardless of whether any tax is ultimately due.")
 
     path1 = OUTDIR + "Resonate_Club_US_Investor_Guide_EN.docx"
     doc.save(path1)
