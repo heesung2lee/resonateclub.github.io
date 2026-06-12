@@ -13,8 +13,8 @@ OUTDIR = "/Users/hslee/workspace/resonateclub.github.io/files/"
 
 # ─── SHARED CONSTANTS (sourced from Doc 1 final) ───
 CAPITAL_TOTAL = "100,000,000"
-CAPITAL_INVESTOR = "90,000,000"
-CAPITAL_CEO = "10,000,000"
+CAPITAL_INVESTOR = "100,000,000"  # 100% ownership
+CAPITAL_CEO = "0 (non-shareholder CEO)"
 CAPITAL_MIN = "50,000,000"
 INSURANCE_BASE = "30,000,000"
 INSURANCE_PLANNED = "200,000,000"
@@ -34,6 +34,13 @@ SHARES = "2,000"
 PRICE_PER_SHARE = "50,000"
 D8_VALIDITY = "2–3 years initially, renewable up to 5 years"
 F5_REQ = "KRW 300M (~$200K) investment OR 2+ full-time Korean employees"
+# Ownership strings
+OWNERSHIP_KO = "투자자 100% (CEO는 비주주 대표이사)"
+OWNERSHIP_EN = "Investor 100% (CEO is non-shareholder Representative Director)"
+EQUITY_KO = "투자자: 미국인, 자본금 {CAPITAL_INVESTOR}원 전액 출자 (지분 100%), D-8-1 비자 취득 예정"
+EQUITY_EN = "Investor: U.S. citizen/entity, sole shareholder (100% equity), D-8-1 visa"
+CEO_KO = "대표이사: 이희성, F-4 비자, 비주주 대표이사 (급여 수령)"
+CEO_EN = "CEO: Hee Sung Lee, F-4 visa, non-shareholder Representative Director (salaried)"
 
 def set_cell_shading(cell, color):
     tc = cell._tc
@@ -126,7 +133,7 @@ def create_doc2_ko():
 
     doc.add_paragraph()
     i = doc.add_paragraph(); i.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    i.add_run(f"작성일: 2026년 6월 11일\n대표이사: 이희성 (F-4 Overseas Korean Visa)\n투자자: U.S. Investor (D-8-1, 90% Equity Stake)").font.size = Pt(10)
+    i.add_run(f"작성일: 2026년 6월 11일\n대표이사: 이희성 (F-4 Overseas Korean Visa)\n투자자: U.S. Investor (D-8-1, 100% Equity Stake)").font.size = Pt(10)
     doc.add_page_break()
 
     add_heading_styled(doc, "개요", 1)
@@ -135,8 +142,8 @@ def create_doc2_ko():
         f"8월 1일까지 법인설립을 완료하고, 이후 여행업 등록 및 모든 인허가를 완료하기까지의 "
         f"모든 단계를 시간순으로 정리한 실행 매뉴얼입니다.\n\n"
         f"핵심 전제:\n"
-        f"• 투자자: 미국인, 자본금 {CAPITAL_INVESTOR}원 출자 (지분 90%), D-8-1 비자 취득 예정\n"
-        f"• 대표이사: 이희성, F-4 비자, 자본금 {CAPITAL_CEO}원 출자 (지분 10%)\n"
+        f"• 투자자: 미국인, 자본금 {CAPITAL_INVESTOR}원 전액 출자 (지분 100%), D-8-1 비자 취득 예정\n"
+        f"• 대표이사: 이희성, F-4 비자, 비주주 대표이사 (급여 수령)\n"
         f"• 법인형태: 외국인투자기업 주식회사 (FIPA 적용)\n"
         f"• 사업유형: 국내외여행업 (기획여행사 / Planned Travel Operator)\n"
         f"• 소재지: 부산광역시 해운대구\n"
@@ -167,8 +174,8 @@ def create_doc2_ko():
         ("STEP 0: 입국 전 사전 준비 (현재 ~ 7월 16일)",
          f"소요 기간: 입국 전까지\n\n"
          f"1. 투자자와 주주간 계약서 체결\n"
-         f"   - 지분 비율: 투자자 90% / CEO 10%\n"
-         f"   - 자본금: 총 {CAPITAL_TOTAL}원 (투자자 {CAPITAL_INVESTOR}원, CEO {CAPITAL_CEO}원)\n"
+         f"   - 지분 비율: 투자자 100% (CEO는 비주주 대표이사)\n"
+         f"   - 자본금: 총 {CAPITAL_TOTAL}원 (투자자 {CAPITAL_INVESTOR}원 전액, CEO는 비주주)\n"
          f"   - 대표이사: 이희성 / 이사(또는 감사): 투자자\n"
          f"   - 배당 정책, 의사결정 권한, 지분양도 제한 등 명시\n\n"
          f"2. 투자자 서류 준비 (미국)\n"
@@ -217,7 +224,7 @@ def create_doc2_ko():
          f"2. 자본금 계좌 개설 (7월 25~26일): 외환은행 또는 국민은행 '외국인투자 전용 계좌'\n\n"
          f"3. 자본금 입금 (7월 27~28일)\n"
          f"   - 투자자: {CAPITAL_INVESTOR}원 입금\n"
-         f"   - CEO: {CAPITAL_CEO}원 입금\n"
+         f"   - CEO: 비주주 대표이사 — 자본금 납입 없음\n"
          f"   - 은행에서 '주식납입금 보관증명서' 발급\n\n"
          f"4. 외국인투자기업 등록 (7월 29~30일): KOTRA/은행에서 등록증 발급\n\n"
          f"☑️ 확보: 외국인투자기업등록증명서, 주식납입금 보관증명서"),
@@ -328,7 +335,7 @@ def create_doc2_en():
 
     doc.add_paragraph()
     i = doc.add_paragraph(); i.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    i.add_run(f"Date: June 11, 2026\nCEO: Hee Sung Lee (F-4 Overseas Korean Visa)\nInvestor: U.S. Investor (D-8-1, 90% Equity Stake)").font.size = Pt(10)
+    i.add_run(f"Date: June 11, 2026\nCEO: Hee Sung Lee (F-4 Overseas Korean Visa)\nInvestor: U.S. Investor (D-8-1, 100% Equity Stake)").font.size = Pt(10)
     doc.add_page_break()
 
     add_heading_styled(doc, "Overview", 1)
@@ -337,8 +344,8 @@ def create_doc2_en():
         f"on July 17, 2026 on an F-4 Overseas Korean Visa. It covers every action required to "
         f"establish the corporation by August 1 and complete all travel agency licensing by September.\n\n"
         f"Key Parameters:\n"
-        f"• Investor: U.S. citizen/entity contributing KRW {CAPITAL_INVESTOR} (90% equity), D-8-1 visa\n"
-        f"• CEO: Hee Sung Lee, F-4 visa, contributing KRW {CAPITAL_CEO} (10% equity)\n"
+        f"• Investor: U.S. citizen/entity contributing KRW {CAPITAL_INVESTOR} (100% equity), D-8-1 visa\n"
+        f"• CEO: Hee Sung Lee, F-4 visa, non-shareholder Representative Director (salaried)\n"
         f"• Entity: Foreign-Invested Joint-Stock Company under FIPA\n"
         f"• Business: Domestic & International Travel Agency (Planned Travel Operator)\n"
         f"• Location: Haeundae-gu, Busan, Republic of Korea\n"
@@ -369,8 +376,8 @@ def create_doc2_en():
         ("STEP 0: Pre-Arrival Preparation (Now – Jul 16)",
          f"Duration: Before arrival\n\n"
          f"1. Sign Shareholder Agreement with investor\n"
-         f"   - Equity: Investor 90% / CEO 10%\n"
-         f"   - Capital: KRW {CAPITAL_TOTAL} (Investor KRW {CAPITAL_INVESTOR}, CEO KRW {CAPITAL_CEO})\n"
+         f"   - Equity: Investor 100% (CEO is non-shareholder Representative Director)\n"
+         f"   - Capital: KRW {CAPITAL_TOTAL} (Investor KRW {CAPITAL_INVESTOR}, CEO is non-shareholder)\n"
          f"   - CEO: Hee Sung Lee / Director(or Auditor): Investor\n"
          f"   - Include: dividend policy, decision rights, transfer restrictions\n\n"
          f"2. Investor documents (US)\n"
@@ -418,7 +425,7 @@ def create_doc2_en():
          f"2. Open capital deposit account (Jul 25–26): Foreign-investment dedicated account at KEB Hana or KB Kookmin Bank\n\n"
          f"3. Transfer capital (Jul 27–28)\n"
          f"   - Investor: KRW {CAPITAL_INVESTOR}\n"
-         f"   - CEO: KRW {CAPITAL_CEO}\n"
+         f"   - CEO: Non-shareholder Representative Director — no capital contribution\n"
          f"   - Bank issues Share Subscription Deposit Certificate\n\n"
          f"4. FDI Enterprise Registration (Jul 29–30): KOTRA/bank issues FDI certificate\n\n"
          f"[CHECK] FDI Enterprise Registration Certificate, Share Subscription Deposit Certificate"),
@@ -542,7 +549,7 @@ def create_doc3_ko():
         f"• 원가 +40% 마크업 투명 가격 정책 (고객에게는 원가 비공개)\n"
         f"• 추후 미국인→한국 인바운드 럭셔리 투어로 확장\n\n"
         f"회사 현황:\n"
-        f"• 자본금: {CAPITAL_TOTAL}원 (법정 최소 {CAPITAL_MIN}원 상회, 투자자 90% + CEO 10%)\n"
+        f"• 자본금: {CAPITAL_TOTAL}원 (법정 최소 {CAPITAL_MIN}원 상회, 투자자 100%)\n"
         f"• 영업보증보험: {INSURANCE_TOTAL}원 (기본 {INSURANCE_BASE}원 + 기획여행 추가 {INSURANCE_PLANNED}원)\n"
         f"• 월고정비: ₩{MONTHLY_TOTAL} (사무실 ₩{MONTHLY_OFFICE} + 보증보험 ₩{MONTHLY_INSURANCE_PREM} + 배상책임 ₩{MONTHLY_LIABILITY} + 회계 ₩{MONTHLY_ACCOUNTING} + 통신 ₩{MONTHLY_TELECOM} + 잡비 ₩{MONTHLY_MISC})\n\n"
         f"파트너사의 역할:\n"
@@ -759,7 +766,7 @@ def create_doc3_en():
         f"• Cost + 40% transparent markup (cost never disclosed to clients)\n"
         f"• Future expansion: USA→Korea inbound luxury tours\n\n"
         f"Company Snapshot:\n"
-        f"• Capital: KRW {CAPITAL_TOTAL} (statutory minimum KRW {CAPITAL_MIN}; Investor 90% + CEO 10%)\n"
+        f"• Capital: KRW {CAPITAL_TOTAL} (statutory minimum KRW {CAPITAL_MIN}; Investor 100%)\n"
         f"• Guarantee Insurance: KRW {INSURANCE_TOTAL} (Base KRW {INSURANCE_BASE} + Planned Travel KRW {INSURANCE_PLANNED})\n"
         f"• Monthly Fixed Costs: KRW {MONTHLY_TOTAL} (Office KRW {MONTHLY_OFFICE} + Guarantee Ins. KRW {MONTHLY_INSURANCE_PREM} + Liability KRW {MONTHLY_LIABILITY} + Accounting KRW {MONTHLY_ACCOUNTING} + Telecom KRW {MONTHLY_TELECOM} + Misc KRW {MONTHLY_MISC})\n\n"
         f"Partner Role:\n"
@@ -778,7 +785,7 @@ def create_doc3_en():
             ["Late Jul 2026", f"FDI notification + Capital deposit (KRW {CAPITAL_TOTAL})", "Capital secured"],
             ["Early Aug 2026", "Corporation registration complete", "Resonate Club Inc. officially established"],
             ["Mid Aug 2026", "Business registration complete", "Tax invoices can be issued"],
-            ["Early Sep 2026", "Travel Agency License issued", "Tour products can be sold"],
+            ["Mid-Sep 2026", "Travel Agency License issued", "Tour products can be sold"],
             ["Mid Sep 2026", f"Guarantee insurance (KRW {INSURANCE_TOTAL}) active", "100% legally compliant; operations begin"],
             ["Oct 2026", "First tour group departure (target)", "Live operations commence"],
         ]
