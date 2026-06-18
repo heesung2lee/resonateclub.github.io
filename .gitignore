@@ -1,0 +1,15 @@
+# Private/sensitive files — do NOT commit
+*.xlsx
+*.xlsx.bak*
+*.docx
+*.pdf
+*.py
+*.md
+contracts/
+files/contracts/
+files/*.xlsx
+files/*.docx
+files/*.pdf
+files/*.py
+files/*.md
+files/*.bak*
