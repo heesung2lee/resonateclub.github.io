@@ -103,15 +103,6 @@ footer{background:#0d1f30;color:rgba(255,255,255,.4);text-align:center;padding:3
 
 .pkg-note{background:var(--cream);border:1px solid rgba(212,175,55,.3);border-radius:4px;padding:12px 16px;margin:8px 0 12px;font-size:11px;color:#888;line-height:1.5}
 
-
-/* COMING SOON Overlay */
-.coming-soon-wrap{position:relative;overflow:hidden}
-.coming-soon-wrap .blur-content{filter:blur(8px);-webkit-filter:blur(8px);opacity:.25;pointer-events:none;user-select:none;transition:all .3s}
-.coming-soon-overlay{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:10;text-align:center}
-.coming-soon-overlay .cs-badge{display:inline-block;font-family:"Playfair Display",serif;font-size:clamp(24px,4vw,42px);font-weight:700;color:var(--gold);letter-spacing:.04em;margin-bottom:8px}
-.coming-soon-overlay .cs-sub{font-size:clamp(12px,2vw,15px);color:rgba(255,255,255,.6);letter-spacing:.08em}
-.coming-soon-banner{background:linear-gradient(135deg,var(--navy),var(--navy-light));color:var(--gold);text-align:center;padding:16px 24px;border-radius:4px;margin-top:24px;font-size:14px;font-weight:600;letter-spacing:.06em}
-
 @media(max-width:640px){
   .nav-links a{font-size:11px;padding:4px 8px}
   .pkg-grid{grid-template-columns:1fr}
@@ -246,49 +237,64 @@ footer{background:#0d1f30;color:rgba(255,255,255,.4);text-align:center;padding:3
 </section>
 
 <!-- ================================================================ -->
-<!-- USA → KOREA — COMING SOON -->
+<!-- USA → KOREA LUXURY JOURNEYS -->
 <!-- ================================================================ -->
-<section id="korea" class="coming-soon-wrap" style="background:#0d1f30;position:relative">
-  <div class="sec-title" style="position:relative;z-index:10">
+<section id="korea" style="background:#f9f9f9">
+  <div class="sec-title">
     <div class="tag en">USA → KOREA</div><div class="tag ko">미국 → 한국</div>
-    <h2 class="en" style="color:var(--gold)">Discover Korea</h2><h2 class="ko" style="color:var(--gold)">한국을 발견하다</h2>
-    <p style="max-width:600px;margin:8px auto 0;color:rgba(255,255,255,.5);font-size:14px" class="en">Premium journeys from the United States to Korea are currently in development. Stay tuned.</p>
-    <p style="max-width:600px;margin:8px auto 0;color:rgba(255,255,255,.5);font-size:14px" class="ko">미국 출발 한국 프리미엄 여행은 현재 준비 중입니다. 곧 찾아뵙겠습니다.</p>
+    <h2 class="en">Discover Korea</h2><h2 class="ko">한국을 발견하다</h2>
+    <p style="max-width:600px;margin:8px auto 0;color:#888;font-size:14px" class="en">Luxury journeys from the United States to Korea — championship golf on world-class courses, or a cultural deep-dive through Seoul, Gyeongju, Busan & Jeju.</p>
+    <p style="max-width:600px;margin:8px auto 0;color:#888;font-size:14px" class="ko">미국 출발 한국 럭셔리 여행 — 세계적 챔피언십 골프 코스, 또는 서울·경주·부산·제주 문화 심층 탐방.</p>
   </div>
 
-  <div class="coming-soon-overlay">
-    <div class="cs-badge en">COMING SOON</div>
-    <div class="cs-badge ko">준비중</div>
-    <div class="cs-sub en">Curating Extraordinary Korean Journeys</div>
-    <div class="cs-sub ko">당신만을 위한 한국 여정을 준비하고 있습니다</div>
-    <div class="coming-soon-banner en">✦ USA → KOREA · LAUNCHING 2027 ✦</div>
-    <div class="coming-soon-banner ko">✦ 미국 → 한국 · 2027 론칭 예정 ✦</div>
-  </div>
-
-  <div class="pkg-grid blur-content">
-    <!-- Korea Golf Premier (blurred) -->
+  <div class="pkg-grid">
+    <!-- Korea Golf Premier -->
     <div class="pkg-card">
       <div class="pkg-img"><span class="pkg-icon">⛳</span><span class="pkg-badge en">Golf Premier</span><span class="pkg-badge ko">골프 프리미어</span></div>
       <div class="pkg-body">
         <h3 class="en">Korea Golf Premier</h3><h3 class="ko">Korea Golf Premier</h3>
         <div class="dur en">12 Nights / 13 Days · 3 Championship Courses</div><div class="dur ko">12박 13일 · 챔피언십 3코스</div>
-        <div class="desc en"><strong>⛳ Courses:</strong> Nine Bridges (Jeju) · South Cape (Namhae) · Jack Nicklaus GC (Incheon)</div>
-        <div class="desc ko"><strong>⛳ 코스:</strong> 나인브릿지(제주) · 사우스케이프(남해) · 잭니클라우스GC(인천)</div>
+        <div class="desc en">
+          <strong>⛳ Courses:</strong> Nine Bridges (Jeju) · South Cape Owner's Club (Namhae) · Jack Nicklaus GC Korea (Incheon)<br>
+          <strong>🏨 Stay:</strong> 5★ luxury — Jeju 4N, Namhae 2N, Seoul 5N, Free Day 1N<br>
+          <strong>🚐 Transport:</strong> Private driver/guide · domestic flights · airport VIP<br>
+          <strong>🍽️ Dining:</strong> All meals + 3 Michelin-starred dinners + Korean BBQ
+        </div>
+        <div class="desc ko">
+          <strong>⛳ 코스:</strong> 나인브릿지(제주) · 사우스케이프(남해) · 잭니클라우스GC(인천)<br>
+          <strong>🏨 숙박:</strong> 5★ 럭셔리 — 제주 4박, 남해 2박, 서울 5박, 자유 1박<br>
+          <strong>🚐 교통:</strong> 프라이빗 드라이버/가이드 · 국내선 · 공항 VIP<br>
+          <strong>🍽️ 식사:</strong> 전 식사 + 미슐랭 스타 3회 + 한우 BBQ
+        </div>
         <div class="price"><span class="en">Custom Quote</span><span class="ko">맞춤 견적</span></div>
-        <button class="pkg-btn" style="cursor:default;opacity:.5"><span class="en">Coming Soon</span><span class="ko">준비중</span></button>
+        <div class="route en">Route: Incheon → Jeju (4N) → Namhae (2N) → Seoul/Incheon (5N) → Free Day</div>
+        <div class="route ko">코스: 인천 → 제주(4박) → 남해(2박) → 서울(5박) → 자유일</div>
+        <button class="pkg-btn" onclick="openModal('korea-golf')"><span class="en">View Sample Itinerary →</span><span class="ko">일정 샘플 & 견적 요청 →</span></button>
       </div>
     </div>
 
-    <!-- Korea Discovery (blurred) -->
+    <!-- Korea Discovery (Non-Golf) -->
     <div class="pkg-card">
       <div class="pkg-img"><span class="pkg-icon">🏯</span><span class="pkg-badge en">Cultural</span><span class="pkg-badge ko">문화</span></div>
       <div class="pkg-body">
         <h3 class="en">Korea Discovery</h3><h3 class="ko">Korea Discovery</h3>
         <div class="dur en">12 Nights / 13 Days · Cultural Immersion</div><div class="dur ko">12박 13일 · 문화 심층 탐방</div>
-        <div class="desc en"><strong>🗺️ Route:</strong> Seoul → Gyeongju → Busan → Jeju</div>
-        <div class="desc ko"><strong>🗺️ 코스:</strong> 서울 → 경주 → 부산 → 제주</div>
+        <div class="desc en">
+          <strong>🗺️ Route:</strong> Seoul → Gyeongju → Busan → Jeju<br>
+          <strong>🏯 Highlights:</strong> UNESCO temples, hanok village stay, DMZ tour, K-culture, Jeju yacht & haenyeo<br>
+          <strong>🏨 Stay:</strong> 5★ luxury + 1-night traditional hanok<br>
+          <strong>🍽️ Dining:</strong> All meals + 4 Michelin-starred + temple cuisine + Jeju black pork
+        </div>
+        <div class="desc ko">
+          <strong>🗺️ 코스:</strong> 서울 → 경주 → 부산 → 제주<br>
+          <strong>🏯 하이라이트:</strong> 유네스코 사찰, 한옥마을 숙박, DMZ 투어, K-컬처, 제주 요트 & 해녀<br>
+          <strong>🏨 숙박:</strong> 5★ 럭셔리 + 전통 한옥 1박<br>
+          <strong>🍽️ 식사:</strong> 전 식사 + 미슐랭 스타 4회 + 사찰음식 + 제주 흑돼지
+        </div>
         <div class="price"><span class="en">Custom Quote</span><span class="ko">맞춤 견적</span></div>
-        <button class="pkg-btn" style="cursor:default;opacity:.5"><span class="en">Coming Soon</span><span class="ko">준비중</span></button>
+        <div class="route en">Route: Seoul (4N) → Gyeongju (2N) → Busan (2N) → Jeju (4N)</div>
+        <div class="route ko">코스: 서울(4박) → 경주(2박) → 부산(2박) → 제주(4박)</div>
+        <button class="pkg-btn" onclick="openModal('korea-discovery')"><span class="en">View Sample Itinerary →</span><span class="ko">일정 샘플 & 견적 요청 →</span></button>
       </div>
     </div>
   </div>
