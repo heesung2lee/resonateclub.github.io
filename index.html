@@ -155,7 +155,7 @@ footer{background:#0d1f30;color:rgba(255,255,255,.4);text-align:center;padding:3
 .crs-sec .leaflet-bar a:last-child{border-bottom:none}
 .crs-sec .leaflet-bar a:hover{background:#264460!important;color:#fff!important}
 .crs-sec .region-group{margin-bottom:22px;max-width:860px;margin-left:auto;margin-right:auto;padding:0 16px}
-.crs-sec .region-header{position:sticky;top:128px;z-index:15;background:var(--crsbg);padding:10px 16px 6px;margin:0 0 8px;max-width:860px;margin-left:auto;margin-right:auto}
+.crs-sec .region-header{position:sticky;top:176px;z-index:15;background:var(--crsbg);padding:10px 16px 6px;margin:0 0 8px;max-width:860px;margin-left:auto;margin-right:auto}
 .crs-sec .region-title{font-size:14px;font-weight:700;color:var(--crstxt);margin:0;padding-bottom:6px;border-bottom:2px solid rgba(212,175,55,.3)}
 .crs-sec .region-group.hidden,.crs-sec .region-header.hidden{display:none}
 .crs-sec .course-card{background:var(--crscard);border:1px solid var(--crsline);border-radius:16px;overflow:hidden;margin-bottom:28px;transition:border-color .2s;padding:28px 28px 32px;opacity:0;transform:translateY(30px);outline:none;-webkit-tap-highlight-color:transparent;box-shadow:0 2px 14px rgba(23,26,32,.06)}
@@ -358,24 +358,20 @@ footer{background:#0d1f30;color:rgba(255,255,255,.4);text-align:center;padding:3
 <!-- ================================================================ -->
 <section id="courses-na" class="crs-sec" style="background:#f7f8fa"><div class="sec-title" style="position:relative;z-index:10"><h2 class="en" style="color:var(--gold)">Golf Course Guide</h2><h2 class="ko" style="color:var(--gold)">골프코스 가이드</h2><p style="max-width:620px;margin:8px auto 0;color:var(--crsdim);font-size:14px" class="en">California · Nevada · Canadian Rockies · Korea — verified first-hand, hand-picked by the locals</p><p style="max-width:620px;margin:8px auto 0;color:var(--crsdim);font-size:14px" class="ko">캘리포니아 · 네바다 · 캐나디안 로키 · 한국 — 직접 검증한, 현지인들이 추천하는 명문 코스</p></div><div class="filter-bar" id="filterBar"><div class="country-tabs" id="countryTabs"><button class="country-tab act" onclick="crsSwitch('usa')" id="crs-tab-usa"><svg viewBox="0 0 18 12" width="16" height="11" style="vertical-align:-1px;border-radius:2px"><rect width="18" height="12" fill="#fff"/><g fill="#b22234"><rect width="18" height="1"/><rect y="2" width="18" height="1"/><rect y="4" width="18" height="1"/><rect y="6" width="18" height="1"/><rect y="8" width="18" height="1"/><rect y="10" width="18" height="1"/></g><rect width="8" height="6.5" fill="#3c3b6e"/></svg> <span class="ko">캘리포니아 & 네바다</span><span class="en">California & Nevada</span></button><button class="country-tab" onclick="crsSwitch('canada')" id="crs-tab-canada"><svg viewBox="0 0 18 12" width="16" height="11" style="vertical-align:-1px;border-radius:2px"><rect width="18" height="12" fill="#fff"/><rect width="4.5" height="12" fill="#d52b1e"/><rect x="13.5" width="4.5" height="12" fill="#d52b1e"/><path d="M9 2.6l.6 1.5 1.6-.2-.8 1.4 1.4.9-1.5.6 1.1 1.6-1.6-.7-.6 1.6-.6-1.6-1.6.7 1.1-1.6-1.5-.6 1.4-.9-.8-1.4 1.6.2z" fill="#d52b1e"/><path d="M8.4 9.3h1.2v1.5H8.4z" fill="#d52b1e"/></svg> <span class="ko">캐나디안 로키</span><span class="en">Canadian Rockies</span></button>
 <button class="country-tab" onclick="crsSwitch('kr')" id="crs-tab-kr"><svg viewBox="0 0 18 12" width="16" height="11" style="vertical-align:-1px;border-radius:2px"><rect width="18" height="12" fill="#fff"/><circle cx="9" cy="6" r="3" fill="#cd2e3a"/><path d="M9 3a3 3 0 0 1 0 6z" fill="#0047a0"/><g fill="#0b0b0b"><rect x="3.1" y="1.4" width="2.6" height=".42"/><rect x="3.1" y="2.24" width="2.6" height=".42"/><rect x="3.1" y="3.08" width="2.6" height=".42"/><rect x="12.3" y="1.4" width=".85" height=".42"/><rect x="14.05" y="1.4" width=".85" height=".42"/><rect x="12.3" y="2.24" width="2.6" height=".42"/><rect x="12.3" y="3.08" width=".85" height=".42"/><rect x="14.05" y="3.08" width=".85" height=".42"/><rect x="3.1" y="8.5" width="2.6" height=".42"/><rect x="3.1" y="9.34" width=".85" height=".42"/><rect x="4.85" y="9.34" width=".85" height=".42"/><rect x="3.1" y="10.18" width="2.6" height=".42"/><rect x="12.3" y="8.5" width=".85" height=".42"/><rect x="14.05" y="8.5" width=".85" height=".42"/><rect x="12.3" y="9.34" width=".85" height=".42"/><rect x="14.05" y="9.34" width=".85" height=".42"/><rect x="12.3" y="10.18" width=".85" height=".42"/><rect x="14.05" y="10.18" width=".85" height=".42"/></g></svg> <span class="ko">한국</span><span class="en">Korea</span></button></div>
+<div class="region-tabs" id="regionTabs">
+<button class="region-tab act" data-region="usa1" data-country="usa" onclick="crsRegion('usa1')"><span class="ko">LA 카운티</span><span class="en">LA County</span></button>
+<button class="region-tab" data-region="usa2" data-country="usa" onclick="crsRegion('usa2')"><span class="ko">인랜드 엠파이어</span><span class="en">Inland Empire</span></button>
+<button class="region-tab" data-region="usa3" data-country="usa" onclick="crsRegion('usa3')"><span class="ko">SD 노스 카운티</span><span class="en">SD North County</span></button>
+<button class="region-tab" data-region="usa4" data-country="usa" onclick="crsRegion('usa4')"><span class="ko">테메큘라 와인컨트리</span><span class="en">Temecula Wine Country</span></button>
+<button class="region-tab" data-region="usa5" data-country="usa" onclick="crsRegion('usa5')"><span class="ko">코첼라 밸리</span><span class="en">Coachella Valley</span></button>
+<button class="region-tab" data-region="usa6" data-country="usa" onclick="crsRegion('usa6')"><span class="ko">산타바바라·센트럴</span><span class="en">Santa Barbara &amp; Central Coast</span></button>
+<button class="region-tab" data-region="usa7" data-country="usa" onclick="crsRegion('usa7')"><span class="ko">SD 코스탈</span><span class="en">SD Coastal</span></button>
+<button class="region-tab" data-region="usa8" data-country="usa" onclick="crsRegion('usa8')"><span class="ko">라스베이거스</span><span class="en">Las Vegas</span></button>
+<button class="region-tab" data-region="canada1" data-country="canada" onclick="crsRegion('canada1')"><span class="ko">캐나디안 로키</span><span class="en">Canadian Rockies</span></button>
+<button class="region-tab" data-region="kr1" data-country="kr" onclick="crsRegion('kr1')"><span class="ko">춘천·원주·홍천</span><span class="en">Chuncheon · Wonju · Hongcheon</span></button>
+<button class="region-tab" data-region="kr2" data-country="kr" onclick="crsRegion('kr2')"><span class="ko">여주·용인·이천·인천</span><span class="en">Yeoju · Yongin · Icheon · Incheon</span></button>
+<button class="region-tab" data-region="kr3" data-country="kr" onclick="crsRegion('kr3')"><span class="ko">남해·기장</span><span class="en">Namhae · Gijang</span></button>
 </div>
-<div class="region-tabs" id="regionTabsUsa" data-country="usa">
-<button class="region-tab act" data-region="usa1" onclick="crsRegion('usa1')"><span class="ko">로스앤젤레스 카운티</span><span class="en">Los Angeles County</span></button>
-<button class="region-tab" data-region="usa2" onclick="crsRegion('usa2')"><span class="ko">인랜드 엠파이어</span><span class="en">Inland Empire</span></button>
-<button class="region-tab" data-region="usa3" onclick="crsRegion('usa3')"><span class="ko">샌디에이고 노스 카운티</span><span class="en">San Diego North County</span></button>
-<button class="region-tab" data-region="usa4" onclick="crsRegion('usa4')"><span class="ko">테메큘라 밸리 와인 컨트리</span><span class="en">Temecula Valley Wine Country</span></button>
-<button class="region-tab" data-region="usa5" onclick="crsRegion('usa5')"><span class="ko">코첼라 밸리</span><span class="en">Coachella Valley</span></button>
-<button class="region-tab" data-region="usa6" onclick="crsRegion('usa6')"><span class="ko">산타바바라 &amp; 센트럴 코스트</span><span class="en">Santa Barbara &amp; Central Coast</span></button>
-<button class="region-tab" data-region="usa7" onclick="crsRegion('usa7')"><span class="ko">샌디에이고 코스탈</span><span class="en">San Diego Coastal</span></button>
-<button class="region-tab" data-region="usa8" onclick="crsRegion('usa8')"><span class="ko">라스베이거스</span><span class="en">Las Vegas</span></button>
-</div>
-<div class="region-tabs" id="regionTabsCan" data-country="canada" style="display:none">
-<button class="region-tab act" data-region="canada1" onclick="crsRegion('canada1')"><span class="ko">캐나디안 로키</span><span class="en">Canadian Rockies</span></button>
-</div>
-<div class="region-tabs" id="regionTabsKr" data-country="kr" style="display:none">
-<button class="region-tab act" data-region="kr1" onclick="crsRegion('kr1')"><span class="ko">춘천 · 원주 · 홍천</span><span class="en">Chuncheon · Wonju · Hongcheon</span></button>
-<button class="region-tab" data-region="kr2" onclick="crsRegion('kr2')"><span class="ko">여주 · 용인 · 이천 · 인천</span><span class="en">Yeoju · Yongin · Icheon · Incheon</span></button>
-<button class="region-tab" data-region="kr3" onclick="crsRegion('kr3')"><span class="ko">남해 · 기장</span><span class="en">Namhae · Gijang</span></button>
 </div>
 <div class="map-wrap" id="crs-map-usa"><div class="map-container" id="crsMapUsa"></div></div><div class="map-wrap" id="crs-map-canada" style="display:none"><div class="map-container" id="crsMapCan"></div></div>
 <div class="map-wrap" id="crs-map-kr" style="display:none"><div class="map-container" id="crsMapKr"></div></div>
@@ -863,24 +859,34 @@ if (r.top < window.innerHeight && r.bottom > 0) card.classList.add('revealed');
 
 var crsRegionCur = 'usa1';
 function crsRegion(r, skipScroll) {
+var t = document.querySelector('.crs-sec .region-tab[data-region="'+r+'"]');
+var c = t ? t.getAttribute('data-country') : null;
+if (c && c !== crsCur) crsSwitch(c, true);
+crsRegionCur = r;
+document.querySelectorAll('.crs-sec .region-tab').forEach(function(x) { x.classList.toggle('act', x.dataset.region === r); });
+if (!skipScroll) { var hdr = document.querySelector('.crs-sec .region-header[data-region="'+r+'"]:not(.hidden)'); if (hdr) { var y = hdr.getBoundingClientRect().top + window.scrollY - 178; window.scrollTo({top: Math.max(0, y), behavior: 'smooth'}); } }
+}
+var crsSpyTimer = null;
+function crsSpyTick() {
+var line = 180, best = null, bestTop = -1e9;
+document.querySelectorAll('.crs-sec .region-header:not(.hidden)').forEach(function(g) {
+var b = g.getBoundingClientRect();
+if (b.top <= line && b.top > bestTop) { best = g; bestTop = b.top; }
+});
+if (best) {
+var c = best.getAttribute('data-country');
+var r = best.getAttribute('data-region');
+if (c && c !== crsCur) crsSwitch(c, true);
+if (r && r !== crsRegionCur) {
 crsRegionCur = r;
 document.querySelectorAll('.crs-sec .region-tab').forEach(function(t) { t.classList.toggle('act', t.dataset.region === r); });
-if (!skipScroll) { var hdr = document.querySelector('.crs-sec .region-header[data-region="'+r+'"]:not(.hidden)'); if (hdr) { var y = hdr.getBoundingClientRect().top + window.scrollY - 170; window.scrollTo(0, Math.max(0, y)); } }
-}
-var crsSpyTicking = false;
-function crsSpy() {
-crsSpyTicking = false;
-var line = 180, best = null, bestTop = -1e9;
-document.querySelectorAll('.crs-sec .region-header:not(.hidden)').forEach(function(h) {
-var b = h.getBoundingClientRect();
-if (b.top <= line && b.top > bestTop) { best = h; bestTop = b.top; }
-});
-if (best && best.dataset.region !== crsRegionCur) {
-crsRegionCur = best.dataset.region;
-document.querySelectorAll('.crs-sec .region-tab').forEach(function(t) { t.classList.toggle('act', t.dataset.region === best.dataset.region); });
 }
 }
-window.addEventListener('scroll', function() { if (!crsSpyTicking) { crsSpyTicking = true; requestAnimationFrame(crsSpy); } }, { passive: true });
+}
+window.addEventListener('scroll', function() {
+if (crsSpyTimer) return;
+crsSpyTimer = setTimeout(function() { crsSpyTimer = null; crsSpyTick(); }, 120);
+}, { passive: true });
 function crsSwitch(c, noScroll) {
 document.getElementById('crs-tab-usa').classList.toggle('act', c==='usa');
 document.getElementById('crs-tab-canada').classList.toggle('act', c==='canada');
@@ -891,7 +897,6 @@ document.getElementById('crs-map-kr').style.display = c==='kr'?'':'none';
 crsCur = c;
 document.querySelectorAll('.crs-sec .region-group').forEach(function(g) { g.classList.toggle('hidden', g.getAttribute('data-country') !== c); });
 document.querySelectorAll('.crs-sec .region-header').forEach(function(h) { h.classList.toggle('hidden', h.getAttribute('data-country') !== c); });
-document.querySelectorAll('.crs-sec .region-tabs').forEach(function(bar) { bar.style.display = (bar.dataset.country === c) ? '' : 'none'; });
 crsRegion(c === 'usa' ? 'usa1' : (c === 'canada' ? 'canada1' : 'kr1'), true);
 
 crsInitMaps();
@@ -1035,7 +1040,7 @@ crsInitQuiz();
 
 /* ── Korea map (club) ── */
 function crsInitKrMap() {
-if (!document.getElementById('crsMapKr') || typeof L === 'undefined') return;
+if (!document.getElementById('crsMapKr') || typeof L === 'undefined' || crsMapKr) return;
 var map = L.map('crsMapKr', {zoomControl:true, scrollWheelZoom:false, touchZoom:true, attributionControl:true});
 L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> &copy; <a href="https://carto.com/">CARTO</a>', subdomains:'abcd', maxZoom:18}).addTo(map);
 var KR_MARKERS = [
