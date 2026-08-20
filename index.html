@@ -897,6 +897,7 @@ document.getElementById('crs-map-kr').style.display = c==='kr'?'':'none';
 crsCur = c;
 document.querySelectorAll('.crs-sec .region-group').forEach(function(g) { g.classList.toggle('hidden', g.getAttribute('data-country') !== c); });
 document.querySelectorAll('.crs-sec .region-header').forEach(function(h) { h.classList.toggle('hidden', h.getAttribute('data-country') !== c); });
+document.querySelectorAll('.crs-sec .region-tab').forEach(function(t) { t.style.display = (t.getAttribute('data-country') === c) ? '' : 'none'; });
 crsRegion(c === 'usa' ? 'usa1' : (c === 'canada' ? 'canada1' : 'kr1'), true);
 
 crsInitMaps();
