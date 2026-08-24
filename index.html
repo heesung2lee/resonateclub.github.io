@@ -22,7 +22,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;height:56px;display:flex;ali
 .nav-links{display:flex;gap:4px;align-items:center}
 .nav-links a{font-size:13px;color:#5c6a7a;text-decoration:none;padding:6px 12px;border-radius:4px;transition:all .2s}
 .nav-links a:hover{background:#f5eed6;color:var(--navy)}
-.btn-lang{font-size:12px;font-weight:500;background:none;border:1px solid rgba(212,175,55,.3);color:var(--gold);padding:6px 14px;border-radius:4px;cursor:pointer;transition:all .2s;position:relative}
+.btn-lang{font-size:12px;font-weight:500;background:none;border:1px solid rgba(212,175,55,.3);color:var(--gold);padding:6px 14px;border-radius:4px;cursor:pointer;transition:all .2s;position:relative;display:inline-flex;align-items:center;gap:3px}#lcFlag{display:inline-flex;margin-right:4px}.lc-cur-badge{display:inline-flex;align-items:center;justify-content:center;min-width:20px;height:20px;border-radius:50%;background:linear-gradient(135deg,#1a3450,#2a4a6e);color:#d4af37;font-weight:700;font-size:12px;border:1px solid rgba(212,175,55,.45);margin-right:6px}.lc-caret{margin-left:2px;font-size:10px;opacity:.7}.cur-badge{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;background:linear-gradient(135deg,#1a3450,#2a4a6e);color:#d4af37;font-weight:700;font-size:13px;vertical-align:-4px;margin-right:7px;border:1px solid rgba(212,175,55,.45)}.lc-dropdown .lc-option{display:flex;align-items:center}
 .btn-lang:hover{background:var(--cream)}
 
 .lc-dropdown{display:none;position:absolute;top:48px;right:20px;background:#fff;border:1px solid #eee;border-radius:8px;box-shadow:0 8px 30px rgba(0,0,0,.12);z-index:400;min-width:200px;overflow:hidden}
@@ -241,7 +241,7 @@ footer{background:#0d1f30;color:rgba(255,255,255,.4);text-align:center;padding:3
     
     <a href="#" class="en" data-page="vip" onclick="nav('vip');return false;">VIP Events</a><a href="#" class="ko" data-page="vip" onclick="nav('vip');return false;">VIP 이벤트</a>
     <a href="#" class="en" data-page="contact" onclick="nav('contact');return false;">Contact</a><a href="#" class="ko" data-page="contact" onclick="nav('contact');return false;">문의</a>
-    <button class="btn-lang" onclick="toggleLangCurrency(event)" id="lcBtn"><span id="lcLabel">EN · USD</span> ▾</button>
+    <button class="btn-lang" onclick="toggleLangCurrency(event)" id="lcBtn"><span id="lcFlag"></span><span id="lcCur" class="lc-cur-badge">$</span><span id="lcLabel">EN · USD</span><span class="lc-caret"> ▾</span></button>
     <div class="lc-dropdown" id="lcDropdown">
       <div class="lc-section">
         <div class="lc-section-title">Language / 언어</div>
@@ -250,8 +250,8 @@ footer{background:#0d1f30;color:rgba(255,255,255,.4);text-align:center;padding:3
       </div>
       <div class="lc-section">
         <div class="lc-section-title">Currency / 통화</div>
-        <button class="lc-option active" onclick="setCurrency('USD',this)">$ USD</button>
-        <button class="lc-option" onclick="setCurrency('KRW',this)">₩ KRW</button>
+        <button class="lc-option active" onclick="setCurrency('USD',this)"><span class="cur-badge">$</span>USD</button>
+        <button class="lc-option" onclick="setCurrency('KRW',this)"><span class="cur-badge">₩</span>KRW</button>
       </div>
     </div>
   </div>
@@ -512,7 +512,7 @@ footer{background:#0d1f30;color:rgba(255,255,255,.4);text-align:center;padding:3
     <span style="color:#5c6a7a;margin:0 8px">·</span>
     <button onclick="openLegal('privacy')" style="background:none;border:none;color:#d4af37;font-size:12px;cursor:pointer;text-decoration:underline;font-family:inherit"><span class="en">Privacy Policy</span><span class="ko">개인정보처리방침</span></button>
   </div>
-  © Resonate Club · resonatetour.com &amp; resonateclub.com · <span class="en">Premium Travel</span><span class="ko">프리미엄 여행</span>
+  © Resonate Club · <span class="en">Premium Travel</span><span class="ko">프리미엄 여행</span>
 </footer>
 
 <!-- Modal -->
@@ -530,9 +530,15 @@ let curLang = 'en';
 let curCurrency = 'USD';
 const EXCHANGE_RATE = 1500; // 기준 환율 (실제 결제 시 실시간 환율 적용 / reference rate, actual rate applies at payment)
 
+var FLAG_US = '<svg viewBox="0 0 18 12" width="16" height="11" style="vertical-align:-1px;border-radius:2px"><rect width="18" height="12" fill="#fff"/><g fill="#b22234"><rect width="18" height="1"/><rect y="2" width="18" height="1"/><rect y="4" width="18" height="1"/><rect y="6" width="18" height="1"/><rect y="8" width="18" height="1"/><rect y="10" width="18" height="1"/></g><rect width="8" height="6.5" fill="#3c3b6e"/></svg>';
+var FLAG_KR = '<svg viewBox="0 0 18 12" width="16" height="11" style="vertical-align:-1px;border-radius:2px"><rect width="18" height="12" fill="#fff"/><circle cx="9" cy="6" r="3" fill="#cd2e3a"/><path d="M9 3a3 3 0 0 1 0 6z" fill="#0047a0"/><g fill="#0b0b0b"><rect x="3.1" y="1.4" width="2.6" height=".42"/><rect x="3.1" y="2.24" width="2.6" height=".42"/><rect x="3.1" y="3.08" width="2.6" height=".42"/><rect x="12.3" y="1.4" width=".85" height=".42"/><rect x="14.05" y="1.4" width=".85" height=".42"/><rect x="12.3" y="2.24" width="2.6" height=".42"/><rect x="12.3" y="3.08" width=".85" height=".42"/><rect x="14.05" y="3.08" width=".85" height=".42"/><rect x="3.1" y="8.5" width="2.6" height=".42"/><rect x="3.1" y="9.34" width=".85" height=".42"/><rect x="4.85" y="9.34" width=".85" height=".42"/><rect x="3.1" y="10.18" width="2.6" height=".42"/><rect x="12.3" y="8.5" width=".85" height=".42"/><rect x="14.05" y="8.5" width=".85" height=".42"/><rect x="12.3" y="9.34" width=".85" height=".42"/><rect x="14.05" y="9.34" width=".85" height=".42"/><rect x="12.3" y="10.18" width=".85" height=".42"/><rect x="14.05" y="10.18" width=".85" height=".42"/></g></svg>';
 function updateLCButton() {
   var curLabel = (curLang === 'en' ? 'EN' : 'KO') + ' · ' + curCurrency;
   document.getElementById('lcLabel').textContent = curLabel;
+  var flag = document.getElementById('lcFlag');
+  if (flag) flag.innerHTML = (curLang === 'en') ? FLAG_US : FLAG_KR;
+  var cur = document.getElementById('lcCur');
+  if (cur) cur.textContent = (curCurrency === 'USD') ? '$' : '₩';
 }
 
 function toggleLangCurrency(e) {
