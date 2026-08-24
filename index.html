@@ -155,7 +155,7 @@ footer{background:#0d1f30;color:rgba(255,255,255,.4);text-align:center;padding:3
 .crs-sec .leaflet-bar a:last-child{border-bottom:none}
 .crs-sec .leaflet-bar a:hover{background:#264460!important;color:#fff!important}
 .crs-sec .region-group{margin-bottom:22px;max-width:860px;margin-left:auto;margin-right:auto;padding:0 16px}
-.crs-sec .region-header{position:sticky;top:176px;z-index:15;background:var(--crsbg);padding:10px 16px 6px;margin:0 0 8px;max-width:860px;margin-left:auto;margin-right:auto}
+.crs-sec .region-header{position:relative;z-index:1;background:var(--crsbg);padding:16px 16px 6px;margin:10px auto 8px;max-width:860px;margin-left:auto;margin-right:auto}
 .crs-sec .region-title{font-size:14px;font-weight:700;color:var(--crstxt);margin:0;padding-bottom:6px;border-bottom:2px solid rgba(212,175,55,.3)}
 .crs-sec .region-group.hidden,.crs-sec .region-header.hidden{display:none}
 .crs-sec .course-card{background:var(--crscard);border:1px solid var(--crsline);border-radius:16px;overflow:hidden;margin-bottom:28px;transition:border-color .2s;padding:28px 28px 32px;opacity:0;transform:translateY(30px);outline:none;-webkit-tap-highlight-color:transparent;box-shadow:0 2px 14px rgba(23,26,32,.06)}
@@ -479,127 +479,15 @@ footer{background:#0d1f30;color:rgba(255,255,255,.4);text-align:center;padding:3
     <h2 class="en">Exclusive Events</h2><h2 class="ko">독점 이벤트</h2>
   </div>
 
-  <div class="pkg-grid">
-    <!-- Genesis Invitational -->
-    <div class="pkg-card" style="border-color:rgba(192,57,43,.4)">
-      <div class="pkg-img" style="background:linear-gradient(135deg,#1a1a2e,#c0392b)">
-        <span class="pkg-icon">🏆</span>
-        <span class="pkg-badge vip en">VVIP</span><span class="pkg-badge vip ko">VVIP</span>
-      </div>
-      <div class="pkg-body">
-        <h3 class="en">PGA TOUR Championship — VVIP</h3>
-        <h3 class="ko">PGA 챔피언십 — VVIP</h3>
-        <div class="dur en">February 2027 · Custom Duration · Pacific Palisades, CA</div>
-        <div class="dur ko">2027년 2월경 · 맞춤 일정 · 퍼시픽 팰리세이즈</div>
-        <div class="desc en">
-PGA TOUR Signature Event (ticketing service) at Riviera Country Club
-          <strong>🎫 VIP Hospitality</strong> — weekend rounds (Sat+Sun)<br>
-          <strong>⛳ 2 championship rounds</strong> with pro instructor<br>
-          <strong>🏨 Fairmont Miramar</strong> — historic Santa Monica icon<br>
-          <strong>🍽️ All meals · Welcome dinner · Private transport</strong>
-        </div>
-        <div class="desc ko">
-          <strong>🏆 PGA TOUR 시그니처 이벤트</strong> @ 리비에라 CC (티켓 대행)<br>
-          <strong>🎫 VIP Hospitality</strong> — 주말 라운드 (토+일)<br>
-          <strong>⛳ 챔피언십 2라운드</strong> 프로 강사 동반<br>
-          <strong>🏨 페어몬트 미라마</strong> — 샌타모니카 역사적 랜드마크<br>
-          <strong>🍽️ 전 식사 · 웰컴 디너 · 전용 교통</strong>
-        </div>
-        <div class="pkg-note en">
-          <strong>🏆 PGA TOUR Signature Event.</strong> Ticketing service. Private group experience — tailored itinerary.<br>
-          <span class="ko">견적 요청</span><span class="en">Request Quote</span> for your preferred dates.
-        </div>
-        <div class="pkg-note ko">
-          <strong>🏆 PGA TOUR Signature Event.</strong> Private group, custom-tailored experience.<br>
-          희망 일정을 알려주시면 <span class="ko">견적 요청</span><span class="en">Request Quote</span>을 보내드립니다.
-        </div>
-        <div class="price"><span class="en">Custom Quote</span><span class="ko">맞춤 견적</span></div>
-        <div class="route en">Riviera CC · VIP tickets · 2 rounds · pro clinic · Fairmont Miramar · all-inclusive</div>
-        <div class="route ko">리비에라 CC · VIP 티켓 · 2라운드 · 프로 클리닉 · 페어몬트 미라마 · 프리미엄 포함</div>
-        <button class="pkg-btn vip" onclick="openModal('genesis-invitational')"><span class="en">View Details & Request Quote →</span><span class="ko">상세 보기 & 견적 요청 →</span></button>
-      </div>
-    </div>
-
-    <!-- LA Dodgers — Single Game -->
-    <div class="pkg-card" style="border-color:rgba(0,80,170,.4)">
-      <div class="pkg-img" style="background:linear-gradient(135deg,#002b5c,#0050aa)">
-        <span class="pkg-icon">⚾</span>
-        <span class="pkg-badge vip en">HOME GAME</span><span class="pkg-badge vip ko">홈경기</span>
-      </div>
-      <div class="pkg-body">
-        <h3 class="en">LA Dodgers — Premium Home Game</h3>
-        <h3 class="ko">LA 다저스 — 프리미엄 홈경기</h3>
-        <div class="dur en">April–Sept 2027 · Custom Duration · Los Angeles, CA</div>
-        <div class="dur ko">2027년 4–9월 · 맞춤 일정 · 로스앤젤레스</div>
-        <div class="desc en">
-          <strong>⚾ Official Ticketing · Dugout Club</strong> — behind home plate, seat-side service<br>
-          <strong>🎬 Warner Bros. Studio Tour</strong> — private VIP access<br>
-          <strong>🍽️ Post-game dinner</strong> at celebrity-favorite <strong>Craig's</strong><br>
-          <strong>🏨 Chateau Marmont</strong> — Hollywood's most legendary hideaway<br>
-          <strong>🚐 Private driver · Airport RT · Korean guide</strong>
-        </div>
-        <div class="desc ko">
-          <strong>⚾ Official Ticketing · Dugout Club</strong> — 홈플레이트 뒤, 좌석 서비스<br>
-          <strong>🎬 Warner Bros. 스튜디오 투어</strong> — VIP 전용<br>
-          <strong>🍽️ 경기 후 디너</strong> @ 셀럽 단골 <strong>Craig's</strong><br>
-          <strong>🏨 샤토 마몽</strong> — 할리우드의 전설적인 은신처<br>
-          <strong>🚐 전용 드라이버 · 공항 픽업 · 한국어 가이드</strong>
-        </div>
-        <div class="pkg-note en">
-          <strong>⚾ Single premium home game.</strong> Dugout Club seats + behind-the-scenes studio tour + celebrity dining.<br>
-                    <span class="ko">견적 요청</span><span class="en">Request Quote</span> · Custom dates, tailored to your schedule.
-        </div>
-        <div class="pkg-note ko">
-          <strong>⚾ 프리미엄 홈경기 1회.</strong> Dugout Club + 스튜디오 비하인드 투어 + 셀럽 다이닝.<br>
-                    <span class="ko">견적 요청</span><span class="en">Request Quote</span> · 맞춤 일정으로 진행됩니다.
-        </div>
-        <div class="price"><span class="en">Custom Quote</span><span class="ko">맞춤 견적</span></div>
-        <div class="route en">Dodger Stadium · Dugout Club · WB Studio Tour · Craig's · Chateau Marmont · 2 nights</div>
-        <div class="route ko">다저 스타디움 · Dugout Club · WB 스튜디오 · Craig's · 샤토 마몽 · 맞춤 숙박</div>
-        <button class="pkg-btn vip" onclick="openModal('dodgers')"><span class="en">View Details & Request Quote →</span><span class="ko">상세 보기 & 견적 요청 →</span></button>
-      </div>
-    </div>
-
-    <!-- LAFC — Single Match -->
-    <div class="pkg-card" style="border-color:rgba(0,0,0,.4)">
-      <div class="pkg-img" style="background:linear-gradient(135deg,#000,#c39d2e)">
-        <span class="pkg-icon">⚽</span>
-        <span class="pkg-badge vip en">HOME MATCH</span><span class="pkg-badge vip ko">홈매치</span>
-      </div>
-      <div class="pkg-body">
-        <h3 class="en">LAFC — Premium Home Match</h3>
-        <h3 class="ko">LAFC — 프리미엄 홈매치</h3>
-        <div class="dur en">Feb–Oct 2027 · Custom Duration · Los Angeles, CA</div>
-        <div class="dur ko">2027년 2–10월 · 맞춤 일정 · 로스앤젤레스</div>
-        <div class="desc en">
-          <strong>⚽ Official Ticketing · Field Club</strong> — premium midfield, all-inclusive lounge<br>
-          <strong>🎨 Arts District gallery walk</strong> — private curator-led tour<br>
-          <strong>🍸 Rooftop sunset</strong> at <strong>Perch LA</strong> — skyline views<br>
-          <strong>🏨 The Ritz-Carlton LA Live</strong> — where pro athletes stay<br>
-          <strong>🚐 Private driver · Airport RT · Korean guide</strong>
-        </div>
-        <div class="desc ko">
-          <strong>⚽ Official Ticketing · Field Club</strong> — 중앙 프리미엄, 프리미엄 포함 라운지<br>
-          <strong>🎨 아트 디스트릭트 갤러리 투어</strong> — 큐레이터 동반<br>
-          <strong>🍸 루프탑 선셋</strong> @ <strong>Perch LA</strong> — 스카이라인 뷰<br>
-          <strong>🏨 리츠칼튼 LA 라이브</strong> — 프로 선수들이 묵는 곳<br>
-          <strong>🚐 전용 드라이버 · 공항 픽업 · 한국어 가이드</strong>
-        </div>
-        <div class="pkg-note en">
-          <strong>⚽ Single premium home match.</strong> Field Club + arts & culture experience + rooftop LA.<br>
-                    <span class="ko">견적 요청</span><span class="en">Request Quote</span> · Custom dates, tailored to your schedule.
-        </div>
-        <div class="pkg-note ko">
-          <strong>⚽ 프리미엄 홈매치 1회.</strong> Field Club + 아트&컬처 체험 + 루프탑 LA.<br>
-                    <span class="ko">견적 요청</span><span class="en">Request Quote</span> · 맞춤 일정으로 진행됩니다.
-        </div>
-        <div class="price"><span class="en">Custom Quote</span><span class="ko">맞춤 견적</span></div>
-        <div class="route en">BMO Stadium · Field Club · Arts District · Perch · Ritz-Carlton LA Live · 2 nights</div>
-        <div class="route ko">BMO 스타디움 · Field Club · 아트 디스트릭트 · Perch · 리츠칼튼 LA Live · 맞춤 숙박</div>
-        <button class="pkg-btn vip" onclick="openModal('lafc')"><span class="en">View Details & Request Quote →</span><span class="ko">상세 보기 & 견적 요청 →</span></button>
-      </div>
+  <div class="pkg-grid" style="display:block;max-width:760px;margin:0 auto;padding:0 24px">
+  <div style="text-align:center">
+    <p style="font-size:14.5px;color:#171a20;line-height:1.8;margin:0 auto 22px;max-width:660px" class="en">By invitation only. Resonate Club opens the door to experiences reserved for a privileged few — premium sports hospitality, private venue access, and bespoke moments curated entirely around you. Tell us the occasion, and we will craft an exclusive invitation to match it.</p>
+    <p style="font-size:14.5px;color:#171a20;line-height:1.8;margin:0 auto 22px;max-width:660px" class="ko">초청에 의해서만 열리는 공간. Resonate Club은 소수의 선택된 이들에게만 허락되는 경험을 안내합니다 — 프리미엄 스포츠 호스피탈리티, 프라이빗 공간 접근, 그리고 당신을 중심으로 설계된 맞춤 순간들. 특별한 날을 알려주시면 그에 어울리는 독점 초대를 만들어드립니다.</p>
+    <div style="margin-top:8px">
+      <a href="https://open.kakao.com/o/sresonatetour" target="_blank" class="btn-pri" style="background:#c0392b;color:#fff"><span class="en">Inquire for an Invitation →</span><span class="ko">VIP 초청 문의 →</span></a>
     </div>
   </div>
+</div>
 </section>
 
 <!-- Contact -->
