@@ -33,6 +33,10 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;height:56px;display:flex;ali
 .lc-option{display:block;width:100%;text-align:left;font-size:13px;font-weight:500;color:#5c6a7a;background:none;border:none;padding:8px 16px;cursor:pointer;transition:all .15s}
 .lc-option:hover{background:#f5eed6;color:var(--navy)}
 .lc-option.active{color:var(--navy);font-weight:700;background:#fdf8ed}
+/* 모바일: 네비 링크 스트립(가로 스크롤)과 겹치지 않도록 언어버튼을 우상단 고정 — 스크롤 없이 항상 탭 가능 */
+@media(max-width:860px){
+  .btn-lang{position:absolute;top:14px;right:20px;z-index:301}
+}
 
 .hero{min-height:70vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:64px 20px 36px;background:linear-gradient(160deg,var(--navy) 0%,var(--navy-light) 50%,#0d1f30 100%);color:#fff;position:relative;overflow:hidden}
 .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 70% 30%,rgba(212,175,55,.08) 0%,transparent 60%)}
@@ -546,6 +550,14 @@ document.addEventListener('click', function(e) {
     dd.classList.remove('show');
   }
 });
+// iOS/터치: 빈 영역 탭 시 click 이벤트가 안 오는 환경 대응 — touchstart로 닫기
+document.addEventListener('touchstart', function(e) {
+  var dd = document.getElementById('lcDropdown');
+  var btn = document.getElementById('lcBtn');
+  if (dd && btn && dd.classList.contains('show') && !btn.contains(e.target) && !dd.contains(e.target)) {
+    dd.classList.remove('show');
+  }
+}, {passive:true});
 
 // Init
 updateLCButton();
