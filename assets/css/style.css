@@ -62,6 +62,9 @@ article.post p{margin:14px 0;font-size:16px}
 article.post ul,article.post ol{margin:14px 0 16px 24px}
 article.post li{margin:8px 0;font-size:16px}
 article.post img{margin:20px 0;border-radius:10px}
+article.post figure{margin:22px 0;text-align:center}
+article.post figure img{margin:0 auto;max-height:460px;object-fit:cover}
+article.post figcaption{font-size:13px;color:#6b7885;font-style:italic;margin-top:8px;text-align:center}
 article.post blockquote{border-left:4px solid var(--gold);background:#fbf7ec;padding:14px 18px;margin:20px 0;font-style:italic;color:#5c4a12}
 /* table */
 table{width:100%;border-collapse:collapse;margin:20px 0;font-size:14.5px}
