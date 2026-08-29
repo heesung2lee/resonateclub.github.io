@@ -16,7 +16,7 @@ a:hover{color:var(--gold)}
 .masthead .site span{color:var(--gold)}
 .masthead .tag{font-size:15px;color:#b9c7d6;margin-top:6px;letter-spacing:.02em;padding-left:2px}
 nav.catbar{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid var(--line)}
-nav.catbar .scroll{display:flex;gap:2px;padding:0 10px;max-width:1040px;margin:0 auto;white-space:nowrap}
+nav.catbar .scroll{display:flex;gap:2px;box-sizing:border-box;padding:0 10px;width:100%;max-width:1040px;min-width:1040px;margin:0 auto;white-space:nowrap;justify-content:flex-start}
 nav.catbar a{display:inline-block;padding:12px 14px;font-size:13.5px;font-weight:500;color:#45525f;border-bottom:2px solid transparent}
 nav.catbar a.active,nav.catbar a:hover{color:var(--navy);border-bottom-color:var(--gold)}
 nav.catbar a:first-child{padding-left:2px}
