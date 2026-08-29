@@ -10,7 +10,8 @@ img{max-width:100%;height:auto;display:block}
 a{color:var(--navy);text-decoration:none}
 a:hover{color:var(--gold)}
 /* header */
-.masthead{background:var(--navy);color:#fff;padding:26px 18px;text-align:left}
+.masthead{background:var(--navy);color:#fff;padding:26px 0;text-align:left}
+.masthead .mhead-inner{max-width:1040px;margin:0 auto;padding-left:10px}
 .masthead .site{font-size:30px;font-weight:800;letter-spacing:.04em;color:#fff;line-height:1.1}
 .masthead .site span{color:var(--gold)}
 .masthead .tag{font-size:15px;color:#b9c7d6;margin-top:6px;letter-spacing:.02em;padding-left:2px}
