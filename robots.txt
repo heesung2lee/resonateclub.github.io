@@ -1,5 +1,8 @@
 User-agent: *
 Allow: /
-Allow: /images/
+Allow: /assets/
+Disallow: /files/
+Disallow: /tech/
+
 
 Sitemap: https://www.resonateclub.com/sitemap.xml
