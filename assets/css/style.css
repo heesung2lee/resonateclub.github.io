@@ -89,3 +89,11 @@ footer .copy{border-top:1px solid rgba(255,255,255,.12);padding-top:18px;color:#
 /* search/back */
 .back{display:inline-block;font-size:13px;color:#6b7885;margin-bottom:14px}
 .back:hover{color:var(--navy)}
+
+nav.catbar .has-drop{position:relative}
+nav.catbar .has-drop>a{cursor:pointer}
+nav.catbar .dropdown{position:absolute;top:100%;left:0;background:#fff;border:1px solid var(--line);border-radius:8px;box-shadow:0 8px 24px rgba(26,52,80,.12);padding:8px 0;min-width:220px;z-index:60;display:none}
+nav.catbar .has-drop:hover .dropdown, nav.catbar .has-drop:focus-within .dropdown{display:block}
+nav.catbar .dropdown a{display:block;padding:9px 16px;font-size:13px;color:#45525f;border-bottom:0;white-space:normal}
+nav.catbar .dropdown a:hover{background:var(--cream);color:var(--gold);font-weight:600}
+nav.catbar .dropdown a b{color:var(--navy)}
