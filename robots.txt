@@ -5,4 +5,4 @@ Disallow: /files/
 Disallow: /tech/
 
 
-Sitemap: https://www.resonateclub.com/sitemap.xml
+Sitemap: https://resonateclub.com/sitemap.xml
